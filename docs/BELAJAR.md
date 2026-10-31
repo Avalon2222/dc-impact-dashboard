@@ -1,10 +1,10 @@
 # 🎓 Panduan Belajar: Bedah Dashboard dari Nol
 
-Panduan ini buat kamu yang baru tahu Python "sedikit-sedikit". Tujuannya bukan ngafalin kode,
+Panduan ini ditujukan untuk pembaca yang baru mengenal Python. Tujuannya bukan menghafal kode,
 tapi **paham kenapa kodenya begitu**. Baca pelan-pelan, buka file yang disebut, dan coba ubah
-sesuatu di tiap bagian. Kalau rusak, `git checkout app.py` balikin lagi. Rusak itu bagian dari belajar.
+sesuatu di tiap bagian. Jika ada yang rusak, `git checkout app.py` mengembalikannya. Rusak adalah bagian dari belajar.
 
-Estimasi waktu: 2–3 jam santai, dibagi beberapa sesi.
+Estimasi waktu: 2–3 jam, dapat dibagi menjadi beberapa sesi.
 
 ---
 
@@ -35,9 +35,9 @@ flowchart TB
 
 **Kenapa dipisah 4 lapisan?** Supaya tiap bagian bisa diubah tanpa merusak yang lain:
 
-- Mau nambah data center? Cukup edit **CSV**. Nggak perlu sentuh kode.
-- Mau ganti rumus? Edit **hitung.py**, jalankan tes, selesai. Tampilan nggak berubah.
-- Mau ganti warna grafik? Edit **app.py** aja.
+- Ingin menambah data center? Cukup edit **CSV**, tanpa menyentuh kode.
+- Ingin mengganti rumus? Edit **hitung.py**, jalankan tes, selesai. Tampilan tidak berubah.
+- Ingin mengganti warna grafik? Cukup edit **app.py**.
 
 Ini prinsip yang dipakai di hampir semua software: *separation of concerns*.
 
@@ -75,7 +75,7 @@ Coba: hitung total MW per provinsi dengan `groupby`. Bandingkan hasilnya dengan 
 ## Langkah 2 — Rumus (src/hitung.py)
 
 Buka `src/hitung.py`. Perhatikan: **tidak ada Streamlit, tidak ada grafik**. Cuma fungsi Python murni
-yang menerima angka dan mengembalikan angka. Ini sengaja: fungsi murni gampang dites dan dipakai ulang.
+yang menerima angka dan mengembalikan angka. Ini disengaja: fungsi murni mudah diuji dan dipakai ulang.
 
 ### Rumus listrik
 
@@ -116,7 +116,7 @@ Setara orang (listrik) = GWh × 1.000.000 ÷ kWh per orang per tahun
 Setara orang (air)     = m³ × 1000 ÷ (liter per orang per hari × 365)
 ```
 
-Ini cara mengubah angka abstrak (GWh) jadi sesuatu yang kebayang ("setara 400 ribu orang").
+Ini cara mengubah angka abstrak (GWh) menjadi sesuatu yang mudah dibayangkan ("setara 400 ribu orang").
 Catatan jujur: angka per kapita ESDM sudah termasuk industri, jadi ini ilustrasi, bukan klaim presisi.
 
 **Coba sendiri** di `python`:
@@ -160,7 +160,7 @@ sequenceDiagram
     participant U as Kamu (browser)
     participant S as Streamlit (app.py)
     U->>S: buka halaman
-    S->>S: jalankan app.py dari atas: baca CSV, bikin sidebar, hitung, gambar grafik
+    S->>S: jalankan app.py dari atas: baca CSV, buat sidebar, hitung, gambar grafik
     S-->>U: tampilkan halaman
     U->>S: geser slider PUE 1,5 → 1,8
     S->>S: jalankan ULANG app.py dari atas (dengan pue = 1.8)
@@ -169,7 +169,7 @@ sequenceDiagram
 
 Konsekuensinya:
 
-1. Nggak perlu kode "kalau slider berubah, update grafik". Cukup tulis alurnya sekali, urut dari atas.
+1. Tidak perlu kode "jika slider berubah, perbarui grafik". Cukup tulis alurnya sekali, urut dari atas.
 2. Baca CSV tiap rerun itu boros → dibungkus `@st.cache_data` supaya cuma dibaca sekali.
 3. Variabel yang kamu ambil dari widget (`pue = st.slider(...)`) langsung berisi nilai terbaru.
 
@@ -187,13 +187,13 @@ Konsekuensinya:
 Perhatikan pola yang berulang di setiap grafik:
 
 ```python
-fig = px.bar(df_kecil, x=..., y=..., color=...)   # 1. bikin figur dari DataFrame
+fig = px.bar(df_kecil, x=..., y=..., color=...)   # 1. buat figur dari DataFrame
 fig.update_traces(...)                            # 2. rapikan detail batang/teks
 rapikan(fig, 520)                                 # 3. gaya seragam (fungsi kita sendiri)
 st.plotly_chart(fig, use_container_width=True)    # 4. tempel ke halaman
 ```
 
-Kalau sudah paham pola ini, kamu bisa bikin grafik apa pun.
+Jika sudah memahami pola ini, kamu bisa membuat grafik apa pun.
 
 ---
 
@@ -209,7 +209,7 @@ px.line(garis, x="tahun", y="kumulatif_mw", color="status_label", line_shape="hv
 
 Tiga keputusan desain yang sengaja diambil (dan layak kamu tiru):
 
-1. **Satu status = satu warna, tetap.** `WARNA_STATUS` adalah kamus; warna nggak berubah walau filter berubah.
+1. **Satu status = satu warna, tetap.** `WARNA_STATUS` adalah kamus; warna tidak berubah walau filter berubah.
 2. **Sumbu log** di perbandingan warga, karena 5.644 kWh (1 rumah) vs 654 juta kWh (1 DC) bedanya 100.000×.
 3. **Angka ditulis di ujung batang** (`text=`), bukan dibaca dari sumbu. Lebih cepat dibaca orang.
 
@@ -239,13 +239,13 @@ pesan penting: sebagian besar kapasitas hyperscaler **tidak dipublikasikan**. It
 | Hyperscale | Data center raksasa milik/untuk AWS, Google, Microsoft, dll |
 | DataFrame | Tabel di pandas |
 | Rerun | Streamlit menjalankan ulang seluruh skrip setiap interaksi |
-| Cache | Menyimpan hasil supaya nggak dihitung ulang |
+| Cache | Menyimpan hasil agar tidak dihitung ulang |
 
 ---
 
 ## Setelah ini
 
-1. Kerjakan `docs/LATIHAN.md` (8 latihan, dari gampang sampai lumayan).
+1. Kerjakan `docs/LATIHAN.md` (8 latihan, dari mudah sampai menengah).
 2. Push ke GitHub, pasang screenshot di README. Itu sudah portofolio.
-3. Project berikutnya bisa memakai `hitung.py` yang sama sebagai *backend API*.
-   Jadi apa yang kamu pelajari di sini langsung kepakai lagi.
+3. Project berikutnya dapat memakai `hitung.py` yang sama sebagai *backend API*.
+   Jadi apa yang dipelajari di sini akan langsung terpakai lagi.

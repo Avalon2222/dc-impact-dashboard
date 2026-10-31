@@ -4,7 +4,7 @@ wue,1.8,liter per kWh,Rata-rata industri AS (US DOE) dikutip AKCP & Data Center 
 utilisasi,0.6,rasio,Asumsi kami,,"Server jarang jalan 100% kapasitas. 0.6 = rata-rata 60% dari kapasitas IT terpakai."
 listrik_per_kapita_kwh_tahun,1411,kWh per orang per tahun,Kementerian ESDM realisasi 2024 (via Kontan),https://industri.kontan.co.id/news/masih-jauh-dari-target-konsumsi-listrik-per-kapita-sepanjang-2024-baru-1411-kwh,"Sudah termasuk konsumsi industri & bisnis; per kapita rumah tangga saja lebih kecil."
 air_per_orang_liter_hari,150,liter per orang per hari,SNI 03-6981-2004 (kota besar/metropolitan); kebutuhan minimal 60 L (Permen PU 122/2015),https://jurnal.apmd.ac.id/index.php/JIRReG/article/download/139/88/416,"Pakai 60 kalau mau skenario kebutuhan pokok minimum."
-orang_per_rumah_tangga,4,orang,Asumsi pembulatan (BPS: rata-rata ~3.7-3.9 orang/rumah tangga),,"Dibulatkan supaya gampang dihitung."
+orang_per_rumah_tangga,4,orang,Asumsi pembulatan (BPS: rata-rata ~3.7-3.9 orang/rumah tangga),,"Dibulatkan agar mudah dihitung."
 jam_per_tahun,8760,jam,Fakta (365 x 24),,
 global_dc_twh_2024,415,TWh,IEA Energy and AI report (April 2025),https://www.thestar.com.my/tech/tech-news/2025/04/10/ai-surge-to-double-data-centre-electricity-demand-by-2030-iea,"~1.5% listrik dunia."
 global_dc_twh_2030,945,TWh,IEA Energy and AI report (April 2025),https://www.thestar.com.my/tech/tech-news/2025/04/10/ai-surge-to-double-data-centre-electricity-demand-by-2030-iea,"Setara konsumsi listrik Jepang hari ini."

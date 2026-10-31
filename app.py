@@ -216,7 +216,7 @@ with tab_peta:
     )
 
     if mode_belajar:
-        with st.expander("🎓 Gimana peta ini dibikin?"):
+        with st.expander("🎓 Bagaimana peta ini dibuat?"):
             st.markdown(
                 "Peta ini cuma **scatter plot** (titik-titik) yang ditempel di atas peta dunia. "
                 "Setiap baris CSV punya `lat`/`lon`, Plotly menaruh satu lingkaran di koordinat itu. "
@@ -307,7 +307,7 @@ with tab_listrik:
     )
 
     if mode_belajar:
-        with st.expander("🎓 Rumus listrik & cara grafik ini dibikin"):
+        with st.expander("🎓 Rumus listrik & cara grafik ini dibuat"):
             st.latex(r"E_{tahun}\ (\text{GWh}) = \frac{MW \times utilisasi \times PUE \times 8760}{1000}")
             st.markdown(
                 f"Dengan slider sekarang (utilisasi **{utilisasi:.2f}**, PUE **{pue:.2f}**), "
@@ -454,7 +454,7 @@ with tab_warga:
     st.plotly_chart(fig_banding, use_container_width=True)
     st.caption(
         "Sumbu X logaritmik: tiap garis grid = 10x lipat. Jumlah RT per RW/kelurahan/kecamatan hanya "
-        "pembulatan kasar supaya kebayang skalanya."
+        "pembulatan kasar agar skalanya mudah dibayangkan."
     )
 
     st.markdown("#### Pertumbuhan kapasitas dari waktu ke waktu")
@@ -537,7 +537,7 @@ with tab_data:
     st.markdown(
         "1. **Kapasitas IT ≠ pemakaian nyata.** Kami pakai utilisasi (slider) untuk mendekati pemakaian.\n"
         "2. **PUE & WUE Indonesia tidak dipublikasikan** per fasilitas; kami pakai rata-rata industri. "
-        "Iklim tropis biasanya bikin PUE/WUE lebih tinggi dari rata-rata global.\n"
+        "Iklim tropis biasanya membuat PUE/WUE lebih tinggi dari rata-rata global.\n"
         "3. **Per kapita listrik ESDM** termasuk industri & bisnis, jadi 'setara N orang' bersifat ilustratif.\n"
         "4. Dataset ini **bukan daftar lengkap**; ada puluhan fasilitas kecil (enterprise/edge) yang tidak masuk.\n"
         "5. Dampak ke warga tidak hanya volume: **sumber air** (air tanah vs PDAM vs daur ulang) dan "

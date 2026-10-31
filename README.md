@@ -114,7 +114,7 @@ dc-impact-dashboard/
 
 ## Belajar dari project ini
 
-Kalau kamu baru mulai Python/data, baca [`docs/BELAJAR.md`](docs/BELAJAR.md) dulu (alur, konsep
+Jika kamu baru mulai Python/data, baca [`docs/BELAJAR.md`](docs/BELAJAR.md) dulu (alur, konsep
 pandas & Streamlit, kenapa kodenya dipisah begini), lalu kerjakan [`docs/LATIHAN.md`](docs/LATIHAN.md).
 Nyalakan **Mode belajar** di sidebar supaya tiap grafik menunjukkan kode di baliknya.
 

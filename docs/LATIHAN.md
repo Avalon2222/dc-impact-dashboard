@@ -1,7 +1,7 @@
 # 🏋️ Latihan
 
-Urut dari gampang ke susah. Tiap latihan ada petunjuk, dan kunci jawaban di bagian yang bisa dibuka.
-Jangan buka kunci sebelum nyoba minimal 10 menit. Habis tiap latihan: jalankan `python -m pytest tests/`
+Diurutkan dari mudah ke sulit. Tiap latihan ada petunjuk, dan kunci jawaban di bagian yang bisa dibuka.
+Usahakan mencoba minimal 10 menit sebelum membuka kunci. Setelah tiap latihan: jalankan `python -m pytest tests/`
 dan `streamlit run app.py`.
 
 ---
@@ -34,7 +34,7 @@ Di tab Dampak ke Warga, pembanding "1 kecamatan" pakai ±25.000 rumah tangga. Ub
 tambahkan satu baris pembanding baru: **"1 RT (±50 rumah)"**.
 
 <details><summary>Petunjuk</summary>
-Cari `banding = pd.DataFrame({` di `app.py`. Ada dua list sejajar: `Pembanding` dan `kwh`. Tambahkan elemen di posisi yang sama di keduanya. Jangan lupa list `jenis` jumlahnya harus ikut nambah.
+Cari `banding = pd.DataFrame({` di `app.py`. Ada dua list sejajar: `Pembanding` dan `kwh`. Tambahkan elemen di posisi yang sama di keduanya. Jangan lupa panjang list `jenis` harus ikut bertambah.
 </details>
 
 <details><summary>Kunci</summary>
