@@ -6,6 +6,8 @@
 *An interactive dashboard estimating the electricity and water footprint of Indonesian data
 centers, compared against residents' needs. Built with Python, pandas, Plotly and Streamlit.*
 
+**🚀 Coba langsung di browser:** [dc-impact-dashboard.streamlit.app](https://dc-impact-dashboard.streamlit.app)
+
 ![Peta data center Indonesia](docs/screenshots/01_peta.png)
 
 ## Kenapa project ini ada?
