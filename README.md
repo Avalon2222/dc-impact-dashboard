@@ -28,13 +28,13 @@ Project ini lahir dari rasa penasaran pribadi setelah membaca berita investasi d
 
 | Tab | Isi |
 |---|---|
-| 🗺️ Peta | Scatter map: ukuran = kapasitas IT (MW), warna = status (beroperasi / dibangun / rencana) |
-| ⚡ Listrik | 15 fasilitas terboros, total per kabupaten/kota, kapasitas beroperasi vs pipeline |
-| 💧 Air | Estimasi air pendingin per fasilitas + 3 skenario teknologi pendingin (WUE 0,3 / 1,8 / 3,5) |
-| 🏘️ Dampak ke Warga | Pilih satu fasilitas → setara berapa orang, rumah tangga, truk tangki; skala log vs RW/kelurahan/kecamatan |
-| 📋 Data & Sumber | Tabel lengkap + link sumber + tingkat keyakinan + unduh CSV + daftar keterbatasan |
-| 🧭 Cara Kerja | Diagram alur data → rumus → grafik |
-| 🎓 Mode belajar | Toggle di sidebar: tiap grafik dapat expander berisi rumus, potongan kode, dan latihan |
+| 🗺️ Map | Scatter map: ukuran = kapasitas IT (MW), warna = status (beroperasi / dibangun / rencana) |
+| ⚡ Electricity | 15 fasilitas terboros, total per kabupaten/kota, kapasitas beroperasi vs pipeline |
+| 💧 Water | Estimasi air pendingin per fasilitas + 3 skenario teknologi pendingin (WUE 0,3 / 1,8 / 3,5) |
+| 🏘️ Impact on Residents | Pilih satu fasilitas → setara berapa orang, rumah tangga, truk tangki; skala log vs RW/kelurahan/kecamatan |
+| 📋 Data & Sources | Tabel lengkap + link sumber + tingkat keyakinan + download CSV + daftar keterbatasan |
+| 🧭 How it works | Diagram alur data → rumus → grafik |
+| 🎓 Learning mode | Toggle di sidebar: tiap grafik dapat expander berisi rumus, potongan kode, dan latihan |
 
 Semua asumsi bisa digeser lewat slider di sidebar dan seluruh dashboard langsung menghitung ulang.
 

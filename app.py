@@ -82,7 +82,7 @@ with st.sidebar:
     st.title("🏭 Dampak Data Center")
     st.caption("Dashboard estimasi konsumsi listrik & air data center di Indonesia.")
 
-    mode_belajar = st.toggle("🎓 Mode belajar", value=False,
+    mode_belajar = st.toggle("🎓 Learning mode", value=False,
                              help="Tampilkan penjelasan & potongan kode di balik setiap grafik.")
 
     st.subheader("Filter")
@@ -102,22 +102,22 @@ with st.sidebar:
         help="'rendah' = kapasitas tidak dipublikasikan, kami pakai estimasi kasar.",
     )
 
-    st.subheader("Asumsi (geser untuk uji skenario)")
-    utilisasi = st.slider("Utilisasi server", 0.1, 1.0, float(PARAM["utilisasi"]), 0.05,
+    st.subheader("Assumptions (slide to test scenarios)")
+    utilisasi = st.slider("Server utilization", 0.1, 1.0, float(PARAM["utilisasi"]), 0.05,
                           help="Seberapa penuh kapasitas IT terpakai rata-rata. 0,6 = 60%.")
-    pue = st.slider("PUE (efisiensi listrik)", 1.1, 2.5, float(PARAM["pue"]), 0.05,
+    pue = st.slider("PUE (power efficiency)", 1.1, 2.5, float(PARAM["pue"]), 0.05,
                     help="Listrik total / listrik server. Makin dekat 1 makin efisien.")
-    wue = st.slider("WUE (liter air per kWh server)", 0.0, 4.0, float(PARAM["wue"]), 0.1,
+    wue = st.slider("WUE (liters of water per server kWh)", 0.0, 4.0, float(PARAM["wue"]), 0.1,
                     help="0 = pendingin tanpa air. Rata-rata industri ~1,8. Hyperscaler efisien 0,2-0,6.")
-    kwh_per_kapita = st.number_input("Listrik per kapita (kWh/orang/tahun)",
+    kwh_per_kapita = st.number_input("Electricity per capita (kWh/person/year)",
                                      value=int(PARAM["listrik_per_kapita_kwh_tahun"]), step=50,
                                      help="ESDM 2024: 1.411 kWh/kapita.")
-    liter_per_orang = st.number_input("Kebutuhan air (liter/orang/hari)",
+    liter_per_orang = st.number_input("Water need (liters/person/day)",
                                       value=int(PARAM["air_per_orang_liter_hari"]), step=10,
                                       help="SNI kota besar 150 L; kebutuhan pokok minimum 60 L.")
     orang_per_rt = int(PARAM["orang_per_rumah_tangga"])
 
-    st.caption("Sumber & catatan tiap angka ada di tab **Data & Sumber**.")
+    st.caption("Sumber & catatan tiap angka ada di tab **Data & Sources**.")
 
 # ----------------------------------------------------------------------------
 # 3. FILTER + HITUNG
@@ -172,7 +172,7 @@ st.caption(
 )
 
 tab_peta, tab_listrik, tab_air, tab_warga, tab_data, tab_cara = st.tabs(
-    ["🗺️ Peta", "⚡ Listrik", "💧 Air", "🏘️ Dampak ke Warga", "📋 Data & Sumber", "🧭 Cara Kerja"]
+    ["🗺️ Map", "⚡ Electricity", "💧 Water", "🏘️ Impact on Residents", "📋 Data & Sources", "🧭 How it works"]
 )
 
 # ----------------------------------------------------------------------------
@@ -408,7 +408,7 @@ with tab_air:
 with tab_warga:
     st.subheader("Kalau satu data center dibanding satu kampung, seperti apa?")
 
-    pilihan = st.selectbox("Pilih fasilitas", options=df.sort_values("kapasitas_it_mw", ascending=False)["nama"])
+    pilihan = st.selectbox("Select facility", options=df.sort_values("kapasitas_it_mw", ascending=False)["nama"])
     baris = df[df["nama"] == pilihan].iloc[0]
 
     st.markdown(
@@ -522,7 +522,7 @@ with tab_data:
         },
     )
     st.download_button(
-        "⬇️ Unduh data + estimasi (CSV)",
+        "⬇️ Download data + estimasi (CSV)",
         data=df.to_csv(index=False).encode("utf-8"),
         file_name="estimasi_data_center_indonesia.csv", mime="text/csv",
     )
