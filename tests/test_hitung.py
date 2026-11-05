@@ -65,3 +65,28 @@ def test_tambah_kolom_estimasi():
     for kolom in ["listrik_gwh_tahun", "air_m3_tahun", "setara_orang_listrik", "setara_orang_air"]:
         assert kolom in hasil.columns
         assert (hasil[kolom] >= 0).all()
+
+
+def test_format_ringkas_semua_tingkat():
+    assert hitung.format_ringkas(2_300_000_000) == "2,3 miliar"
+    assert hitung.format_ringkas(12_500) == "12,5 ribu"
+    assert hitung.format_ringkas(999) == "999"
+
+
+def test_format_nan_jadi_strip():
+    assert hitung.format_angka(float("nan")) == "-"
+    assert hitung.format_ringkas(float("nan")) == "-"
+
+
+def test_rumah_tangga_turunan_dari_orang():
+    df = pd.DataFrame({"kapasitas_it_mw": [10.0, 50.0]})
+    hasil = hitung.tambah_kolom_estimasi(
+        df, utilisasi=0.6, pue=1.5, wue=1.8,
+        kwh_per_kapita_tahun=1200, liter_per_orang_hari=120, orang_per_rumah_tangga=4,
+    )
+    assert hasil["setara_rumah_tangga_listrik"].tolist() == pytest.approx(
+        (hasil["setara_orang_listrik"] / 4).tolist()
+    )
+    assert hasil["air_liter_hari"].iloc[0] == pytest.approx(hasil["air_m3_tahun"].iloc[0] * 1000 / 365)
+    # Data center 5x lebih besar -> estimasi juga 5x (rumusnya linear)
+    assert hasil["listrik_gwh_tahun"].iloc[1] == pytest.approx(5 * hasil["listrik_gwh_tahun"].iloc[0])
