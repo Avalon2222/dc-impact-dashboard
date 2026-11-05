@@ -1,0 +1,941 @@
+kampus,tahun,kuartal,pue_kuartalan,pue_ttm
+Fleet,2008,3,1.23,1.21
+Fleet,2008,4,1.16,1.2
+Fleet,2009,1,1.15,1.19
+Fleet,2009,2,1.2,1.19
+Fleet,2009,3,1.22,1.19
+Fleet,2009,4,1.16,1.19
+Fleet,2010,1,1.15,1.18
+Fleet,2010,2,1.17,1.18
+Fleet,2010,3,1.2,1.17
+Fleet,2010,4,1.13,1.16
+Fleet,2011,1,1.13,1.16
+Fleet,2011,2,1.14,1.15
+Fleet,2011,3,1.16,1.14
+Fleet,2011,4,1.12,1.14
+Fleet,2012,1,1.11,1.13
+Fleet,2012,2,1.12,1.13
+Fleet,2012,3,,1.13
+Fleet,2012,4,1.11,1.12
+Fleet,2013,1,1.12,1.12
+Fleet,2013,2,1.12,1.12
+Fleet,2013,3,1.14,1.12
+Fleet,2013,4,1.11,1.12
+Fleet,2014,1,1.11,1.12
+Fleet,2014,2,1.11,1.12
+Fleet,2014,3,1.13,1.12
+Fleet,2014,4,1.11,1.12
+Fleet,2015,1,1.11,1.12
+Fleet,2015,2,1.12,1.12
+Fleet,2015,3,1.14,1.12
+Fleet,2015,4,1.11,1.12
+Fleet,2016,1,1.11,1.12
+"Berkeley County, South Carolina",2016,2,1.13,1.13
+"Changhua County, Taiwan",2016,2,1.2,1.18
+"Council Bluffs, Iowa",2016,2,1.1,1.1
+"Council Bluffs, Iowa (2nd facility)",2016,2,1.11,1.12
+"Douglas County, Georgia",2016,2,1.12,1.11
+"Dublin, Ireland",2016,2,1.17,1.15
+Fleet,2016,2,1.12,1.12
+"Hamina, Finland",2016,2,1.12,1.11
+"Lenoir, North Carolina",2016,2,1.1,1.11
+"Mayes County, Oklahoma",2016,2,1.11,1.11
+"Quilicura, Chile",2016,2,1.12,1.15
+Singapore,2016,2,1.19,1.21
+"St. Ghislain, Belgium",2016,2,1.09,1.09
+"The Dalles, Oregon",2016,2,1.13,1.13
+"Berkeley County, South Carolina",2016,3,1.16,1.13
+"Changhua County, Taiwan",2016,3,1.2,1.18
+"Council Bluffs, Iowa",2016,3,1.14,1.1
+"Council Bluffs, Iowa (2nd facility)",2016,3,1.14,1.12
+"Douglas County, Georgia",2016,3,1.16,1.12
+"Dublin, Ireland",2016,3,1.15,1.15
+Fleet,2016,3,1.14,1.12
+"Hamina, Finland",2016,3,1.13,1.12
+"Lenoir, North Carolina",2016,3,1.12,1.11
+"Mayes County, Oklahoma",2016,3,1.15,1.12
+"Quilicura, Chile",2016,3,1.11,1.12
+Singapore,2016,3,1.2,1.21
+"St. Ghislain, Belgium",2016,3,1.1,1.09
+"The Dalles, Oregon",2016,3,1.13,1.13
+"Berkeley County, South Carolina",2016,4,1.1,1.13
+"Changhua County, Taiwan",2016,4,1.15,1.17
+"Council Bluffs, Iowa",2016,4,1.1,1.1
+"Council Bluffs, Iowa (2nd facility)",2016,4,1.1,1.11
+"Douglas County, Georgia",2016,4,1.11,1.12
+"Dublin, Ireland",2016,4,1.17,1.15
+Fleet,2016,4,1.11,1.12
+"Hamina, Finland",2016,4,1.12,1.12
+"Lenoir, North Carolina",2016,4,1.1,1.1
+"Mayes County, Oklahoma",2016,4,1.11,1.12
+"Quilicura, Chile",2016,4,1.11,1.11
+Singapore,2016,4,1.19,1.2
+"St. Ghislain, Belgium",2016,4,1.09,1.09
+"The Dalles, Oregon",2016,4,1.12,1.13
+"Berkeley County, South Carolina",2017,1,1.1,1.12
+"Changhua County, Taiwan",2017,1,1.12,1.16
+"Council Bluffs, Iowa",2017,1,1.1,1.11
+"Council Bluffs, Iowa (2nd facility)",2017,1,1.1,1.11
+"Douglas County, Georgia",2017,1,1.11,1.12
+"Dublin, Ireland",2017,1,1.12,1.13
+"Eemshaven, Netherlands",2017,1,1.22,
+Fleet,2017,1,1.11,1.12
+"Hamina, Finland",2017,1,1.1,1.12
+"Lenoir, North Carolina",2017,1,1.1,1.1
+"Mayes County, Oklahoma",2017,1,1.11,1.12
+"Quilicura, Chile",2017,1,1.14,1.12
+Singapore,2017,1,1.18,1.19
+"St. Ghislain, Belgium",2017,1,1.09,1.09
+"The Dalles, Oregon",2017,1,1.14,1.13
+"Berkeley County, South Carolina",2017,2,1.13,1.12
+"Changhua County, Taiwan",2017,2,1.15,1.15
+"Council Bluffs, Iowa",2017,2,1.11,1.11
+"Council Bluffs, Iowa (2nd facility)",2017,2,1.1,1.11
+"Douglas County, Georgia",2017,2,1.12,1.12
+"Dublin, Ireland",2017,2,1.12,1.13
+"Eemshaven, Netherlands",2017,2,1.1,
+Fleet,2017,2,1.11,1.12
+"Hamina, Finland",2017,2,1.09,1.11
+"Lenoir, North Carolina",2017,2,1.1,1.1
+"Mayes County, Oklahoma",2017,2,1.12,1.12
+"Quilicura, Chile",2017,2,1.14,1.13
+Singapore,2017,2,1.18,1.19
+"St. Ghislain, Belgium",2017,2,1.09,1.09
+"The Dalles, Oregon",2017,2,1.14,1.13
+"Berkeley County, South Carolina",2017,3,1.16,1.13
+"Changhua County, Taiwan",2017,3,1.17,1.15
+"Council Bluffs, Iowa",2017,3,1.15,1.11
+"Council Bluffs, Iowa (2nd facility)",2017,3,1.12,1.1
+"Douglas County, Georgia",2017,3,1.14,1.12
+"Dublin, Ireland",2017,3,1.11,1.12
+"Eemshaven, Netherlands",2017,3,1.11,
+Fleet,2017,3,1.13,1.12
+"Hamina, Finland",2017,3,1.09,1.1
+"Lenoir, North Carolina",2017,3,1.12,1.1
+"Mayes County, Oklahoma",2017,3,1.14,1.12
+"Quilicura, Chile",2017,3,1.14,1.13
+Singapore,2017,3,1.17,1.18
+"St. Ghislain, Belgium",2017,3,1.09,1.09
+"The Dalles, Oregon",2017,3,1.15,1.14
+"Berkeley County, South Carolina",2017,4,1.11,1.13
+"Changhua County, Taiwan",2017,4,1.13,1.14
+"Council Bluffs, Iowa",2017,4,1.15,1.12
+"Council Bluffs, Iowa (2nd facility)",2017,4,1.08,1.1
+"Douglas County, Georgia",2017,4,1.1,1.12
+"Dublin, Ireland",2017,4,1.11,1.11
+"Eemshaven, Netherlands",2017,4,1.12,1.13
+Fleet,2017,4,1.1,1.11
+"Hamina, Finland",2017,4,1.09,1.09
+"Lenoir, North Carolina",2017,4,1.1,1.1
+"Mayes County, Oklahoma",2017,4,1.09,1.12
+"Quilicura, Chile",2017,4,1.13,1.14
+Singapore,2017,4,1.17,1.18
+"St. Ghislain, Belgium",2017,4,1.08,1.09
+"The Dalles, Oregon",2017,4,1.14,1.14
+"Berkeley County, South Carolina",2018,1,1.1,1.12
+"Changhua County, Taiwan",2018,1,1.12,1.14
+"Council Bluffs, Iowa",2018,1,1.14,1.13
+"Council Bluffs, Iowa (2nd facility)",2018,1,1.09,1.1
+"Douglas County, Georgia",2018,1,1.1,1.11
+"Dublin, Ireland",2018,1,1.11,1.11
+"Eemshaven, Netherlands",2018,1,1.11,1.11
+Fleet,2018,1,1.1,1.11
+"Hamina, Finland",2018,1,1.09,1.09
+"Lenoir, North Carolina",2018,1,1.1,1.1
+"Mayes County, Oklahoma",2018,1,1.08,1.11
+"Quilicura, Chile",2018,1,1.14,1.14
+Singapore,2018,1,1.16,1.17
+"St. Ghislain, Belgium",2018,1,1.08,1.09
+"The Dalles, Oregon",2018,1,1.14,1.14
+"Berkeley County, South Carolina",2018,2,1.13,1.12
+"Changhua County, Taiwan",2018,2,1.16,1.14
+"Council Bluffs, Iowa",2018,2,1.13,1.14
+"Council Bluffs, Iowa (2nd facility)",2018,2,1.1,1.1
+"Douglas County, Georgia",2018,2,1.12,1.11
+"Dublin, Ireland",2018,2,1.12,1.11
+"Eemshaven, Netherlands",2018,2,1.11,1.11
+Fleet,2018,2,1.12,1.11
+"Hamina, Finland",2018,2,1.09,1.09
+"Lenoir, North Carolina",2018,2,1.11,1.11
+"Mayes County, Oklahoma",2018,2,1.11,1.11
+"Quilicura, Chile",2018,2,1.13,1.14
+Singapore,2018,2,1.2,1.18
+"St. Ghislain, Belgium",2018,2,1.08,1.08
+"The Dalles, Oregon",2018,2,1.13,1.14
+"Berkeley County, South Carolina",2018,3,1.15,1.12
+"Changhua County, Taiwan",2018,3,1.17,1.15
+"Council Bluffs, Iowa",2018,3,1.14,1.14
+"Council Bluffs, Iowa (2nd facility)",2018,3,1.11,1.1
+"Douglas County, Georgia",2018,3,1.16,1.12
+"Dublin, Ireland",2018,3,1.11,1.11
+"Eemshaven, Netherlands",2018,3,1.12,1.11
+Fleet,2018,3,1.13,1.11
+"Hamina, Finland",2018,3,1.1,1.09
+"Lenoir, North Carolina",2018,3,1.13,1.11
+"Mayes County, Oklahoma",2018,3,1.13,1.11
+"Quilicura, Chile",2018,3,1.12,1.13
+Singapore,2018,3,1.18,1.18
+"St. Ghislain, Belgium",2018,3,1.1,1.09
+"The Dalles, Oregon",2018,3,1.13,1.13
+"The Dalles, Oregon (2nd facility)",2018,3,1.08,
+"Berkeley County, South Carolina",2018,4,1.1,1.12
+"Changhua County, Taiwan",2018,4,1.12,1.14
+"Council Bluffs, Iowa",2018,4,1.11,1.12
+"Council Bluffs, Iowa (2nd facility)",2018,4,1.08,1.09
+"Douglas County, Georgia",2018,4,1.1,1.12
+"Dublin, Ireland",2018,4,1.12,1.11
+"Eemshaven, Netherlands",2018,4,1.1,1.11
+Fleet,2018,4,1.1,1.11
+"Hamina, Finland",2018,4,1.09,1.09
+"Lenoir, North Carolina",2018,4,1.09,1.11
+"Mayes County, Oklahoma",2018,4,1.08,1.1
+"Quilicura, Chile",2018,4,1.1,1.12
+Singapore,2018,4,1.17,1.18
+"St. Ghislain, Belgium",2018,4,1.1,1.09
+"The Dalles, Oregon",2018,4,1.11,1.13
+"The Dalles, Oregon (2nd facility)",2018,4,1.24,
+"Berkeley County, South Carolina",2019,1,1.08,1.11
+"Changhua County, Taiwan",2019,1,1.11,1.14
+"Council Bluffs, Iowa",2019,1,1.12,1.12
+"Council Bluffs, Iowa (2nd facility)",2019,1,1.08,1.09
+"Douglas County, Georgia",2019,1,1.1,1.12
+"Dublin, Ireland",2019,1,1.13,1.12
+"Eemshaven, Netherlands",2019,1,1.09,1.1
+Fleet,2019,1,1.09,1.11
+"Hamina, Finland",2019,1,1.09,1.09
+"Lenoir, North Carolina",2019,1,1.09,1.1
+"Mayes County, Oklahoma",2019,1,1.08,1.1
+"Quilicura, Chile",2019,1,1.1,1.11
+Singapore,2019,1,1.15,1.17
+"St. Ghislain, Belgium",2019,1,1.09,1.09
+"The Dalles, Oregon",2019,1,1.11,1.12
+"The Dalles, Oregon (2nd facility)",2019,1,1.07,
+"Berkeley County, South Carolina",2019,2,1.12,1.11
+"Changhua County, Taiwan",2019,2,1.14,1.13
+"Council Bluffs, Iowa",2019,2,1.11,1.11
+"Council Bluffs, Iowa (2nd facility)",2019,2,1.09,1.09
+"Douglas County, Georgia",2019,2,1.13,1.12
+"Dublin, Ireland",2019,2,1.13,1.12
+"Eemshaven, Netherlands",2019,2,1.09,1.1
+Fleet,2019,2,1.11,1.11
+"Hamina, Finland",2019,2,1.09,1.09
+"Lenoir, North Carolina",2019,2,1.1,1.1
+"Mayes County, Oklahoma",2019,2,1.11,1.1
+"Quilicura, Chile",2019,2,1.09,1.1
+Singapore,2019,2,1.15,1.16
+"St. Ghislain, Belgium",2019,2,1.09,1.09
+"The Dalles, Oregon",2019,2,1.11,1.12
+"The Dalles, Oregon (2nd facility)",2019,2,1.06,1.11
+"Berkeley County, South Carolina",2019,3,1.14,1.11
+"Changhua County, Taiwan",2019,3,1.15,1.13
+"Council Bluffs, Iowa",2019,3,1.14,1.12
+"Council Bluffs, Iowa (2nd facility)",2019,3,1.11,1.09
+"Douglas County, Georgia",2019,3,1.16,1.12
+"Dublin, Ireland",2019,3,1.13,1.12
+"Eemshaven, Netherlands",2019,3,1.1,1.09
+Fleet,2019,3,1.13,1.11
+"Hamina, Finland",2019,3,1.09,1.09
+"Lenoir, North Carolina",2019,3,1.12,1.1
+"Mayes County, Oklahoma",2019,3,1.15,1.1
+"Quilicura, Chile",2019,3,1.09,1.09
+Singapore,2019,3,1.15,1.15
+"St. Ghislain, Belgium",2019,3,1.09,1.09
+"The Dalles, Oregon",2019,3,1.12,1.11
+"The Dalles, Oregon (2nd facility)",2019,3,1.07,1.11
+"Berkeley County, South Carolina",2019,4,1.1,1.11
+"Changhua County, Taiwan",2019,4,1.12,1.13
+"Council Bluffs, Iowa",2019,4,1.1,1.12
+"Council Bluffs, Iowa (2nd facility)",2019,4,1.07,1.09
+"Douglas County, Georgia",2019,4,1.1,1.12
+"Dublin, Ireland",2019,4,1.1,1.12
+"Eemshaven, Netherlands",2019,4,1.08,1.09
+Fleet,2019,4,1.09,1.1
+"Hamina, Finland",2019,4,1.09,1.09
+"Lenoir, North Carolina",2019,4,1.08,1.1
+"Mayes County, Oklahoma",2019,4,1.08,1.1
+"Quilicura, Chile",2019,4,1.09,1.09
+Singapore,2019,4,1.14,1.15
+"St. Ghislain, Belgium",2019,4,1.08,1.09
+"The Dalles, Oregon",2019,4,1.11,1.11
+"The Dalles, Oregon (2nd facility)",2019,4,1.08,1.07
+"Berkeley County, South Carolina",2020,1,1.09,1.11
+"Changhua County, Taiwan",2020,1,1.11,1.13
+"Council Bluffs, Iowa",2020,1,1.1,1.11
+"Council Bluffs, Iowa (2nd facility)",2020,1,1.08,1.09
+"Douglas County, Georgia",2020,1,1.09,1.11
+"Dublin, Ireland",2020,1,1.09,1.11
+"Eemshaven, Netherlands",2020,1,1.09,1.09
+Fleet,2020,1,1.09,1.1
+"Hamina, Finland",2020,1,1.09,1.09
+"Lenoir, North Carolina",2020,1,1.08,1.1
+"Mayes County, Oklahoma",2020,1,1.1,1.11
+"Quilicura, Chile",2020,1,1.09,1.09
+Singapore,2020,1,1.14,1.15
+"St. Ghislain, Belgium",2020,1,1.08,1.08
+"The Dalles, Oregon",2020,1,1.11,1.11
+"The Dalles, Oregon (2nd facility)",2020,1,1.08,1.07
+"Berkeley County, South Carolina",2020,2,1.11,1.11
+"Changhua County, Taiwan",2020,2,1.14,1.13
+"Council Bluffs, Iowa",2020,2,1.11,1.11
+"Council Bluffs, Iowa (2nd facility)",2020,2,1.09,1.1
+"Douglas County, Georgia",2020,2,1.1,1.11
+"Dublin, Ireland",2020,2,1.09,1.1
+"Eemshaven, Netherlands",2020,2,1.09,1.09
+Fleet,2020,2,1.11,1.1
+"Hamina, Finland",2020,2,1.09,1.09
+"Jackson County, Alabama",2020,2,1.19,
+"Lenoir, North Carolina",2020,2,1.09,1.09
+"Mayes County, Oklahoma",2020,2,1.12,1.12
+"Montgomery County, Tennessee",2020,2,1.17,
+"Quilicura, Chile",2020,2,1.08,1.09
+Singapore,2020,2,1.15,1.14
+"St. Ghislain, Belgium",2020,2,1.08,1.08
+"The Dalles, Oregon",2020,2,1.11,1.11
+"The Dalles, Oregon (2nd facility)",2020,2,1.08,1.08
+"Berkeley County, South Carolina",2020,3,1.14,1.11
+"Changhua County, Taiwan",2020,3,1.15,1.13
+"Council Bluffs, Iowa",2020,3,1.13,1.11
+"Council Bluffs, Iowa (2nd facility)",2020,3,1.11,1.1
+"Douglas County, Georgia",2020,3,1.13,1.1
+"Dublin, Ireland",2020,3,1.09,1.09
+"Eemshaven, Netherlands",2020,3,1.1,1.09
+Fleet,2020,3,1.13,1.11
+"Hamina, Finland",2020,3,1.09,1.09
+"Jackson County, Alabama",2020,3,1.21,
+"Lenoir, North Carolina",2020,3,1.12,1.09
+"Mayes County, Oklahoma",2020,3,1.16,1.12
+"Montgomery County, Tennessee",2020,3,1.2,
+"Quilicura, Chile",2020,3,1.08,1.08
+Singapore,2020,3,1.14,1.14
+"St. Ghislain, Belgium",2020,3,1.09,1.08
+"The Dalles, Oregon",2020,3,1.11,1.11
+"The Dalles, Oregon (2nd facility)",2020,3,1.08,1.08
+"Berkeley County, South Carolina",2020,4,1.09,1.11
+"Changhua County, Taiwan",2020,4,1.11,1.13
+"Council Bluffs, Iowa",2020,4,1.1,1.11
+"Council Bluffs, Iowa (2nd facility)",2020,4,1.08,1.09
+"Douglas County, Georgia",2020,4,1.08,1.1
+"Dublin, Ireland",2020,4,1.09,1.09
+"Eemshaven, Netherlands",2020,4,1.08,1.09
+Fleet,2020,4,1.09,1.1
+"Hamina, Finland",2020,4,1.09,1.09
+"Jackson County, Alabama",2020,4,1.13,
+"Lenoir, North Carolina",2020,4,1.08,1.09
+"Mayes County, Oklahoma",2020,4,1.1,1.12
+"Montgomery County, Tennessee",2020,4,1.11,
+"Quilicura, Chile",2020,4,1.08,1.08
+Singapore,2020,4,1.13,1.14
+"St. Ghislain, Belgium",2020,4,1.08,1.08
+"The Dalles, Oregon",2020,4,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2020,4,1.06,1.07
+"Berkeley County, South Carolina",2021,1,1.08,1.11
+"Changhua County, Taiwan",2021,1,1.1,1.12
+"Council Bluffs, Iowa",2021,1,1.11,1.11
+"Council Bluffs, Iowa (2nd facility)",2021,1,1.08,1.09
+"Douglas County, Georgia",2021,1,1.08,1.1
+"Dublin, Ireland",2021,1,1.09,1.09
+"Eemshaven, Netherlands",2021,1,1.08,1.09
+Fleet,2021,1,1.09,1.1
+"Hamina, Finland",2021,1,1.09,1.09
+"Jackson County, Alabama",2021,1,1.11,1.16
+"Lenoir, North Carolina",2021,1,1.08,1.09
+"Loudoun County, Virginia",2021,1,1.1,
+"Loudoun County, Virginia (2nd facility)",2021,1,1.14,
+"Mayes County, Oklahoma",2021,1,1.08,1.11
+"Montgomery County, Tennessee",2021,1,1.09,1.14
+"Quilicura, Chile",2021,1,1.09,1.08
+Singapore,2021,1,1.12,1.13
+"St. Ghislain, Belgium",2021,1,1.09,1.09
+"The Dalles, Oregon",2021,1,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2021,1,1.06,1.07
+"Berkeley County, South Carolina",2021,2,1.11,1.11
+"Changhua County, Taiwan",2021,2,1.13,1.12
+"Council Bluffs, Iowa",2021,2,1.11,1.11
+"Council Bluffs, Iowa (2nd facility)",2021,2,1.09,1.09
+"Douglas County, Georgia",2021,2,1.09,1.1
+"Dublin, Ireland",2021,2,1.1,1.09
+"Eemshaven, Netherlands",2021,2,1.08,1.09
+Fleet,2021,2,1.1,1.1
+"Hamina, Finland",2021,2,1.09,1.09
+"Jackson County, Alabama",2021,2,1.13,1.14
+"Lenoir, North Carolina",2021,2,1.1,1.09
+"Loudoun County, Virginia",2021,2,1.1,
+"Loudoun County, Virginia (2nd facility)",2021,2,1.15,
+"Mayes County, Oklahoma",2021,2,1.11,1.11
+"Montgomery County, Tennessee",2021,2,1.1,1.12
+"Quilicura, Chile",2021,2,1.08,1.08
+Singapore,2021,2,1.13,1.13
+"St. Ghislain, Belgium",2021,2,1.08,1.09
+"The Dalles, Oregon",2021,2,1.11,1.1
+"The Dalles, Oregon (2nd facility)",2021,2,1.06,1.06
+"Berkeley County, South Carolina",2021,3,1.13,1.11
+"Changhua County, Taiwan",2021,3,1.14,1.12
+"Council Bluffs, Iowa",2021,3,1.13,1.11
+"Council Bluffs, Iowa (2nd facility)",2021,3,1.11,1.09
+"Douglas County, Georgia",2021,3,1.12,1.1
+"Dublin, Ireland",2021,3,1.09,1.09
+"Eemshaven, Netherlands",2021,3,1.09,1.09
+Fleet,2021,3,1.12,1.1
+"Hamina, Finland",2021,3,1.09,1.09
+"Jackson County, Alabama",2021,3,1.15,1.13
+"Lenoir, North Carolina",2021,3,1.11,1.09
+"Loudoun County, Virginia",2021,3,1.11,
+"Loudoun County, Virginia (2nd facility)",2021,3,1.16,
+"Mayes County, Oklahoma",2021,3,1.14,1.11
+"Montgomery County, Tennessee",2021,3,1.14,1.11
+"Quilicura, Chile",2021,3,1.1,1.09
+Singapore,2021,3,1.13,1.13
+"St. Ghislain, Belgium",2021,3,1.09,1.08
+"The Dalles, Oregon",2021,3,1.12,1.11
+"The Dalles, Oregon (2nd facility)",2021,3,1.07,1.06
+"Berkeley County, South Carolina",2021,4,1.09,1.1
+"Changhua County, Taiwan",2021,4,1.12,1.12
+"Council Bluffs, Iowa",2021,4,1.1,1.12
+"Council Bluffs, Iowa (2nd facility)",2021,4,1.07,1.09
+"Douglas County, Georgia",2021,4,1.08,1.09
+"Dublin, Ireland",2021,4,1.09,1.09
+"Eemshaven, Netherlands",2021,4,1.08,1.08
+Fleet,2021,4,1.09,1.1
+"Hamina, Finland",2021,4,1.09,1.09
+"Henderson, Nevada",2021,4,1.1,
+"Jackson County, Alabama",2021,4,1.11,1.13
+"Lenoir, North Carolina",2021,4,1.08,1.09
+"Loudoun County, Virginia",2021,4,1.09,1.1
+"Loudoun County, Virginia (2nd facility)",2021,4,1.09,1.13
+"Mayes County, Oklahoma",2021,4,1.08,1.1
+"Midlothian, Texas",2021,4,1.17,
+"Montgomery County, Tennessee",2021,4,1.09,1.1
+"Papillion, Nebraska",2021,4,1.15,
+"Quilicura, Chile",2021,4,1.1,1.09
+Singapore,2021,4,1.13,1.13
+"St. Ghislain, Belgium",2021,4,1.08,1.08
+"The Dalles, Oregon",2021,4,1.11,1.11
+"The Dalles, Oregon (2nd facility)",2021,4,1.05,1.06
+"Berkeley County, South Carolina",2022,1,1.08,1.1
+"Central Ohio (New Albany), Ohio",2022,1,1.14,
+"Changhua County, Taiwan",2022,1,1.1,1.12
+"Council Bluffs, Iowa",2022,1,1.11,1.11
+"Council Bluffs, Iowa (2nd facility)",2022,1,1.07,1.09
+"Douglas County, Georgia",2022,1,1.08,1.09
+"Dublin, Ireland",2022,1,1.09,1.09
+"Eemshaven, Netherlands",2022,1,1.06,1.08
+Fleet,2022,1,1.09,1.1
+"Fredericia, Denmark",2022,1,1.13,
+"Hamina, Finland",2022,1,1.09,1.09
+"Henderson, Nevada",2022,1,1.09,
+"Jackson County, Alabama",2022,1,1.1,1.12
+"Lenoir, North Carolina",2022,1,1.08,1.09
+"Loudoun County, Virginia",2022,1,1.07,1.09
+"Loudoun County, Virginia (2nd facility)",2022,1,1.08,1.11
+"Mayes County, Oklahoma",2022,1,1.08,1.1
+"Midlothian, Texas",2022,1,1.16,
+"Montgomery County, Tennessee",2022,1,1.11,1.11
+"Papillion, Nebraska",2022,1,1.18,
+"Quilicura, Chile",2022,1,1.1,1.09
+Singapore,2022,1,1.13,1.13
+Singapore (2nd facility),2022,1,1.23,
+"St. Ghislain, Belgium",2022,1,1.08,1.08
+"The Dalles, Oregon",2022,1,1.1,1.11
+"The Dalles, Oregon (2nd facility)",2022,1,1.08,1.06
+"Berkeley County, South Carolina",2022,2,1.1,1.1
+"Central Ohio (New Albany), Ohio",2022,2,1.13,
+"Changhua County, Taiwan",2022,2,1.13,1.12
+"Council Bluffs, Iowa",2022,2,1.12,1.12
+"Council Bluffs, Iowa (2nd facility)",2022,2,1.08,1.09
+"Douglas County, Georgia",2022,2,1.1,1.09
+"Dublin, Ireland",2022,2,1.09,1.09
+"Eemshaven, Netherlands",2022,2,1.07,1.08
+Fleet,2022,2,1.1,1.1
+"Fredericia, Denmark",2022,2,1.11,
+"Hamina, Finland",2022,2,1.09,1.09
+"Henderson, Nevada",2022,2,1.1,
+"Jackson County, Alabama",2022,2,1.12,1.12
+"Lenoir, North Carolina",2022,2,1.09,1.09
+"Loudoun County, Virginia",2022,2,1.09,1.09
+"Loudoun County, Virginia (2nd facility)",2022,2,1.09,1.1
+"Mayes County, Oklahoma",2022,2,1.11,1.1
+"Midlothian, Texas",2022,2,1.18,
+"Montgomery County, Tennessee",2022,2,1.12,1.11
+"Papillion, Nebraska",2022,2,1.12,
+"Quilicura, Chile",2022,2,1.09,1.1
+Singapore,2022,2,1.14,1.13
+Singapore (2nd facility),2022,2,1.23,
+"St. Ghislain, Belgium",2022,2,1.09,1.09
+"The Dalles, Oregon",2022,2,1.09,1.11
+"The Dalles, Oregon (2nd facility)",2022,2,1.07,1.07
+"Berkeley County, South Carolina",2022,3,1.13,1.1
+"Central Ohio (New Albany), Ohio",2022,3,1.18,
+"Changhua County, Taiwan",2022,3,1.14,1.12
+"Council Bluffs, Iowa",2022,3,1.14,1.12
+"Council Bluffs, Iowa (2nd facility)",2022,3,1.1,1.08
+"Douglas County, Georgia",2022,3,1.12,1.09
+"Dublin, Ireland",2022,3,1.09,1.09
+"Eemshaven, Netherlands",2022,3,1.08,1.07
+Fleet,2022,3,1.12,1.1
+"Fredericia, Denmark",2022,3,1.11,
+"Hamina, Finland",2022,3,1.09,1.09
+"Henderson, Nevada",2022,3,1.15,1.12
+"Jackson County, Alabama",2022,3,1.14,1.12
+"Lenoir, North Carolina",2022,3,1.11,1.09
+"Loudoun County, Virginia",2022,3,1.11,1.09
+"Loudoun County, Virginia (2nd facility)",2022,3,1.11,1.1
+"Mayes County, Oklahoma",2022,3,1.13,1.1
+"Midlothian, Texas",2022,3,1.19,1.18
+"Montgomery County, Tennessee",2022,3,1.14,1.12
+"Papillion, Nebraska",2022,3,1.13,1.14
+"Quilicura, Chile",2022,3,1.09,1.09
+Singapore,2022,3,1.13,1.13
+Singapore (2nd facility),2022,3,1.21,
+"St. Ghislain, Belgium",2022,3,1.09,1.09
+"Storey County, Nevada",2022,3,1.29,
+"The Dalles, Oregon",2022,3,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2022,3,1.08,1.07
+"Berkeley County, South Carolina",2022,4,1.08,1.1
+"Central Ohio (New Albany), Ohio",2022,4,1.13,1.14
+"Changhua County, Taiwan",2022,4,1.11,1.12
+"Council Bluffs, Iowa",2022,4,1.1,1.12
+"Council Bluffs, Iowa (2nd facility)",2022,4,1.07,1.08
+"Douglas County, Georgia",2022,4,1.07,1.09
+"Dublin, Ireland",2022,4,1.09,1.09
+"Eemshaven, Netherlands",2022,4,1.07,1.07
+Fleet,2022,4,1.08,1.1
+"Fredericia, Denmark",2022,4,1.12,1.12
+"Hamina, Finland",2022,4,1.09,1.09
+"Henderson, Nevada",2022,4,1.09,1.11
+"Jackson County, Alabama",2022,4,1.1,1.12
+"Lenoir, North Carolina",2022,4,1.08,1.09
+"Loudoun County, Virginia",2022,4,1.07,1.09
+"Loudoun County, Virginia (2nd facility)",2022,4,1.07,1.09
+"Mayes County, Oklahoma",2022,4,1.07,1.1
+"Midlothian, Texas",2022,4,1.12,1.16
+"Montgomery County, Tennessee",2022,4,1.08,1.11
+"Papillion, Nebraska",2022,4,1.1,1.13
+"Quilicura, Chile",2022,4,1.09,1.09
+Singapore,2022,4,1.13,1.13
+Singapore (2nd facility),2022,4,1.19,1.21
+"St. Ghislain, Belgium",2022,4,1.09,1.09
+"Storey County, Nevada",2022,4,1.2,
+"The Dalles, Oregon",2022,4,1.09,1.1
+"The Dalles, Oregon (2nd facility)",2022,4,1.05,1.07
+"Berkeley County, South Carolina",2023,1,1.08,1.1
+"Central Ohio (New Albany), Ohio",2023,1,1.13,1.14
+"Changhua County, Taiwan",2023,1,1.09,1.12
+"Council Bluffs, Iowa",2023,1,1.1,1.11
+"Council Bluffs, Iowa (2nd facility)",2023,1,1.07,1.08
+"Douglas County, Georgia",2023,1,1.07,1.09
+"Dublin, Ireland",2023,1,1.09,1.09
+"Eemshaven, Netherlands",2023,1,1.07,1.07
+Fleet,2023,1,1.08,1.1
+"Fredericia, Denmark",2023,1,1.12,1.11
+"Hamina, Finland",2023,1,1.09,1.09
+"Henderson, Nevada",2023,1,1.07,1.1
+"Jackson County, Alabama",2023,1,1.09,1.11
+"Lenoir, North Carolina",2023,1,1.08,1.09
+"Loudoun County, Virginia",2023,1,1.07,1.08
+"Loudoun County, Virginia (2nd facility)",2023,1,1.07,1.08
+"Mayes County, Oklahoma",2023,1,1.08,1.1
+"Midlothian, Texas",2023,1,1.11,1.14
+"Montgomery County, Tennessee",2023,1,1.1,1.11
+"Papillion, Nebraska",2023,1,1.12,1.12
+"Quilicura, Chile",2023,1,1.09,1.09
+Singapore,2023,1,1.13,1.13
+Singapore (2nd facility),2023,1,1.19,1.2
+"St. Ghislain, Belgium",2023,1,1.09,1.09
+"Storey County, Nevada",2023,1,1.18,
+"The Dalles, Oregon",2023,1,1.09,1.1
+"The Dalles, Oregon (2nd facility)",2023,1,1.07,1.07
+"Berkeley County, South Carolina",2023,2,1.11,1.1
+"Central Ohio (New Albany), Ohio",2023,2,1.1,1.13
+"Changhua County, Taiwan",2023,2,1.13,1.12
+"Council Bluffs, Iowa",2023,2,1.11,1.11
+"Council Bluffs, Iowa (2nd facility)",2023,2,1.08,1.08
+"Douglas County, Georgia",2023,2,1.09,1.09
+"Dublin, Ireland",2023,2,1.08,1.09
+"Eemshaven, Netherlands",2023,2,1.07,1.07
+Fleet,2023,2,1.1,1.1
+"Fredericia, Denmark",2023,2,1.1,1.11
+"Hamina, Finland",2023,2,1.09,1.09
+"Henderson, Nevada",2023,2,1.08,1.09
+"Jackson County, Alabama",2023,2,1.11,1.11
+"Lenoir, North Carolina",2023,2,1.09,1.09
+"Loudoun County, Virginia",2023,2,1.08,1.08
+"Loudoun County, Virginia (2nd facility)",2023,2,1.08,1.08
+"Mayes County, Oklahoma",2023,2,1.1,1.1
+"Midlothian, Texas",2023,2,1.14,1.14
+"Montgomery County, Tennessee",2023,2,1.1,1.1
+"Papillion, Nebraska",2023,2,1.09,1.11
+"Quilicura, Chile",2023,2,1.09,1.09
+Singapore,2023,2,1.13,1.13
+Singapore (2nd facility),2023,2,1.19,1.2
+"St. Ghislain, Belgium",2023,2,1.08,1.09
+"Storey County, Nevada",2023,2,1.2,1.22
+"The Dalles, Oregon",2023,2,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2023,2,1.07,1.06
+"Berkeley County, South Carolina",2023,3,1.14,1.11
+"Central Ohio (New Albany), Ohio",2023,3,1.11,1.11
+"Changhua County, Taiwan",2023,3,1.15,1.12
+"Council Bluffs, Iowa",2023,3,1.14,1.11
+"Council Bluffs, Iowa (2nd facility)",2023,3,1.09,1.08
+"Douglas County, Georgia",2023,3,1.13,1.09
+"Dublin, Ireland",2023,3,1.08,1.09
+"Eemshaven, Netherlands",2023,3,1.09,1.07
+Fleet,2023,3,1.12,1.1
+"Fredericia, Denmark",2023,3,1.08,1.11
+"Hamina, Finland",2023,3,1.1,1.09
+"Henderson, Nevada",2023,3,1.1,1.09
+"Jackson County, Alabama",2023,3,1.13,1.11
+"Lenoir, North Carolina",2023,3,1.12,1.09
+"Loudoun County, Virginia",2023,3,1.1,1.08
+"Loudoun County, Virginia (2nd facility)",2023,3,1.11,1.08
+"Mayes County, Oklahoma",2023,3,1.14,1.1
+"Midlothian, Texas",2023,3,1.16,1.13
+"Montgomery County, Tennessee",2023,3,1.13,1.1
+"Papillion, Nebraska",2023,3,1.1,1.1
+"Quilicura, Chile",2023,3,1.09,1.09
+Singapore,2023,3,1.13,1.13
+Singapore (2nd facility),2023,3,1.19,1.19
+"St. Ghislain, Belgium",2023,3,1.09,1.09
+"Storey County, Nevada",2023,3,1.24,1.21
+"The Dalles, Oregon",2023,3,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2023,3,1.08,1.06
+"Berkeley County, South Carolina",2023,4,1.08,1.1
+"Central Ohio (New Albany), Ohio",2023,4,1.08,1.1
+"Changhua County, Taiwan",2023,4,1.11,1.12
+"Council Bluffs, Iowa",2023,4,1.1,1.11
+"Council Bluffs, Iowa (2nd facility)",2023,4,1.07,1.08
+"Douglas County, Georgia",2023,4,1.08,1.09
+"Dublin, Ireland",2023,4,1.08,1.08
+"Eemshaven, Netherlands",2023,4,1.07,1.08
+Fleet,2023,4,1.08,1.1
+"Fredericia, Denmark",2023,4,1.1,1.1
+"Hamina, Finland",2023,4,1.09,1.09
+"Henderson, Nevada",2023,4,1.07,1.08
+"Jackson County, Alabama",2023,4,1.09,1.1
+"Lenoir, North Carolina",2023,4,1.08,1.09
+"Loudoun County, Virginia",2023,4,1.09,1.08
+"Loudoun County, Virginia (2nd facility)",2023,4,1.07,1.08
+"Mayes County, Oklahoma",2023,4,1.08,1.1
+"Midlothian, Texas",2023,4,1.1,1.13
+"Montgomery County, Tennessee",2023,4,1.09,1.1
+"Papillion, Nebraska",2023,4,1.08,1.09
+"Quilicura, Chile",2023,4,1.09,1.09
+Singapore,2023,4,1.13,1.13
+Singapore (2nd facility),2023,4,1.17,1.19
+"St. Ghislain, Belgium",2023,4,1.08,1.09
+"Storey County, Nevada",2023,4,1.14,1.19
+"The Dalles, Oregon",2023,4,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2023,4,1.06,1.07
+"Berkeley County, South Carolina",2024,1,1.08,1.1
+"Central Ohio (New Albany), Ohio",2024,1,1.08,1.09
+"Changhua County, Taiwan",2024,1,1.1,1.12
+"Council Bluffs, Iowa",2024,1,1.12,1.12
+"Council Bluffs, Iowa (2nd facility)",2024,1,1.07,1.08
+"Douglas County, Georgia",2024,1,1.07,1.09
+"Dublin, Ireland",2024,1,1.08,1.08
+"Eemshaven, Netherlands",2024,1,1.07,1.07
+Fleet,2024,1,1.08,1.09
+"Fredericia, Denmark",2024,1,1.09,1.09
+"Hamina, Finland",2024,1,1.09,1.09
+"Henderson, Nevada",2024,1,1.07,1.08
+"Jackson County, Alabama",2024,1,1.08,1.1
+"Lenoir, North Carolina",2024,1,1.08,1.1
+"Loudoun County, Virginia",2024,1,1.08,1.09
+"Loudoun County, Virginia (2nd facility)",2024,1,1.07,1.08
+"Mayes County, Oklahoma",2024,1,1.08,1.1
+"Midlothian, Texas",2024,1,1.09,1.12
+"Montgomery County, Tennessee",2024,1,1.09,1.1
+"Papillion, Nebraska",2024,1,1.09,1.09
+"Quilicura, Chile",2024,1,1.11,1.1
+Singapore,2024,1,1.13,1.13
+Singapore (2nd facility),2024,1,1.16,1.18
+"St. Ghislain, Belgium",2024,1,1.08,1.09
+"Storey County, Nevada",2024,1,1.12,1.17
+"The Dalles, Oregon",2024,1,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2024,1,1.06,1.07
+"Berkeley County, South Carolina",2024,2,1.11,1.1
+"Central Ohio (New Albany), Ohio",2024,2,1.09,1.09
+"Changhua County, Taiwan",2024,2,1.13,1.12
+"Council Bluffs, Iowa",2024,2,1.11,1.12
+"Council Bluffs, Iowa (2nd facility)",2024,2,1.07,1.07
+"Douglas County, Georgia",2024,2,1.1,1.09
+"Dublin, Ireland",2024,2,1.08,1.08
+"Eemshaven, Netherlands",2024,2,1.08,1.08
+Fleet,2024,2,1.1,1.1
+"Fredericia, Denmark",2024,2,1.08,1.09
+"Hamina, Finland",2024,2,1.1,1.1
+"Henderson, Nevada",2024,2,1.09,1.08
+"Jackson County, Alabama",2024,2,1.11,1.1
+"Lenoir, North Carolina",2024,2,1.11,1.1
+"Loudoun County, Virginia",2024,2,1.09,1.09
+"Loudoun County, Virginia (2nd facility)",2024,2,1.08,1.08
+"Mayes County, Oklahoma",2024,2,1.12,1.11
+"Midlothian, Texas",2024,2,1.12,1.11
+"Montgomery County, Tennessee",2024,2,1.11,1.1
+"Papillion, Nebraska",2024,2,1.09,1.09
+"Quilicura, Chile",2024,2,1.09,1.1
+Singapore,2024,2,1.13,1.13
+Singapore (2nd facility),2024,2,1.15,1.17
+"St. Ghislain, Belgium",2024,2,1.08,1.08
+"Storey County, Nevada",2024,2,1.16,1.16
+"The Dalles, Oregon",2024,2,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2024,2,1.06,1.06
+"Berkeley County, South Carolina",2024,3,1.13,1.1
+"Central Ohio (Columbus), Ohio",2024,3,1.05,
+"Central Ohio (Lancaster), Ohio",2024,3,1.04,
+"Central Ohio (New Albany), Ohio",2024,3,1.07,1.08
+"Changhua County, Taiwan",2024,3,1.15,1.12
+"Council Bluffs, Iowa",2024,3,1.13,1.11
+"Council Bluffs, Iowa (2nd facility)",2024,3,1.08,1.07
+"Douglas County, Georgia",2024,3,1.12,1.09
+"Dublin, Ireland",2024,3,1.07,1.08
+"Eemshaven, Netherlands",2024,3,1.08,1.08
+Fleet,2024,3,1.11,1.1
+"Fredericia, Denmark",2024,3,1.07,1.08
+"Hamina, Finland",2024,3,1.1,1.1
+"Henderson, Nevada",2024,3,1.11,1.09
+"Jackson County, Alabama",2024,3,1.13,1.1
+"Lenoir, North Carolina",2024,3,1.24,1.13
+"Loudoun County, Virginia",2024,3,1.11,1.09
+"Loudoun County, Virginia (2nd facility)",2024,3,1.09,1.08
+"Mayes County, Oklahoma",2024,3,1.14,1.11
+"Midlothian, Texas",2024,3,1.13,1.11
+"Montgomery County, Tennessee",2024,3,1.13,1.1
+"Papillion, Nebraska",2024,3,1.1,1.09
+"Quilicura, Chile",2024,3,1.09,1.1
+Singapore,2024,3,1.13,1.13
+Singapore (2nd facility),2024,3,1.15,1.16
+"St. Ghislain, Belgium",2024,3,1.08,1.08
+"Storey County, Nevada",2024,3,1.22,1.17
+"The Dalles, Oregon",2024,3,1.11,1.1
+"The Dalles, Oregon (2nd facility)",2024,3,1.08,1.07
+"Berkeley County, South Carolina",2024,4,1.08,1.1
+"Central Ohio (Columbus), Ohio",2024,4,1.05,1.06
+"Central Ohio (Lancaster), Ohio",2024,4,1.04,
+"Central Ohio (New Albany), Ohio",2024,4,1.05,1.07
+"Changhua County, Taiwan",2024,4,1.12,1.13
+"Council Bluffs, Iowa",2024,4,1.09,1.11
+"Council Bluffs, Iowa (2nd facility)",2024,4,1.06,1.07
+"Douglas County, Georgia",2024,4,1.08,1.09
+"Dublin, Ireland",2024,4,1.08,1.08
+"Eemshaven, Netherlands",2024,4,1.07,1.08
+Fleet,2024,4,1.08,1.09
+"Fredericia, Denmark",2024,4,1.07,1.07
+"Hamina, Finland",2024,4,1.09,1.1
+"Henderson, Nevada",2024,4,1.08,1.09
+"Inzai, Japan",2024,4,1.15,
+"Jackson County, Alabama",2024,4,1.09,1.1
+"Lenoir, North Carolina",2024,4,1.08,1.13
+"Loudoun County, Virginia",2024,4,1.07,1.09
+"Loudoun County, Virginia (2nd facility)",2024,4,1.07,1.08
+"Mayes County, Oklahoma",2024,4,1.09,1.11
+"Midlothian, Texas",2024,4,1.08,1.1
+"Montgomery County, Tennessee",2024,4,1.08,1.1
+"Papillion, Nebraska",2024,4,1.08,1.09
+"Quilicura, Chile",2024,4,1.09,1.09
+Singapore,2024,4,1.13,1.13
+Singapore (2nd facility),2024,4,1.14,1.15
+"St. Ghislain, Belgium",2024,4,1.07,1.08
+"Storey County, Nevada",2024,4,1.11,1.16
+"The Dalles, Oregon",2024,4,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2024,4,1.06,1.06
+"Berkeley County, South Carolina",2025,1,1.07,1.1
+"Bristow, Virginia",2025,1,1.07,
+"Central Ohio (Columbus), Ohio",2025,1,1.05,1.05
+"Central Ohio (Lancaster), Ohio",2025,1,1.04,1.04
+"Central Ohio (New Albany), Ohio",2025,1,1.05,1.06
+"Changhua County, Taiwan",2025,1,1.1,1.12
+"Council Bluffs, Iowa",2025,1,1.1,1.11
+"Council Bluffs, Iowa (2nd facility)",2025,1,1.07,1.07
+"Douglas County, Georgia",2025,1,1.08,1.09
+"Dublin, Ireland",2025,1,1.08,1.08
+"Eemshaven, Netherlands",2025,1,1.07,1.08
+Fleet,2025,1,1.08,1.09
+"Fredericia, Denmark",2025,1,1.07,1.07
+"Hamina, Finland",2025,1,1.09,1.1
+"Henderson, Nevada",2025,1,1.07,1.09
+"Inzai, Japan",2025,1,1.12,
+"Jackson County, Alabama",2025,1,1.09,1.1
+"Lenoir, North Carolina",2025,1,1.08,1.13
+"Loudoun County, Virginia",2025,1,1.07,1.09
+"Loudoun County, Virginia (2nd facility)",2025,1,1.07,1.08
+"Mayes County, Oklahoma",2025,1,1.09,1.11
+"Midlothian, Texas",2025,1,1.08,1.1
+"Montgomery County, Tennessee",2025,1,1.08,1.1
+"Omaha, Nebraska",2025,1,1.06,
+"Papillion, Nebraska",2025,1,1.08,1.09
+"Quilicura, Chile",2025,1,1.09,1.09
+Singapore,2025,1,1.12,1.13
+Singapore (2nd facility),2025,1,1.14,1.15
+"St. Ghislain, Belgium",2025,1,1.07,1.08
+"Storey County, Nevada",2025,1,1.09,1.14
+"The Dalles, Oregon",2025,1,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2025,1,1.06,1.07
+"Berkeley County, South Carolina",2025,2,1.11,1.1
+"Bristow, Virginia",2025,2,1.08,1.07
+"Central Ohio (Columbus), Ohio",2025,2,1.05,1.05
+"Central Ohio (Lancaster), Ohio",2025,2,1.04,1.04
+"Central Ohio (New Albany), Ohio",2025,2,1.07,1.06
+"Changhua County, Taiwan",2025,2,1.14,1.13
+"Council Bluffs, Iowa",2025,2,1.11,1.11
+"Council Bluffs, Iowa (2nd facility)",2025,2,1.08,1.07
+"Douglas County, Georgia",2025,2,1.1,1.09
+"Dublin, Ireland",2025,2,1.08,1.08
+"Eemshaven, Netherlands",2025,2,1.07,1.07
+Fleet,2025,2,1.1,1.09
+"Fredericia, Denmark",2025,2,1.06,1.07
+"Hamina, Finland",2025,2,1.09,1.1
+"Henderson, Nevada",2025,2,1.09,1.09
+"Inzai, Japan",2025,2,1.14,
+"Jackson County, Alabama",2025,2,1.11,1.1
+"Lenoir, North Carolina",2025,2,1.1,1.13
+"Loudoun County, Virginia",2025,2,1.08,1.08
+"Loudoun County, Virginia (2nd facility)",2025,2,1.08,1.08
+"Mayes County, Oklahoma",2025,2,1.16,1.12
+"Midlothian, Texas",2025,2,1.11,1.1
+"Montgomery County, Tennessee",2025,2,1.11,1.1
+"Omaha, Nebraska",2025,2,1.04,
+"Papillion, Nebraska",2025,2,1.09,1.09
+"Quilicura, Chile",2025,2,1.08,1.09
+Singapore,2025,2,1.13,1.13
+Singapore (2nd facility),2025,2,1.15,1.14
+"St. Ghislain, Belgium",2025,2,1.08,1.08
+"Storey County, Nevada",2025,2,1.16,1.14
+"The Dalles, Oregon",2025,2,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2025,2,1.06,1.06
+"Berkeley County, South Carolina",2025,3,1.12,1.1
+"Bristow, Virginia",2025,3,1.12,1.09
+"Central Ohio (Columbus), Ohio",2025,3,1.07,1.06
+"Central Ohio (Lancaster), Ohio",2025,3,1.04,1.04
+"Central Ohio (New Albany), Ohio",2025,3,1.07,1.06
+"Changhua County, Taiwan",2025,3,1.16,1.13
+"Council Bluffs, Iowa",2025,3,1.14,1.11
+"Council Bluffs, Iowa (2nd facility)",2025,3,1.1,1.08
+"Douglas County, Georgia",2025,3,1.12,1.09
+"Dublin, Ireland",2025,3,1.08,1.08
+"Eemshaven, Netherlands",2025,3,1.08,1.07
+Fleet,2025,3,1.11,1.09
+"Fredericia, Denmark",2025,3,1.06,1.07
+"Hamina, Finland",2025,3,1.1,1.1
+"Henderson, Nevada",2025,3,1.12,1.09
+"Inzai, Japan",2025,3,1.14,1.14
+"Jackson County, Alabama",2025,3,1.13,1.1
+"Lenoir, North Carolina",2025,3,1.12,1.1
+"Loudoun County, Virginia",2025,3,1.1,1.08
+"Loudoun County, Virginia (2nd facility)",2025,3,1.1,1.08
+"Mayes County, Oklahoma",2025,3,1.15,1.12
+"Midlothian, Texas",2025,3,1.13,1.1
+"Montgomery County, Tennessee",2025,3,1.1,1.1
+"Omaha, Nebraska",2025,3,1.04,
+"Papillion, Nebraska",2025,3,1.11,1.09
+"Quilicura, Chile",2025,3,1.08,1.09
+Singapore,2025,3,1.12,1.13
+Singapore (2nd facility),2025,3,1.15,1.14
+"St. Ghislain, Belgium",2025,3,1.08,1.08
+"Storey County, Nevada",2025,3,1.22,1.15
+"The Dalles, Oregon",2025,3,1.11,1.1
+"The Dalles, Oregon (2nd facility)",2025,3,1.08,1.07
+"The Dalles, Oregon (3rd facility)",2025,3,1.09,
+"Berkeley County, South Carolina",2025,4,1.08,1.09
+"Bristow, Virginia",2025,4,1.07,1.09
+"Central Ohio (Columbus), Ohio",2025,4,1.05,1.06
+"Central Ohio (Lancaster), Ohio",2025,4,1.04,1.04
+"Central Ohio (New Albany), Ohio",2025,4,1.06,1.06
+"Changhua County, Taiwan",2025,4,1.12,1.13
+"Council Bluffs, Iowa",2025,4,1.09,1.11
+"Council Bluffs, Iowa (2nd facility)",2025,4,1.07,1.08
+"Douglas County, Georgia",2025,4,1.07,1.09
+"Dublin, Ireland",2025,4,1.08,1.08
+"Eemshaven, Netherlands",2025,4,1.07,1.07
+Fleet,2025,4,1.08,1.09
+"Fredericia, Denmark",2025,4,1.06,1.07
+"Hamina, Finland",2025,4,1.09,1.1
+"Henderson, Nevada",2025,4,1.08,1.09
+"Inzai, Japan",2025,4,1.07,1.11
+"Jackson County, Alabama",2025,4,1.09,1.1
+"Lenoir, North Carolina",2025,4,1.08,1.1
+"Loudoun County, Virginia",2025,4,1.07,1.08
+"Loudoun County, Virginia (2nd facility)",2025,4,1.07,1.08
+"Mayes County, Oklahoma",2025,4,1.09,1.12
+"Midlothian, Texas",2025,4,1.09,1.1
+"Montgomery County, Tennessee",2025,4,1.06,1.09
+"Omaha, Nebraska",2025,4,1.05,1.05
+"Papillion, Nebraska",2025,4,1.07,1.09
+"Quilicura, Chile",2025,4,1.08,1.08
+Singapore,2025,4,1.12,1.12
+Singapore (2nd facility),2025,4,1.14,1.14
+"St. Ghislain, Belgium",2025,4,1.07,1.08
+"Storey County, Nevada",2025,4,1.11,1.14
+"The Dalles, Oregon",2025,4,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2025,4,1.06,1.06
+"The Dalles, Oregon (3rd facility)",2025,4,1.07,
+"Berkeley County, South Carolina",2026,1,1.08,1.09
+"Bristow, Virginia",2026,1,1.07,1.09
+"Central Ohio (Columbus), Ohio",2026,1,1.06,1.06
+"Central Ohio (Lancaster), Ohio",2026,1,1.04,1.04
+"Central Ohio (New Albany), Ohio",2026,1,1.07,1.06
+"Changhua County, Taiwan",2026,1,1.11,1.13
+"Council Bluffs, Iowa",2026,1,1.1,1.11
+"Council Bluffs, Iowa (2nd facility)",2026,1,1.07,1.08
+"Douglas County, Georgia",2026,1,1.07,1.09
+"Dublin, Ireland",2026,1,1.08,1.08
+"Eemshaven, Netherlands",2026,1,1.07,1.07
+Fleet,2026,1,1.08,1.09
+"Fredericia, Denmark",2026,1,1.06,1.06
+"Hamina, Finland",2026,1,1.1,1.1
+"Henderson, Nevada",2026,1,1.08,1.09
+"Inzai, Japan",2026,1,1.08,1.1
+"Jackson County, Alabama",2026,1,1.09,1.1
+"Lenoir, North Carolina",2026,1,1.08,1.1
+"Loudoun County, Virginia",2026,1,1.07,1.08
+"Loudoun County, Virginia (2nd facility)",2026,1,1.08,1.08
+"Mayes County, Oklahoma",2026,1,1.08,1.11
+"Mesa, Arizona",2026,1,1.22,
+"Midlothian, Texas",2026,1,1.08,1.1
+"Montgomery County, Tennessee",2026,1,1.09,1.09
+"Omaha, Nebraska",2026,1,1.05,1.05
+"Papillion, Nebraska",2026,1,1.07,1.09
+"Quilicura, Chile",2026,1,1.08,1.08
+"Red Oak, Texas",2026,1,1.1,
+Singapore,2026,1,1.12,1.12
+Singapore (2nd facility),2026,1,1.14,1.14
+"St. Ghislain, Belgium",2026,1,1.07,1.08
+"Storey County, Nevada",2026,1,1.11,1.15
+"The Dalles, Oregon",2026,1,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2026,1,1.06,1.06
+"The Dalles, Oregon (3rd facility)",2026,1,1.07,
+"Berkeley County, South Carolina",2026,2,1.11,1.1
+"Bristow, Virginia",2026,2,1.1,1.09
+"Central Ohio (Columbus), Ohio",2026,2,1.06,1.06
+"Central Ohio (Lancaster), Ohio",2026,2,1.04,1.04
+"Central Ohio (New Albany), Ohio",2026,2,1.08,1.07
+"Changhua County, Taiwan",2026,2,1.13,1.13
+"Council Bluffs, Iowa",2026,2,1.12,1.11
+"Council Bluffs, Iowa (2nd facility)",2026,2,1.08,1.08
+"Douglas County, Georgia",2026,2,1.1,1.09
+"Dublin, Ireland",2026,2,1.08,1.08
+"Eemshaven, Netherlands",2026,2,1.07,1.07
+Fleet,2026,2,1.1,1.09
+"Fort Wayne, Indiana",2026,2,1.05,
+"Fredericia, Denmark",2026,2,1.06,1.06
+"Hamina, Finland",2026,2,1.09,1.09
+"Henderson, Nevada",2026,2,1.1,1.09
+"Inzai, Japan",2026,2,1.11,1.1
+"Jackson County, Alabama",2026,2,1.12,1.11
+"Lenoir, North Carolina",2026,2,1.1,1.1
+"Loudoun County, Virginia",2026,2,1.09,1.08
+"Loudoun County, Virginia (2nd facility)",2026,2,1.09,1.08
+"Mayes County, Oklahoma",2026,2,1.11,1.11
+"Mesa, Arizona",2026,2,1.28,
+"Midlothian, Texas",2026,2,1.12,1.11
+"Montgomery County, Tennessee",2026,2,1.12,1.09
+"Omaha, Nebraska",2026,2,1.06,1.05
+"Papillion, Nebraska",2026,2,1.09,1.09
+"Quilicura, Chile",2026,2,1.07,1.08
+"Red Oak, Texas",2026,2,1.14,
+Singapore,2026,2,1.13,1.12
+Singapore (2nd facility),2026,2,1.17,1.15
+"St. Ghislain, Belgium",2026,2,1.08,1.08
+"Storey County, Nevada",2026,2,1.17,1.15
+"The Dalles, Oregon",2026,2,1.1,1.1
+"The Dalles, Oregon (2nd facility)",2026,2,1.07,1.06
+"The Dalles, Oregon (3rd facility)",2026,2,1.08,1.08
