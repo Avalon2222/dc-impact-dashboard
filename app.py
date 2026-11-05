@@ -251,7 +251,7 @@ with tab_peta:
     if mode_belajar:
         with st.expander("🎓 Bagaimana peta ini dibuat?"):
             st.markdown(
-                "Peta ini cuma **scatter plot** (titik-titik) yang ditempel di atas peta dunia. "
+                "Peta ini hanya **scatter plot** (titik-titik) yang ditempel di atas peta dunia. "
                 "Setiap baris CSV punya `lat`/`lon`, Plotly menaruh satu lingkaran di koordinat itu. "
                 "`size` mengatur besar lingkaran dari kolom MW, `color` memberi warna dari kolom status."
             )
@@ -625,7 +625,7 @@ with tab_ml:
                 title=f"PUE prediksi per lokasi, iklim tahun {int(df_prediksi['tahun_iklim'].iloc[0])}",
             )
             fig_lok.update_traces(textposition="outside", marker_line_width=0)
-            fig_lok.update_xaxes(range=[1.0, per_lokasi["q_maks"].max() + 0.04])
+            fig_lok.update_xaxes(range=[per_lokasi["q_min"].min() - 0.02, per_lokasi["q_maks"].max() + 0.03])
             rapikan(fig_lok, 420)
             st.plotly_chart(fig_lok, use_container_width=True)
             st.caption("Garis tipis = rentang prediksi antar kuartal (musim). Semua lokasi Indonesia panas-lembap sepanjang tahun, "
@@ -645,7 +645,7 @@ with tab_ml:
                 gabung, x="bola_basah", y="pue", color="jenis", hover_name="nama", hover_data={"negara": True, "pue": ":.3f", "bola_basah": ":.1f"},
                 color_discrete_map={"Google (observasi)": "#898781", "Indonesia (prediksi)": WARNA_STATUS["dibangun"]},
                 labels={"bola_basah": "Suhu bola basah rata-rata (°C)", "pue": "PUE", "jenis": ""},
-                title="PUE vs iklim: kampus Google (2022+) dan prediksi Indonesia",
+                title="PUE vs bola basah: Google (observasi) vs Indonesia (prediksi)",
             )
             fig_iklim.update_traces(marker=dict(size=10, opacity=0.85))
             fig_iklim.update_yaxes(showgrid=True, gridcolor="#e1e0d9")
