@@ -5,8 +5,20 @@
 > Peta interaktif dan estimasi konsumsi **listrik** dan **air** data center di Indonesia,
 > dibandingkan dengan kebutuhan **warga**. Dibangun dengan Python, pandas, Plotly, dan Streamlit.
 
-*An interactive dashboard estimating the electricity and water footprint of Indonesian data
-centers, compared against residents' needs. Built with Python, pandas, Plotly and Streamlit.*
+## 🇬🇧 In English
+
+**How thirsty is the cloud?** An interactive dashboard that maps 27 data centers in Indonesia and estimates how much electricity and cooling water each one uses, then translates those numbers into something people can feel: how many residents, households, or water trucks that equals.
+
+- **Map** every facility by IT capacity (MW) and status: operating, under construction, or planned.
+- **Estimate** power and water from PUE, WUE and utilization, with three cooling-technology scenarios.
+- **Compare** a single facility against the needs of a neighborhood, village, or district.
+- **Tweak** every assumption with sidebar sliders and watch the whole dashboard recompute.
+
+**Built with:** Python, pandas, Plotly, Streamlit  
+**Data:** Public company announcements and news, plus published PUE/WUE benchmarks (every row has a source and a confidence level)  
+**Engineering:** Unit-tested calculation module, CI on GitHub Actions, and a built-in learning mode that explains every formula
+
+*The rest of this README is in Indonesian.*
 
 **🚀 Coba langsung di browser:** [dc-impact-dashboard.streamlit.app](https://dc-impact-dashboard.streamlit.app)
 
