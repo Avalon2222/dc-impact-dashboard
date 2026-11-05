@@ -1,0 +1,129 @@
+{
+  "dilatih_pada": "2026-11-05",
+  "sumber": {
+    "pue": "Google Data Center Efficiency (PUE kuartalan per kampus) + NASA POWER",
+    "wue": "Meta 2025 Environmental Data Index (listrik & air per situs 2020-2024) + NASA POWER"
+  },
+  "model": {
+    "pue": {
+      "terpilih": "ridge",
+      "layak": true,
+      "alasan": "ridge lolos gerbang: MAE 0.0186 vs baseline 0.0259, R2 cv 0.34",
+      "n_baris": 868,
+      "n_grup": 35,
+      "fitur": [
+        "suhu_rata",
+        "suhu_maks_rata",
+        "rh_rata",
+        "titik_embun_rata",
+        "bola_basah_rata",
+        "bola_basah_p90",
+        "hari_panas_lembap",
+        "cdd18",
+        "umur_kuartal",
+        "tahun"
+      ],
+      "target": "pue_kuartalan",
+      "rentang_target": [
+        1.04,
+        1.29
+      ],
+      "rata_rata_target": 1.1046774193548388,
+      "evaluasi": {
+        "baseline_rata_rata": {
+          "mae_cv": 0.025904026217791306,
+          "rmse_cv": 0.034166844609165935,
+          "r2_cv": -0.01448756629264647,
+          "mae_waktu": 0.03062604983202682,
+          "r2_waktu": -0.27005438941713233,
+          "n_uji_waktu": 304
+        },
+        "ridge": {
+          "mae_cv": 0.018579369121234764,
+          "rmse_cv": 0.02754759002554515,
+          "r2_cv": 0.34051608773258746,
+          "mae_waktu": 0.021142051624411483,
+          "r2_waktu": 0.10263618828037246,
+          "n_uji_waktu": 304
+        },
+        "random_forest": {
+          "mae_cv": 0.019115878858107425,
+          "rmse_cv": 0.027735526659250217,
+          "r2_cv": 0.33148706084379687,
+          "mae_waktu": 0.020291516618917628,
+          "r2_waktu": 0.09455941144991264,
+          "n_uji_waktu": 304
+        },
+        "gradient_boosting": {
+          "mae_cv": 0.020508616777603326,
+          "rmse_cv": 0.03083391708911429,
+          "r2_cv": 0.17378251009056578,
+          "mae_waktu": 0.020993818729493217,
+          "r2_waktu": -0.04806365897116982,
+          "n_uji_waktu": 304
+        }
+      },
+      "pentingnya_fitur": {
+        "bola_basah_p90": 0.006684247943748152,
+        "cdd18": 0.005272750660608017,
+        "hari_panas_lembap": 0.0029784164504596702,
+        "suhu_rata": 0.0028454433904141515,
+        "umur_kuartal": 0.0022480498034033723,
+        "bola_basah_rata": 0.0015648094241589247,
+        "tahun": 0.0013484580517525338,
+        "suhu_maks_rata": 0.0013375463580206884,
+        "titik_embun_rata": 0.00038552230561673847,
+        "rh_rata": 5.841825415280333e-05
+      }
+    },
+    "wue": {
+      "terpilih": "baseline_rata_rata",
+      "layak": false,
+      "alasan": "tidak ada model yang lolos gerbang (R2 cv >= 0.2 dan MAE <= 85% baseline); kandidat terbaik gradient_boosting R2 cv 0.12. Dipakai baseline rata-rata.",
+      "n_baris": 71,
+      "n_grup": 16,
+      "fitur": [
+        "bola_basah_rata",
+        "rh_rata",
+        "cdd18",
+        "tahun"
+      ],
+      "target": "liter_per_kwh",
+      "rentang_target": [
+        0.025746652935118436,
+        1.462227880651952
+      ],
+      "rata_rata_target": 0.2980667643076227,
+      "evaluasi": {
+        "baseline_rata_rata": {
+          "mae_cv": 0.22176552738593341,
+          "rmse_cv": 0.3144594945442656,
+          "r2_cv": -0.12249338341664373
+        },
+        "ridge": {
+          "mae_cv": 0.22241828114156925,
+          "rmse_cv": 0.31199623710471536,
+          "r2_cv": -0.10497659210786048
+        },
+        "random_forest": {
+          "mae_cv": 0.1998477580451893,
+          "rmse_cv": 0.3107974375615388,
+          "r2_cv": -0.09650148632635691
+        },
+        "gradient_boosting": {
+          "mae_cv": 0.18479370608866028,
+          "rmse_cv": 0.27907338875110294,
+          "r2_cv": 0.11592070886808148
+        }
+      },
+      "pentingnya_fitur": {}
+    }
+  },
+  "prediksi_indonesia": {
+    "pue_min": 1.1256,
+    "pue_maks": 1.1382,
+    "wue_min": 0.2981,
+    "wue_maks": 0.2981,
+    "tahun_iklim": 2025
+  }
+}

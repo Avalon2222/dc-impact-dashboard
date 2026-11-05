@@ -1,0 +1,869 @@
+kampus,negara,tahun,kuartal,pue_kuartalan,pue_prediksi_oof,bola_basah_rata,umur_kuartal
+"Berkeley County, South Carolina",Amerika Serikat,2016,2,1.13,1.1457,19.831,0
+"Changhua County, Taiwan",Taiwan,2016,2,1.2,1.165,23.475,0
+"Council Bluffs, Iowa",Amerika Serikat,2016,2,1.1,1.1251,14.607,0
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2016,2,1.11,1.1238,14.607,0
+"Douglas County, Georgia",Amerika Serikat,2016,2,1.12,1.1341,18.082,0
+"Dublin, Ireland",Irlandia,2016,2,1.17,1.1169,9.539,0
+"Hamina, Finland",Finlandia,2016,2,1.12,1.1189,8.7,0
+"Lenoir, North Carolina",Amerika Serikat,2016,2,1.1,1.1286,15.495,0
+"Mayes County, Oklahoma",Amerika Serikat,2016,2,1.11,1.1334,18.063,0
+"Quilicura, Chile",Chili,2016,2,1.12,1.1372,6.47,0
+Singapore,Singapura,2016,2,1.19,1.1878,26.556,0
+"St. Ghislain, Belgium",Belgia,2016,2,1.09,1.1237,10.96,0
+"The Dalles, Oregon",Amerika Serikat,2016,2,1.13,1.1208,9.911,0
+"Berkeley County, South Carolina",Amerika Serikat,2016,3,1.16,1.1803,25.144,1
+"Changhua County, Taiwan",Taiwan,2016,3,1.2,1.1753,25.425,1
+"Council Bluffs, Iowa",Amerika Serikat,2016,3,1.14,1.1468,20.523,1
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2016,3,1.14,1.1464,20.523,1
+"Douglas County, Georgia",Amerika Serikat,2016,3,1.16,1.1754,23.378,1
+"Dublin, Ireland",Irlandia,2016,3,1.15,1.1143,13.783,1
+"Hamina, Finland",Finlandia,2016,3,1.13,1.1224,14.112,1
+"Lenoir, North Carolina",Amerika Serikat,2016,3,1.12,1.1613,21.662,1
+"Mayes County, Oklahoma",Amerika Serikat,2016,3,1.15,1.1685,23.446,1
+"Quilicura, Chile",Chili,2016,3,1.11,1.1407,4.944,1
+Singapore,Singapura,2016,3,1.2,1.1812,25.929,1
+"St. Ghislain, Belgium",Belgia,2016,3,1.1,1.1267,15.766,1
+"The Dalles, Oregon",Amerika Serikat,2016,3,1.13,1.1218,12.8,1
+"Berkeley County, South Carolina",Amerika Serikat,2016,4,1.1,1.1137,13.332,2
+"Changhua County, Taiwan",Taiwan,2016,4,1.15,1.1448,20.68,2
+"Council Bluffs, Iowa",Amerika Serikat,2016,4,1.1,1.1072,3.769,2
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2016,4,1.1,1.1111,3.769,2
+"Douglas County, Georgia",Amerika Serikat,2016,4,1.11,1.1142,9.776,2
+"Dublin, Ireland",Irlandia,2016,4,1.17,1.1158,7.709,2
+"Hamina, Finland",Finlandia,2016,4,1.12,1.1226,-0.189,2
+"Lenoir, North Carolina",Amerika Serikat,2016,4,1.1,1.1104,6.93,2
+"Mayes County, Oklahoma",Amerika Serikat,2016,4,1.11,1.1122,8.418,2
+"Quilicura, Chile",Chili,2016,4,1.11,1.1432,8.921,2
+Singapore,Singapura,2016,4,1.19,1.1756,25.625,2
+"St. Ghislain, Belgium",Belgia,2016,4,1.09,1.1205,5.172,2
+"The Dalles, Oregon",Amerika Serikat,2016,4,1.12,1.1147,2.92,2
+"Berkeley County, South Carolina",Amerika Serikat,2017,1,1.1,1.1073,11.323,3
+"Changhua County, Taiwan",Taiwan,2017,1,1.12,1.1233,15.954,3
+"Council Bluffs, Iowa",Amerika Serikat,2017,1,1.1,1.1089,-0.77,3
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2017,1,1.1,1.1143,-0.77,3
+"Douglas County, Georgia",Amerika Serikat,2017,1,1.11,1.1021,9.107,3
+"Dublin, Ireland",Irlandia,2017,1,1.12,1.114,6.01,3
+"Eemshaven, Netherlands",Belanda,2017,1,1.22,1.1233,3.016,0
+"Hamina, Finland",Finlandia,2017,1,1.1,1.1241,-3.587,3
+"Lenoir, North Carolina",Amerika Serikat,2017,1,1.1,1.1064,5.016,3
+"Mayes County, Oklahoma",Amerika Serikat,2017,1,1.11,1.1083,5.847,3
+"Quilicura, Chile",Chili,2017,1,1.14,1.1436,11.593,3
+Singapore,Singapura,2017,1,1.18,1.1671,25.271,3
+"St. Ghislain, Belgium",Belgia,2017,1,1.09,1.1167,3.374,3
+"The Dalles, Oregon",Amerika Serikat,2017,1,1.14,1.1112,-1.125,3
+"Berkeley County, South Carolina",Amerika Serikat,2017,2,1.13,1.1425,20.671,4
+"Changhua County, Taiwan",Taiwan,2017,2,1.15,1.1535,22.642,4
+"Council Bluffs, Iowa",Amerika Serikat,2017,2,1.11,1.1168,14.144,4
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2017,2,1.1,1.1168,14.144,4
+"Douglas County, Georgia",Amerika Serikat,2017,2,1.12,1.1299,18.653,4
+"Dublin, Ireland",Irlandia,2017,2,1.12,1.1082,10.236,4
+"Eemshaven, Netherlands",Belanda,2017,2,1.1,1.1172,10.574,1
+"Hamina, Finland",Finlandia,2017,2,1.09,1.1119,5.466,4
+"Lenoir, North Carolina",Amerika Serikat,2017,2,1.1,1.1202,16.583,4
+"Mayes County, Oklahoma",Amerika Serikat,2017,2,1.12,1.1252,17.498,4
+"Quilicura, Chile",Chili,2017,2,1.14,1.1328,5.253,4
+Singapore,Singapura,2017,2,1.18,1.1753,26.294,4
+"St. Ghislain, Belgium",Belgia,2017,2,1.09,1.1136,11.405,4
+"The Dalles, Oregon",Amerika Serikat,2017,2,1.14,1.1093,8.925,4
+"Berkeley County, South Carolina",Amerika Serikat,2017,3,1.16,1.1612,24.409,5
+"Changhua County, Taiwan",Taiwan,2017,3,1.17,1.1692,25.707,5
+"Council Bluffs, Iowa",Amerika Serikat,2017,3,1.15,1.1359,19.362,5
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2017,3,1.12,1.1377,19.362,5
+"Douglas County, Georgia",Amerika Serikat,2017,3,1.14,1.1526,21.86,5
+"Dublin, Ireland",Irlandia,2017,3,1.11,1.1063,13.033,5
+"Eemshaven, Netherlands",Belanda,2017,3,1.11,1.1225,14.763,2
+"Hamina, Finland",Finlandia,2017,3,1.09,1.1144,13.19,5
+"Lenoir, North Carolina",Amerika Serikat,2017,3,1.12,1.1384,19.921,5
+"Mayes County, Oklahoma",Amerika Serikat,2017,3,1.14,1.1528,22.05,5
+"Quilicura, Chile",Chili,2017,3,1.14,1.1303,4.483,5
+Singapore,Singapura,2017,3,1.17,1.1706,25.803,5
+"St. Ghislain, Belgium",Belgia,2017,3,1.09,1.1173,14.515,5
+"The Dalles, Oregon",Amerika Serikat,2017,3,1.15,1.1149,14.171,5
+"Berkeley County, South Carolina",Amerika Serikat,2017,4,1.11,1.1068,13.092,6
+"Changhua County, Taiwan",Taiwan,2017,4,1.13,1.1304,19.892,6
+"Council Bluffs, Iowa",Amerika Serikat,2017,4,1.15,1.0976,2.156,6
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2017,4,1.08,1.1035,2.156,6
+"Douglas County, Georgia",Amerika Serikat,2017,4,1.1,1.0977,9.718,6
+"Dublin, Ireland",Irlandia,2017,4,1.11,1.1067,7.771,6
+"Eemshaven, Netherlands",Belanda,2017,4,1.12,1.1135,7.727,3
+"Hamina, Finland",Finlandia,2017,4,1.09,1.1125,1.999,6
+"Lenoir, North Carolina",Amerika Serikat,2017,4,1.1,1.1004,6.629,6
+"Mayes County, Oklahoma",Amerika Serikat,2017,4,1.09,1.1068,7.157,6
+"Quilicura, Chile",Chili,2017,4,1.13,1.137,8.83,6
+Singapore,Singapura,2017,4,1.17,1.168,25.708,6
+"St. Ghislain, Belgium",Belgia,2017,4,1.08,1.1084,6.658,6
+"The Dalles, Oregon",Amerika Serikat,2017,4,1.14,1.1075,2.065,6
+"Berkeley County, South Carolina",Amerika Serikat,2018,1,1.1,1.0977,9.039,7
+"Changhua County, Taiwan",Taiwan,2018,1,1.12,1.1144,15.692,7
+"Council Bluffs, Iowa",Amerika Serikat,2018,1,1.14,1.1022,-4.094,7
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2018,1,1.09,1.1112,-4.094,7
+"Douglas County, Georgia",Amerika Serikat,2018,1,1.1,1.091,6.638,7
+"Dublin, Ireland",Irlandia,2018,1,1.11,1.107,4.102,7
+"Eemshaven, Netherlands",Belanda,2018,1,1.11,1.1164,1.538,4
+"Hamina, Finland",Finlandia,2018,1,1.09,1.1109,-6.312,7
+"Lenoir, North Carolina",Amerika Serikat,2018,1,1.1,1.0942,2.787,7
+"Mayes County, Oklahoma",Amerika Serikat,2018,1,1.08,1.1039,2.321,7
+"Quilicura, Chile",Chili,2018,1,1.14,1.1373,10.738,7
+Singapore,Singapura,2018,1,1.16,1.1564,24.998,7
+"St. Ghislain, Belgium",Belgia,2018,1,1.08,1.1114,2.29,7
+"The Dalles, Oregon",Amerika Serikat,2018,1,1.14,1.1053,0.929,7
+"Berkeley County, South Carolina",Amerika Serikat,2018,2,1.13,1.1324,20.249,8
+"Changhua County, Taiwan",Taiwan,2018,2,1.16,1.1528,23.205,8
+"Council Bluffs, Iowa",Amerika Serikat,2018,2,1.13,1.1129,14.404,8
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2018,2,1.1,1.1159,14.404,8
+"Douglas County, Georgia",Amerika Serikat,2018,2,1.12,1.1221,18.388,8
+"Dublin, Ireland",Irlandia,2018,2,1.12,1.0997,10.367,8
+"Eemshaven, Netherlands",Belanda,2018,2,1.11,1.1104,11.791,5
+"Hamina, Finland",Finlandia,2018,2,1.09,1.1032,8.467,8
+"Lenoir, North Carolina",Amerika Serikat,2018,2,1.11,1.1187,16.533,8
+"Mayes County, Oklahoma",Amerika Serikat,2018,2,1.11,1.1294,17.809,8
+"Quilicura, Chile",Chili,2018,2,1.13,1.1322,4.626,8
+Singapore,Singapura,2018,2,1.2,1.1673,26.158,8
+"St. Ghislain, Belgium",Belgia,2018,2,1.08,1.1061,12.814,8
+"The Dalles, Oregon",Amerika Serikat,2018,2,1.13,1.1027,9.339,8
+"Berkeley County, South Carolina",Amerika Serikat,2018,3,1.15,1.1608,25.187,9
+"Changhua County, Taiwan",Taiwan,2018,3,1.17,1.1573,25.174,9
+"Council Bluffs, Iowa",Amerika Serikat,2018,3,1.14,1.1339,19.922,9
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2018,3,1.11,1.137,19.922,9
+"Douglas County, Georgia",Amerika Serikat,2018,3,1.16,1.1568,23.13,9
+"Dublin, Ireland",Irlandia,2018,3,1.11,1.0974,13.569,9
+"Eemshaven, Netherlands",Belanda,2018,3,1.12,1.1181,15.794,6
+"Hamina, Finland",Finlandia,2018,3,1.1,1.1097,15.837,9
+"Lenoir, North Carolina",Amerika Serikat,2018,3,1.13,1.1467,21.592,9
+"Mayes County, Oklahoma",Amerika Serikat,2018,3,1.13,1.1544,23.073,9
+"Quilicura, Chile",Chili,2018,3,1.12,1.1266,4.324,9
+Singapore,Singapura,2018,3,1.18,1.1617,25.731,9
+"St. Ghislain, Belgium",Belgia,2018,3,1.1,1.1133,15.289,9
+"The Dalles, Oregon",Amerika Serikat,2018,3,1.13,1.1061,13.131,9
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2018,3,1.08,1.1163,13.131,0
+"Berkeley County, South Carolina",Amerika Serikat,2018,4,1.1,1.1008,14.123,10
+"Changhua County, Taiwan",Taiwan,2018,4,1.12,1.13,19.847,10
+"Council Bluffs, Iowa",Amerika Serikat,2018,4,1.11,1.0943,0.979,10
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2018,4,1.08,1.1035,0.979,10
+"Douglas County, Georgia",Amerika Serikat,2018,4,1.1,1.0894,9.874,10
+"Dublin, Ireland",Irlandia,2018,4,1.12,1.0987,8.348,10
+"Eemshaven, Netherlands",Belanda,2018,4,1.1,1.1062,7.357,7
+"Hamina, Finland",Finlandia,2018,4,1.09,1.0972,1.847,10
+"Lenoir, North Carolina",Amerika Serikat,2018,4,1.09,1.0886,6.973,10
+"Mayes County, Oklahoma",Amerika Serikat,2018,4,1.08,1.0993,6.392,10
+"Quilicura, Chile",Chili,2018,4,1.1,1.1336,8.193,10
+Singapore,Singapura,2018,4,1.17,1.1608,25.681,10
+"St. Ghislain, Belgium",Belgia,2018,4,1.1,1.1026,6.529,10
+"The Dalles, Oregon",Amerika Serikat,2018,4,1.11,1.0988,2.872,10
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2018,4,1.24,1.115,2.872,1
+"Berkeley County, South Carolina",Amerika Serikat,2019,1,1.08,1.0897,10.769,11
+"Changhua County, Taiwan",Taiwan,2019,1,1.11,1.1116,17.448,11
+"Council Bluffs, Iowa",Amerika Serikat,2019,1,1.12,1.0881,-4.977,11
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2019,1,1.08,1.1,-4.977,11
+"Douglas County, Georgia",Amerika Serikat,2019,1,1.1,1.0902,7.893,11
+"Dublin, Ireland",Irlandia,2019,1,1.13,1.0979,6.029,11
+"Eemshaven, Netherlands",Belanda,2019,1,1.09,1.1117,4.126,8
+"Hamina, Finland",Finlandia,2019,1,1.09,1.1045,-4.531,11
+"Lenoir, North Carolina",Amerika Serikat,2019,1,1.09,1.0919,3.681,11
+"Mayes County, Oklahoma",Amerika Serikat,2019,1,1.08,1.0981,2.199,11
+"Quilicura, Chile",Chili,2019,1,1.1,1.1361,10.583,11
+Singapore,Singapura,2019,1,1.15,1.1543,25.483,11
+"St. Ghislain, Belgium",Belgia,2019,1,1.09,1.1044,3.882,11
+"The Dalles, Oregon",Amerika Serikat,2019,1,1.11,1.0952,-0.793,11
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2019,1,1.07,1.1132,-0.793,2
+"Berkeley County, South Carolina",Amerika Serikat,2019,2,1.12,1.1307,20.957,12
+"Changhua County, Taiwan",Taiwan,2019,2,1.14,1.139,23.026,12
+"Council Bluffs, Iowa",Amerika Serikat,2019,2,1.11,1.0964,13.917,12
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2019,2,1.09,1.1006,13.917,12
+"Douglas County, Georgia",Amerika Serikat,2019,2,1.13,1.1192,19.088,12
+"Dublin, Ireland",Irlandia,2019,2,1.13,1.0928,9.477,12
+"Eemshaven, Netherlands",Belanda,2019,2,1.09,1.1022,10.591,9
+"Hamina, Finland",Finlandia,2019,2,1.09,1.0934,8.305,12
+"Lenoir, North Carolina",Amerika Serikat,2019,2,1.1,1.1075,17.128,12
+"Mayes County, Oklahoma",Amerika Serikat,2019,2,1.11,1.1146,18.1,12
+"Quilicura, Chile",Chili,2019,2,1.09,1.1269,4.422,12
+Singapore,Singapura,2019,2,1.15,1.1628,26.55,12
+"St. Ghislain, Belgium",Belgia,2019,2,1.09,1.0968,10.766,12
+"The Dalles, Oregon",Amerika Serikat,2019,2,1.11,1.095,9.278,12
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2019,2,1.06,1.1077,9.278,3
+"Berkeley County, South Carolina",Amerika Serikat,2019,3,1.14,1.1527,24.853,13
+"Changhua County, Taiwan",Taiwan,2019,3,1.15,1.1483,25.428,13
+"Council Bluffs, Iowa",Amerika Serikat,2019,3,1.14,1.1264,21.148,13
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2019,3,1.11,1.1313,21.148,13
+"Douglas County, Georgia",Amerika Serikat,2019,3,1.16,1.1512,22.845,13
+"Dublin, Ireland",Irlandia,2019,3,1.13,1.0897,13.886,13
+"Eemshaven, Netherlands",Belanda,2019,3,1.1,1.1106,15.455,10
+"Hamina, Finland",Finlandia,2019,3,1.09,1.0982,13.198,13
+"Lenoir, North Carolina",Amerika Serikat,2019,3,1.12,1.1326,21.262,13
+"Mayes County, Oklahoma",Amerika Serikat,2019,3,1.15,1.1493,24.087,13
+"Quilicura, Chile",Chili,2019,3,1.09,1.122,3.276,13
+Singapore,Singapura,2019,3,1.15,1.1569,25.853,13
+"St. Ghislain, Belgium",Belgia,2019,3,1.09,1.1032,14.688,13
+"The Dalles, Oregon",Amerika Serikat,2019,3,1.12,1.0976,13.426,13
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2019,3,1.07,1.1096,13.426,4
+"Berkeley County, South Carolina",Amerika Serikat,2019,4,1.1,1.0921,13.686,14
+"Changhua County, Taiwan",Taiwan,2019,4,1.12,1.1172,19.317,14
+"Council Bluffs, Iowa",Amerika Serikat,2019,4,1.1,1.0868,1.462,14
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2019,4,1.07,1.0972,1.462,14
+"Douglas County, Georgia",Amerika Serikat,2019,4,1.1,1.0857,10.261,14
+"Dublin, Ireland",Irlandia,2019,4,1.1,1.0916,7.275,14
+"Eemshaven, Netherlands",Belanda,2019,4,1.08,1.0991,7.139,11
+"Hamina, Finland",Finlandia,2019,4,1.09,1.0956,2.081,14
+"Lenoir, North Carolina",Amerika Serikat,2019,4,1.08,1.0865,7.23,14
+"Mayes County, Oklahoma",Amerika Serikat,2019,4,1.08,1.0938,6.321,14
+"Quilicura, Chile",Chili,2019,4,1.09,1.1299,7.413,14
+Singapore,Singapura,2019,4,1.14,1.1523,25.591,14
+"St. Ghislain, Belgium",Belgia,2019,4,1.08,1.0945,6.655,14
+"The Dalles, Oregon",Amerika Serikat,2019,4,1.11,1.0915,1.892,14
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2019,4,1.08,1.1097,1.892,5
+"Berkeley County, South Carolina",Amerika Serikat,2020,1,1.09,1.083,11.975,15
+"Changhua County, Taiwan",Taiwan,2020,1,1.11,1.101,16.622,15
+"Council Bluffs, Iowa",Amerika Serikat,2020,1,1.1,1.0828,-1.44,15
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2020,1,1.08,1.0943,-1.44,15
+"Douglas County, Georgia",Amerika Serikat,2020,1,1.09,1.0776,9.499,15
+"Dublin, Ireland",Irlandia,2020,1,1.09,1.09,5.425,15
+"Eemshaven, Netherlands",Belanda,2020,1,1.09,1.1047,4.743,12
+"Hamina, Finland",Finlandia,2020,1,1.09,1.0989,-0.256,15
+"Lenoir, North Carolina",Amerika Serikat,2020,1,1.08,1.0806,5.749,15
+"Mayes County, Oklahoma",Amerika Serikat,2020,1,1.1,1.091,4.98,15
+"Quilicura, Chile",Chili,2020,1,1.09,1.1268,11.654,15
+Singapore,Singapura,2020,1,1.14,1.146,25.558,15
+"St. Ghislain, Belgium",Belgia,2020,1,1.08,1.0938,4.628,15
+"The Dalles, Oregon",Amerika Serikat,2020,1,1.11,1.0907,1.374,15
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2020,1,1.08,1.1094,1.374,6
+"Berkeley County, South Carolina",Amerika Serikat,2020,2,1.11,1.1083,19.743,16
+"Changhua County, Taiwan",Taiwan,2020,2,1.14,1.1274,22.595,16
+"Council Bluffs, Iowa",Amerika Serikat,2020,2,1.11,1.0906,13.728,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2020,2,1.09,1.0963,13.728,16
+"Douglas County, Georgia",Amerika Serikat,2020,2,1.1,1.1017,17.174,16
+"Dublin, Ireland",Irlandia,2020,2,1.09,1.0839,9.945,16
+"Eemshaven, Netherlands",Belanda,2020,2,1.09,1.0963,10.339,13
+"Hamina, Finland",Finlandia,2020,2,1.09,1.0814,7.652,16
+"Jackson County, Alabama",Amerika Serikat,2020,2,1.19,1.1151,15.756,0
+"Lenoir, North Carolina",Amerika Serikat,2020,2,1.09,1.0915,14.769,16
+"Mayes County, Oklahoma",Amerika Serikat,2020,2,1.12,1.1042,17.065,16
+"Montgomery County, Tennessee",Amerika Serikat,2020,2,1.17,1.1178,16.11,0
+"Quilicura, Chile",Chili,2020,2,1.08,1.1176,5.226,16
+Singapore,Singapura,2020,2,1.15,1.1527,26.472,16
+"St. Ghislain, Belgium",Belgia,2020,2,1.08,1.0913,11.087,16
+"The Dalles, Oregon",Amerika Serikat,2020,2,1.11,1.0857,8.762,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2020,2,1.08,1.1005,8.762,7
+"Berkeley County, South Carolina",Amerika Serikat,2020,3,1.14,1.1431,24.627,16
+"Changhua County, Taiwan",Taiwan,2020,3,1.15,1.1446,25.356,16
+"Council Bluffs, Iowa",Amerika Serikat,2020,3,1.13,1.1132,19.172,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2020,3,1.11,1.1194,19.172,16
+"Douglas County, Georgia",Amerika Serikat,2020,3,1.13,1.1367,22.482,16
+"Dublin, Ireland",Irlandia,2020,3,1.09,1.083,13.371,16
+"Eemshaven, Netherlands",Belanda,2020,3,1.1,1.1002,15.554,14
+"Hamina, Finland",Finlandia,2020,3,1.09,1.0914,13.928,16
+"Jackson County, Alabama",Amerika Serikat,2020,3,1.21,1.1508,21.393,1
+"Lenoir, North Carolina",Amerika Serikat,2020,3,1.12,1.1233,20.817,16
+"Mayes County, Oklahoma",Amerika Serikat,2020,3,1.16,1.1324,22.33,16
+"Montgomery County, Tennessee",Amerika Serikat,2020,3,1.2,1.1437,21.738,1
+"Quilicura, Chile",Chili,2020,3,1.08,1.11,4.248,16
+Singapore,Singapura,2020,3,1.14,1.1466,25.734,16
+"St. Ghislain, Belgium",Belgia,2020,3,1.09,1.0957,15.298,16
+"The Dalles, Oregon",Amerika Serikat,2020,3,1.11,1.0911,13.436,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2020,3,1.08,1.1029,13.436,8
+"Berkeley County, South Carolina",Amerika Serikat,2020,4,1.09,1.0882,14.581,16
+"Changhua County, Taiwan",Taiwan,2020,4,1.11,1.1192,20.07,16
+"Council Bluffs, Iowa",Amerika Serikat,2020,4,1.1,1.0796,1.841,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2020,4,1.08,1.0889,1.841,16
+"Douglas County, Georgia",Amerika Serikat,2020,4,1.08,1.077,10.495,16
+"Dublin, Ireland",Irlandia,2020,4,1.09,1.0872,7.795,16
+"Eemshaven, Netherlands",Belanda,2020,4,1.08,1.0926,7.631,15
+"Hamina, Finland",Finlandia,2020,4,1.09,1.0863,3.501,16
+"Jackson County, Alabama",Amerika Serikat,2020,4,1.13,1.0936,8.354,2
+"Lenoir, North Carolina",Amerika Serikat,2020,4,1.08,1.0781,7.927,16
+"Mayes County, Oklahoma",Amerika Serikat,2020,4,1.1,1.0867,7.022,16
+"Montgomery County, Tennessee",Amerika Serikat,2020,4,1.11,1.0971,7.394,2
+"Quilicura, Chile",Chili,2020,4,1.08,1.1246,8.197,16
+Singapore,Singapura,2020,4,1.13,1.1447,25.583,16
+"St. Ghislain, Belgium",Belgia,2020,4,1.08,1.0901,6.999,16
+"The Dalles, Oregon",Amerika Serikat,2020,4,1.1,1.0799,3.272,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2020,4,1.06,1.0962,3.272,9
+"Berkeley County, South Carolina",Amerika Serikat,2021,1,1.08,1.0785,10.163,16
+"Changhua County, Taiwan",Taiwan,2021,1,1.1,1.0952,15.4,16
+"Council Bluffs, Iowa",Amerika Serikat,2021,1,1.11,1.0791,-2.721,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2021,1,1.08,1.0903,-2.721,16
+"Douglas County, Georgia",Amerika Serikat,2021,1,1.08,1.0758,7.465,16
+"Dublin, Ireland",Irlandia,2021,1,1.09,1.087,5.287,16
+"Eemshaven, Netherlands",Belanda,2021,1,1.08,1.0945,2.475,16
+"Hamina, Finland",Finlandia,2021,1,1.09,1.088,-7.03,16
+"Jackson County, Alabama",Amerika Serikat,2021,1,1.11,1.0919,5.097,3
+"Lenoir, North Carolina",Amerika Serikat,2021,1,1.08,1.0784,3.394,16
+"Loudoun County, Virginia",Amerika Serikat,2021,1,1.1,1.1074,1.095,0
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2021,1,1.14,1.1037,1.095,0
+"Mayes County, Oklahoma",Amerika Serikat,2021,1,1.08,1.0858,2.544,16
+"Montgomery County, Tennessee",Amerika Serikat,2021,1,1.09,1.0963,3.376,3
+"Quilicura, Chile",Chili,2021,1,1.09,1.1162,11.455,16
+Singapore,Singapura,2021,1,1.12,1.1355,24.844,16
+"St. Ghislain, Belgium",Belgia,2021,1,1.09,1.0886,2.995,16
+"The Dalles, Oregon",Amerika Serikat,2021,1,1.1,1.0882,0.688,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2021,1,1.06,1.1039,0.688,10
+"Berkeley County, South Carolina",Amerika Serikat,2021,2,1.11,1.1109,19.295,16
+"Changhua County, Taiwan",Taiwan,2021,2,1.13,1.1345,23.265,16
+"Council Bluffs, Iowa",Amerika Serikat,2021,2,1.11,1.0932,13.892,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2021,2,1.09,1.0976,13.892,16
+"Douglas County, Georgia",Amerika Serikat,2021,2,1.09,1.0995,17.148,16
+"Dublin, Ireland",Irlandia,2021,2,1.1,1.0831,8.957,16
+"Eemshaven, Netherlands",Belanda,2021,2,1.08,1.0868,9.354,16
+"Hamina, Finland",Finlandia,2021,2,1.09,1.077,8.86,16
+"Jackson County, Alabama",Amerika Serikat,2021,2,1.13,1.1106,15.94,4
+"Lenoir, North Carolina",Amerika Serikat,2021,2,1.1,1.0919,15.203,16
+"Loudoun County, Virginia",Amerika Serikat,2021,2,1.1,1.1138,14.768,1
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2021,2,1.15,1.1141,14.768,1
+"Mayes County, Oklahoma",Amerika Serikat,2021,2,1.11,1.0991,16.926,16
+"Montgomery County, Tennessee",Amerika Serikat,2021,2,1.1,1.1112,16.353,4
+"Quilicura, Chile",Chili,2021,2,1.08,1.1188,4.888,16
+Singapore,Singapura,2021,2,1.13,1.1498,26.187,16
+"St. Ghislain, Belgium",Belgia,2021,2,1.08,1.0836,9.685,16
+"The Dalles, Oregon",Amerika Serikat,2021,2,1.11,1.0836,9.313,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2021,2,1.06,1.093,9.313,11
+"Berkeley County, South Carolina",Amerika Serikat,2021,3,1.13,1.1377,24.249,16
+"Changhua County, Taiwan",Taiwan,2021,3,1.14,1.1413,25.567,16
+"Council Bluffs, Iowa",Amerika Serikat,2021,3,1.13,1.1174,20.462,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2021,3,1.11,1.123,20.462,16
+"Douglas County, Georgia",Amerika Serikat,2021,3,1.12,1.1313,22.12,16
+"Dublin, Ireland",Irlandia,2021,3,1.09,1.0825,14.633,16
+"Eemshaven, Netherlands",Belanda,2021,3,1.09,1.0954,15.833,16
+"Hamina, Finland",Finlandia,2021,3,1.09,1.0871,14.089,16
+"Jackson County, Alabama",Amerika Serikat,2021,3,1.15,1.1399,21.05,5
+"Lenoir, North Carolina",Amerika Serikat,2021,3,1.11,1.1187,20.446,16
+"Loudoun County, Virginia",Amerika Serikat,2021,3,1.11,1.1457,21.092,2
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2021,3,1.16,1.143,21.092,2
+"Mayes County, Oklahoma",Amerika Serikat,2021,3,1.14,1.1387,23.056,16
+"Montgomery County, Tennessee",Amerika Serikat,2021,3,1.14,1.1378,21.743,5
+"Quilicura, Chile",Chili,2021,3,1.1,1.1207,1.84,16
+Singapore,Singapura,2021,3,1.13,1.1451,25.732,16
+"St. Ghislain, Belgium",Belgia,2021,3,1.09,1.093,15.286,16
+"The Dalles, Oregon",Amerika Serikat,2021,3,1.12,1.0909,13.758,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2021,3,1.07,1.0979,13.758,12
+"Berkeley County, South Carolina",Amerika Serikat,2021,4,1.09,1.0836,13.823,16
+"Changhua County, Taiwan",Taiwan,2021,4,1.12,1.107,19.543,16
+"Council Bluffs, Iowa",Amerika Serikat,2021,4,1.1,1.0769,4.165,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2021,4,1.07,1.0844,4.165,16
+"Douglas County, Georgia",Amerika Serikat,2021,4,1.08,1.0776,10.842,16
+"Dublin, Ireland",Irlandia,2021,4,1.09,1.0847,8.759,16
+"Eemshaven, Netherlands",Belanda,2021,4,1.08,1.0905,7.473,16
+"Hamina, Finland",Finlandia,2021,4,1.09,1.0813,0.449,16
+"Henderson, Nevada",Amerika Serikat,2021,4,1.1,1.1275,5.712,0
+"Jackson County, Alabama",Amerika Serikat,2021,4,1.11,1.0862,9.526,6
+"Lenoir, North Carolina",Amerika Serikat,2021,4,1.08,1.0757,8.163,16
+"Loudoun County, Virginia",Amerika Serikat,2021,4,1.09,1.0971,7.291,3
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2021,4,1.09,1.0961,7.291,3
+"Mayes County, Oklahoma",Amerika Serikat,2021,4,1.08,1.0853,9.408,16
+"Midlothian, Texas",Amerika Serikat,2021,4,1.17,1.1076,13.35,0
+"Montgomery County, Tennessee",Amerika Serikat,2021,4,1.09,1.0923,9.361,6
+"Papillion, Nebraska",Amerika Serikat,2021,4,1.15,1.1074,4.075,0
+"Quilicura, Chile",Chili,2021,4,1.1,1.1208,8.179,16
+Singapore,Singapura,2021,4,1.13,1.1456,25.739,16
+"St. Ghislain, Belgium",Belgia,2021,4,1.08,1.0894,6.607,16
+"The Dalles, Oregon",Amerika Serikat,2021,4,1.11,1.0829,3.129,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2021,4,1.05,1.0946,3.129,13
+"Berkeley County, South Carolina",Amerika Serikat,2022,1,1.08,1.0777,10.074,16
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2022,1,1.14,1.0951,-1.381,0
+"Changhua County, Taiwan",Taiwan,2022,1,1.1,1.0937,16.614,16
+"Council Bluffs, Iowa",Amerika Serikat,2022,1,1.11,1.0791,-4.2,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2022,1,1.07,1.0895,-4.2,16
+"Douglas County, Georgia",Amerika Serikat,2022,1,1.08,1.0747,6.69,16
+"Dublin, Ireland",Irlandia,2022,1,1.09,1.0854,5.961,16
+"Eemshaven, Netherlands",Belanda,2022,1,1.06,1.0957,4.573,16
+"Fredericia, Denmark",Denmark,2022,1,1.13,1.1183,2.99,0
+"Hamina, Finland",Finlandia,2022,1,1.09,1.0918,-4.353,16
+"Henderson, Nevada",Amerika Serikat,2022,1,1.09,1.1217,2.243,1
+"Jackson County, Alabama",Amerika Serikat,2022,1,1.1,1.0856,4.093,7
+"Lenoir, North Carolina",Amerika Serikat,2022,1,1.08,1.0743,3.307,16
+"Loudoun County, Virginia",Amerika Serikat,2022,1,1.07,1.0967,0.847,4
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2022,1,1.08,1.0939,0.847,4
+"Mayes County, Oklahoma",Amerika Serikat,2022,1,1.08,1.0831,1.407,16
+"Midlothian, Texas",Amerika Serikat,2022,1,1.16,1.0964,5.052,1
+"Montgomery County, Tennessee",Amerika Serikat,2022,1,1.11,1.0921,2.509,7
+"Papillion, Nebraska",Amerika Serikat,2022,1,1.18,1.1091,-4.082,1
+"Quilicura, Chile",Chili,2022,1,1.1,1.1167,10.153,16
+Singapore,Singapura,2022,1,1.13,1.1383,25.379,16
+Singapore (2nd facility),Singapura,2022,1,1.23,1.161,25.379,0
+"St. Ghislain, Belgium",Belgia,2022,1,1.08,1.0899,4.169,16
+"The Dalles, Oregon",Amerika Serikat,2022,1,1.1,1.0826,1.136,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2022,1,1.08,1.0938,1.136,14
+"Berkeley County, South Carolina",Amerika Serikat,2022,2,1.1,1.1189,20.395,16
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2022,2,1.13,1.1048,13.733,1
+"Changhua County, Taiwan",Taiwan,2022,2,1.13,1.1242,22.577,16
+"Council Bluffs, Iowa",Amerika Serikat,2022,2,1.12,1.0885,13.492,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2022,2,1.08,1.0921,13.492,16
+"Douglas County, Georgia",Amerika Serikat,2022,2,1.1,1.1064,18.078,16
+"Dublin, Ireland",Irlandia,2022,2,1.09,1.0825,10.113,16
+"Eemshaven, Netherlands",Belanda,2022,2,1.07,1.089,10.678,16
+"Fredericia, Denmark",Denmark,2022,2,1.11,1.1085,9.721,1
+"Hamina, Finland",Finlandia,2022,2,1.09,1.0807,7.072,16
+"Henderson, Nevada",Amerika Serikat,2022,2,1.1,1.1894,10.769,2
+"Jackson County, Alabama",Amerika Serikat,2022,2,1.12,1.1053,16.946,8
+"Lenoir, North Carolina",Amerika Serikat,2022,2,1.09,1.0929,15.702,16
+"Loudoun County, Virginia",Amerika Serikat,2022,2,1.09,1.1073,14.55,5
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2022,2,1.09,1.1066,14.55,5
+"Mayes County, Oklahoma",Amerika Serikat,2022,2,1.11,1.1026,17.719,16
+"Midlothian, Texas",Amerika Serikat,2022,2,1.18,1.1387,20.608,2
+"Montgomery County, Tennessee",Amerika Serikat,2022,2,1.12,1.1067,17.095,8
+"Papillion, Nebraska",Amerika Serikat,2022,2,1.12,1.1212,13.362,2
+"Quilicura, Chile",Chili,2022,2,1.09,1.1194,3.504,16
+Singapore,Singapura,2022,2,1.14,1.1491,26.282,16
+Singapore (2nd facility),Singapura,2022,2,1.23,1.1639,26.282,1
+"St. Ghislain, Belgium",Belgia,2022,2,1.09,1.0852,11.448,16
+"The Dalles, Oregon",Amerika Serikat,2022,2,1.09,1.0808,7.351,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2022,2,1.07,1.0868,7.351,15
+"Berkeley County, South Carolina",Amerika Serikat,2022,3,1.13,1.1371,24.523,16
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2022,3,1.18,1.1266,18.928,2
+"Changhua County, Taiwan",Taiwan,2022,3,1.14,1.144,25.559,16
+"Council Bluffs, Iowa",Amerika Serikat,2022,3,1.14,1.1157,19.808,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2022,3,1.1,1.1202,19.808,16
+"Douglas County, Georgia",Amerika Serikat,2022,3,1.12,1.1312,22.107,16
+"Dublin, Ireland",Irlandia,2022,3,1.09,1.0808,14.213,16
+"Eemshaven, Netherlands",Belanda,2022,3,1.08,1.0957,15.782,16
+"Fredericia, Denmark",Denmark,2022,3,1.11,1.1087,14.804,2
+"Hamina, Finland",Finlandia,2022,3,1.09,1.0863,14.391,16
+"Henderson, Nevada",Amerika Serikat,2022,3,1.15,1.2227,21.002,3
+"Jackson County, Alabama",Amerika Serikat,2022,3,1.14,1.136,21.173,9
+"Lenoir, North Carolina",Amerika Serikat,2022,3,1.11,1.1173,20.559,16
+"Loudoun County, Virginia",Amerika Serikat,2022,3,1.11,1.1369,20.649,6
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2022,3,1.11,1.1339,20.649,6
+"Mayes County, Oklahoma",Amerika Serikat,2022,3,1.13,1.1403,22.795,16
+"Midlothian, Texas",Amerika Serikat,2022,3,1.19,1.163,24.239,3
+"Montgomery County, Tennessee",Amerika Serikat,2022,3,1.14,1.1345,21.827,9
+"Papillion, Nebraska",Amerika Serikat,2022,3,1.13,1.1563,19.842,3
+"Quilicura, Chile",Chili,2022,3,1.09,1.1151,2.47,16
+Singapore,Singapura,2022,3,1.13,1.146,25.897,16
+Singapore (2nd facility),Singapura,2022,3,1.21,1.1618,25.897,2
+"St. Ghislain, Belgium",Belgia,2022,3,1.09,1.094,15.501,16
+"Storey County, Nevada",Amerika Serikat,2022,3,1.29,1.12,13.029,0
+"The Dalles, Oregon",Amerika Serikat,2022,3,1.1,1.0892,14.857,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2022,3,1.08,1.0919,14.857,16
+"Berkeley County, South Carolina",Amerika Serikat,2022,4,1.08,1.0812,13.043,16
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2022,4,1.13,1.1013,3.036,3
+"Changhua County, Taiwan",Taiwan,2022,4,1.11,1.1154,19.954,16
+"Council Bluffs, Iowa",Amerika Serikat,2022,4,1.1,1.074,0.377,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2022,4,1.07,1.0807,0.377,16
+"Douglas County, Georgia",Amerika Serikat,2022,4,1.07,1.0808,8.688,16
+"Dublin, Ireland",Irlandia,2022,4,1.09,1.0829,8.505,16
+"Eemshaven, Netherlands",Belanda,2022,4,1.07,1.0848,7.744,16
+"Fredericia, Denmark",Denmark,2022,4,1.12,1.1032,6.491,3
+"Hamina, Finland",Finlandia,2022,4,1.09,1.0813,1.508,16
+"Henderson, Nevada",Amerika Serikat,2022,4,1.09,1.121,5.165,4
+"Jackson County, Alabama",Amerika Serikat,2022,4,1.1,1.0878,6.859,10
+"Lenoir, North Carolina",Amerika Serikat,2022,4,1.08,1.078,5.865,16
+"Loudoun County, Virginia",Amerika Serikat,2022,4,1.07,1.0931,4.935,7
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2022,4,1.07,1.09,4.935,7
+"Mayes County, Oklahoma",Amerika Serikat,2022,4,1.07,1.0809,5.975,16
+"Midlothian, Texas",Amerika Serikat,2022,4,1.12,1.0954,10.404,4
+"Montgomery County, Tennessee",Amerika Serikat,2022,4,1.08,1.0883,5.862,10
+"Papillion, Nebraska",Amerika Serikat,2022,4,1.1,1.1009,0.217,4
+"Quilicura, Chile",Chili,2022,4,1.09,1.1185,8.358,16
+Singapore,Singapura,2022,4,1.13,1.1419,25.454,16
+Singapore (2nd facility),Singapura,2022,4,1.19,1.159,25.454,3
+"St. Ghislain, Belgium",Belgia,2022,4,1.09,1.0812,7.605,16
+"Storey County, Nevada",Amerika Serikat,2022,4,1.2,1.1014,-0.235,1
+"The Dalles, Oregon",Amerika Serikat,2022,4,1.09,1.0748,2.091,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2022,4,1.05,1.0824,2.091,16
+"Berkeley County, South Carolina",Amerika Serikat,2023,1,1.08,1.0779,12.307,16
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2023,1,1.13,1.0963,1.333,4
+"Changhua County, Taiwan",Taiwan,2023,1,1.09,1.0921,15.719,16
+"Council Bluffs, Iowa",Amerika Serikat,2023,1,1.1,1.079,-2.512,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2023,1,1.07,1.0884,-2.512,16
+"Douglas County, Georgia",Amerika Serikat,2023,1,1.07,1.0713,9.508,16
+"Dublin, Ireland",Irlandia,2023,1,1.09,1.0841,6.018,16
+"Eemshaven, Netherlands",Belanda,2023,1,1.07,1.0901,4.648,16
+"Fredericia, Denmark",Denmark,2023,1,1.12,1.1067,2.99,4
+"Hamina, Finland",Finlandia,2023,1,1.09,1.0891,-3.87,16
+"Henderson, Nevada",Amerika Serikat,2023,1,1.07,1.1046,2.762,5
+"Jackson County, Alabama",Amerika Serikat,2023,1,1.09,1.081,7.31,11
+"Lenoir, North Carolina",Amerika Serikat,2023,1,1.08,1.075,5.919,16
+"Loudoun County, Virginia",Amerika Serikat,2023,1,1.07,1.0961,3.365,8
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2023,1,1.07,1.091,3.365,8
+"Mayes County, Oklahoma",Amerika Serikat,2023,1,1.08,1.0835,4.263,16
+"Midlothian, Texas",Amerika Serikat,2023,1,1.11,1.0892,8.961,5
+"Montgomery County, Tennessee",Amerika Serikat,2023,1,1.1,1.0832,6.097,11
+"Papillion, Nebraska",Amerika Serikat,2023,1,1.12,1.1021,-2.694,5
+"Quilicura, Chile",Chili,2023,1,1.09,1.1209,11.631,16
+Singapore,Singapura,2023,1,1.13,1.1342,25.037,16
+Singapore (2nd facility),Singapura,2023,1,1.19,1.1522,25.037,4
+"St. Ghislain, Belgium",Belgia,2023,1,1.09,1.0843,4.558,16
+"Storey County, Nevada",Amerika Serikat,2023,1,1.18,1.1072,-3.011,2
+"The Dalles, Oregon",Amerika Serikat,2023,1,1.09,1.0836,-0.329,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2023,1,1.07,1.0924,-0.329,16
+"Berkeley County, South Carolina",Amerika Serikat,2023,2,1.11,1.1069,19.7,16
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2023,2,1.1,1.0997,12.5,5
+"Changhua County, Taiwan",Taiwan,2023,2,1.13,1.1289,23.146,16
+"Council Bluffs, Iowa",Amerika Serikat,2023,2,1.11,1.0916,13.867,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2023,2,1.08,1.0935,13.867,16
+"Douglas County, Georgia",Amerika Serikat,2023,2,1.09,1.0981,17.417,16
+"Dublin, Ireland",Irlandia,2023,2,1.08,1.0795,11.069,16
+"Eemshaven, Netherlands",Belanda,2023,2,1.07,1.0836,10.645,16
+"Fredericia, Denmark",Denmark,2023,2,1.1,1.0958,9.713,5
+"Hamina, Finland",Finlandia,2023,2,1.09,1.0736,7.809,16
+"Henderson, Nevada",Amerika Serikat,2023,2,1.08,1.1614,12.01,6
+"Jackson County, Alabama",Amerika Serikat,2023,2,1.11,1.0965,16.106,12
+"Lenoir, North Carolina",Amerika Serikat,2023,2,1.09,1.0829,14.683,16
+"Loudoun County, Virginia",Amerika Serikat,2023,2,1.08,1.1003,13.927,9
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2023,2,1.08,1.0973,13.927,9
+"Mayes County, Oklahoma",Amerika Serikat,2023,2,1.1,1.1031,17.445,16
+"Midlothian, Texas",Amerika Serikat,2023,2,1.14,1.1204,20.12,6
+"Montgomery County, Tennessee",Amerika Serikat,2023,2,1.1,1.1,16.272,12
+"Papillion, Nebraska",Amerika Serikat,2023,2,1.09,1.1175,13.764,6
+"Quilicura, Chile",Chili,2023,2,1.09,1.117,4.985,16
+Singapore,Singapura,2023,2,1.13,1.1506,26.653,16
+Singapore (2nd facility),Singapura,2023,2,1.19,1.1562,26.653,5
+"St. Ghislain, Belgium",Belgia,2023,2,1.08,1.0819,11.58,16
+"Storey County, Nevada",Amerika Serikat,2023,2,1.2,1.0968,7.884,3
+"The Dalles, Oregon",Amerika Serikat,2023,2,1.1,1.0789,9.388,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2023,2,1.07,1.0817,9.388,16
+"Berkeley County, South Carolina",Amerika Serikat,2023,3,1.14,1.1413,24.884,16
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2023,3,1.11,1.1213,18.847,6
+"Changhua County, Taiwan",Taiwan,2023,3,1.15,1.1419,25.949,16
+"Council Bluffs, Iowa",Amerika Serikat,2023,3,1.14,1.1099,19.862,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2023,3,1.09,1.1132,19.862,16
+"Douglas County, Georgia",Amerika Serikat,2023,3,1.13,1.1309,22.481,16
+"Dublin, Ireland",Irlandia,2023,3,1.08,1.0801,14.142,16
+"Eemshaven, Netherlands",Belanda,2023,3,1.09,1.091,16.195,16
+"Fredericia, Denmark",Denmark,2023,3,1.08,1.1022,15.272,6
+"Hamina, Finland",Finlandia,2023,3,1.1,1.0873,15.415,16
+"Henderson, Nevada",Amerika Serikat,2023,3,1.1,1.2176,18.918,7
+"Jackson County, Alabama",Amerika Serikat,2023,3,1.13,1.1262,21.309,13
+"Lenoir, North Carolina",Amerika Serikat,2023,3,1.12,1.1169,20.733,16
+"Loudoun County, Virginia",Amerika Serikat,2023,3,1.1,1.1293,20.557,10
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2023,3,1.11,1.1272,20.557,10
+"Mayes County, Oklahoma",Amerika Serikat,2023,3,1.14,1.1335,22.997,16
+"Midlothian, Texas",Amerika Serikat,2023,3,1.16,1.1639,24.597,7
+"Montgomery County, Tennessee",Amerika Serikat,2023,3,1.13,1.1217,21.417,13
+"Papillion, Nebraska",Amerika Serikat,2023,3,1.1,1.1358,19.965,7
+"Quilicura, Chile",Chili,2023,3,1.09,1.1064,5.392,16
+Singapore,Singapura,2023,3,1.13,1.1476,26.407,16
+Singapore (2nd facility),Singapura,2023,3,1.19,1.154,26.407,6
+"St. Ghislain, Belgium",Belgia,2023,3,1.09,1.0905,16.092,16
+"Storey County, Nevada",Amerika Serikat,2023,3,1.24,1.1104,12.688,4
+"The Dalles, Oregon",Amerika Serikat,2023,3,1.1,1.0876,13.778,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2023,3,1.08,1.0885,13.778,16
+"Berkeley County, South Carolina",Amerika Serikat,2023,4,1.08,1.0804,13.002,16
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2023,4,1.08,1.0933,5.05,7
+"Changhua County, Taiwan",Taiwan,2023,4,1.11,1.1108,20.247,16
+"Council Bluffs, Iowa",Amerika Serikat,2023,4,1.1,1.0723,3.775,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2023,4,1.07,1.0775,3.775,16
+"Douglas County, Georgia",Amerika Serikat,2023,4,1.08,1.0785,9.203,16
+"Dublin, Ireland",Irlandia,2023,4,1.08,1.0827,8.807,16
+"Eemshaven, Netherlands",Belanda,2023,4,1.07,1.0819,8.075,16
+"Fredericia, Denmark",Denmark,2023,4,1.1,1.0974,5.639,7
+"Hamina, Finland",Finlandia,2023,4,1.09,1.0807,-0.728,16
+"Henderson, Nevada",Amerika Serikat,2023,4,1.07,1.1164,5.548,8
+"Jackson County, Alabama",Amerika Serikat,2023,4,1.09,1.0821,7.63,14
+"Lenoir, North Carolina",Amerika Serikat,2023,4,1.08,1.075,6.82,16
+"Loudoun County, Virginia",Amerika Serikat,2023,4,1.09,1.086,6.32,11
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2023,4,1.07,1.0826,6.32,11
+"Mayes County, Oklahoma",Amerika Serikat,2023,4,1.08,1.078,8.131,16
+"Midlothian, Texas",Amerika Serikat,2023,4,1.1,1.0897,11.421,8
+"Montgomery County, Tennessee",Amerika Serikat,2023,4,1.09,1.0789,7.451,14
+"Papillion, Nebraska",Amerika Serikat,2023,4,1.08,1.092,3.752,8
+"Quilicura, Chile",Chili,2023,4,1.09,1.1173,7.568,16
+Singapore,Singapura,2023,4,1.13,1.1485,26.5,16
+Singapore (2nd facility),Singapura,2023,4,1.17,1.1524,26.5,7
+"St. Ghislain, Belgium",Belgia,2023,4,1.08,1.0786,8.094,16
+"Storey County, Nevada",Amerika Serikat,2023,4,1.14,1.0949,1.39,5
+"The Dalles, Oregon",Amerika Serikat,2023,4,1.1,1.0762,3.783,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2023,4,1.06,1.0827,3.783,16
+"Berkeley County, South Carolina",Amerika Serikat,2024,1,1.08,1.075,10.507,16
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2024,1,1.08,1.0861,1.025,8
+"Changhua County, Taiwan",Taiwan,2024,1,1.1,1.0897,16.155,16
+"Council Bluffs, Iowa",Amerika Serikat,2024,1,1.12,1.0738,-1.344,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2024,1,1.07,1.081,-1.344,16
+"Douglas County, Georgia",Amerika Serikat,2024,1,1.07,1.0729,7.279,16
+"Dublin, Ireland",Irlandia,2024,1,1.08,1.0832,6.236,16
+"Eemshaven, Netherlands",Belanda,2024,1,1.07,1.0891,5.12,16
+"Fredericia, Denmark",Denmark,2024,1,1.09,1.0988,2.95,8
+"Hamina, Finland",Finlandia,2024,1,1.09,1.083,-5.749,16
+"Henderson, Nevada",Amerika Serikat,2024,1,1.07,1.0965,4.713,9
+"Jackson County, Alabama",Amerika Serikat,2024,1,1.08,1.0755,5.227,15
+"Lenoir, North Carolina",Amerika Serikat,2024,1,1.08,1.0732,4.5,16
+"Loudoun County, Virginia",Amerika Serikat,2024,1,1.08,1.0853,2.773,12
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2024,1,1.07,1.0803,2.773,12
+"Mayes County, Oklahoma",Amerika Serikat,2024,1,1.08,1.076,4.447,16
+"Midlothian, Texas",Amerika Serikat,2024,1,1.09,1.0814,8.641,9
+"Montgomery County, Tennessee",Amerika Serikat,2024,1,1.09,1.077,4.555,15
+"Papillion, Nebraska",Amerika Serikat,2024,1,1.09,1.0919,-1.475,9
+"Quilicura, Chile",Chili,2024,1,1.11,1.12,11.717,16
+Singapore,Singapura,2024,1,1.13,1.1412,26.14,16
+Singapore (2nd facility),Singapura,2024,1,1.16,1.1462,26.14,8
+"St. Ghislain, Belgium",Belgia,2024,1,1.08,1.0826,5.244,16
+"Storey County, Nevada",Amerika Serikat,2024,1,1.12,1.0993,-0.083,6
+"The Dalles, Oregon",Amerika Serikat,2024,1,1.1,1.0779,1.016,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2024,1,1.06,1.0851,1.016,16
+"Berkeley County, South Carolina",Amerika Serikat,2024,2,1.11,1.1161,21.123,16
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2024,2,1.09,1.0969,15.601,9
+"Changhua County, Taiwan",Taiwan,2024,2,1.13,1.1285,23.744,16
+"Council Bluffs, Iowa",Amerika Serikat,2024,2,1.11,1.0842,14.885,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2024,2,1.07,1.0847,14.885,16
+"Douglas County, Georgia",Amerika Serikat,2024,2,1.1,1.1052,18.924,16
+"Dublin, Ireland",Irlandia,2024,2,1.08,1.08,10.459,16
+"Eemshaven, Netherlands",Belanda,2024,2,1.08,1.0868,12.05,16
+"Fredericia, Denmark",Denmark,2024,2,1.08,1.0922,10.822,9
+"Hamina, Finland",Finlandia,2024,2,1.1,1.0715,8.749,16
+"Henderson, Nevada",Amerika Serikat,2024,2,1.09,1.1717,12.616,10
+"Jackson County, Alabama",Amerika Serikat,2024,2,1.11,1.096,17.756,16
+"Lenoir, North Carolina",Amerika Serikat,2024,2,1.11,1.0923,17.109,16
+"Loudoun County, Virginia",Amerika Serikat,2024,2,1.09,1.0971,16.454,13
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2024,2,1.08,1.0954,16.454,13
+"Mayes County, Oklahoma",Amerika Serikat,2024,2,1.12,1.1016,18.897,16
+"Midlothian, Texas",Amerika Serikat,2024,2,1.12,1.1211,21.581,10
+"Montgomery County, Tennessee",Amerika Serikat,2024,2,1.11,1.0968,18.333,16
+"Papillion, Nebraska",Amerika Serikat,2024,2,1.09,1.1011,14.681,10
+"Quilicura, Chile",Chili,2024,2,1.09,1.1066,4.035,16
+Singapore,Singapura,2024,2,1.13,1.1529,27.306,16
+Singapore (2nd facility),Singapura,2024,2,1.15,1.1483,27.306,9
+"St. Ghislain, Belgium",Belgia,2024,2,1.08,1.0833,11.908,16
+"Storey County, Nevada",Amerika Serikat,2024,2,1.16,1.0921,7.888,7
+"The Dalles, Oregon",Amerika Serikat,2024,2,1.1,1.0779,8.275,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2024,2,1.06,1.0802,8.275,16
+"Berkeley County, South Carolina",Amerika Serikat,2024,3,1.13,1.1379,25.052,16
+"Central Ohio (Columbus), Ohio",Amerika Serikat,2024,3,1.05,1.1303,18.916,0
+"Central Ohio (Lancaster), Ohio",Amerika Serikat,2024,3,1.04,1.1509,19.216,0
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2024,3,1.07,1.1196,18.797,10
+"Changhua County, Taiwan",Taiwan,2024,3,1.15,1.1408,26.107,16
+"Council Bluffs, Iowa",Amerika Serikat,2024,3,1.13,1.1074,19.406,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2024,3,1.08,1.1094,19.406,16
+"Douglas County, Georgia",Amerika Serikat,2024,3,1.12,1.1302,22.591,16
+"Dublin, Ireland",Irlandia,2024,3,1.07,1.0787,13.254,16
+"Eemshaven, Netherlands",Belanda,2024,3,1.08,1.0901,16.183,16
+"Fredericia, Denmark",Denmark,2024,3,1.07,1.0912,15.187,10
+"Hamina, Finland",Finlandia,2024,3,1.1,1.086,16.382,16
+"Henderson, Nevada",Amerika Serikat,2024,3,1.11,1.2319,18.181,11
+"Jackson County, Alabama",Amerika Serikat,2024,3,1.13,1.122,21.058,16
+"Lenoir, North Carolina",Amerika Serikat,2024,3,1.24,1.1131,20.774,16
+"Loudoun County, Virginia",Amerika Serikat,2024,3,1.11,1.1172,20.788,14
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2024,3,1.09,1.1139,20.788,14
+"Mayes County, Oklahoma",Amerika Serikat,2024,3,1.14,1.1275,22.334,16
+"Midlothian, Texas",Amerika Serikat,2024,3,1.13,1.1465,23.914,11
+"Montgomery County, Tennessee",Amerika Serikat,2024,3,1.13,1.1201,21.263,16
+"Papillion, Nebraska",Amerika Serikat,2024,3,1.1,1.1304,19.482,11
+"Quilicura, Chile",Chili,2024,3,1.09,1.1106,3.056,16
+Singapore,Singapura,2024,3,1.13,1.1474,26.547,16
+Singapore (2nd facility),Singapura,2024,3,1.15,1.1455,26.547,10
+"St. Ghislain, Belgium",Belgia,2024,3,1.08,1.0863,16.095,16
+"Storey County, Nevada",Amerika Serikat,2024,3,1.22,1.1052,11.801,8
+"The Dalles, Oregon",Amerika Serikat,2024,3,1.11,1.0853,14.05,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2024,3,1.08,1.086,14.05,16
+"Berkeley County, South Carolina",Amerika Serikat,2024,4,1.08,1.0817,13.868,16
+"Central Ohio (Columbus), Ohio",Amerika Serikat,2024,4,1.05,1.0966,5.087,1
+"Central Ohio (Lancaster), Ohio",Amerika Serikat,2024,4,1.04,1.1034,5.694,1
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2024,4,1.05,1.0854,5.088,11
+"Changhua County, Taiwan",Taiwan,2024,4,1.12,1.1049,20.333,16
+"Council Bluffs, Iowa",Amerika Serikat,2024,4,1.09,1.0717,3.537,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2024,4,1.06,1.0752,3.537,16
+"Douglas County, Georgia",Amerika Serikat,2024,4,1.08,1.0753,10.646,16
+"Dublin, Ireland",Irlandia,2024,4,1.08,1.0807,8.766,16
+"Eemshaven, Netherlands",Belanda,2024,4,1.07,1.083,7.87,16
+"Fredericia, Denmark",Denmark,2024,4,1.07,1.0903,6.688,11
+"Hamina, Finland",Finlandia,2024,4,1.09,1.0809,3.082,16
+"Henderson, Nevada",Amerika Serikat,2024,4,1.08,1.1185,5.088,12
+"Inzai, Japan",Jepang,2024,4,1.15,1.0983,10.549,0
+"Jackson County, Alabama",Amerika Serikat,2024,4,1.09,1.0743,8.951,16
+"Lenoir, North Carolina",Amerika Serikat,2024,4,1.08,1.0713,7.687,16
+"Loudoun County, Virginia",Amerika Serikat,2024,4,1.07,1.076,6.236,15
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2024,4,1.07,1.0737,6.236,15
+"Mayes County, Oklahoma",Amerika Serikat,2024,4,1.09,1.0791,8.938,16
+"Midlothian, Texas",Amerika Serikat,2024,4,1.08,1.0886,12.835,12
+"Montgomery County, Tennessee",Amerika Serikat,2024,4,1.08,1.0767,8.616,16
+"Papillion, Nebraska",Amerika Serikat,2024,4,1.08,1.0859,3.5,12
+"Quilicura, Chile",Chili,2024,4,1.09,1.1166,8.623,16
+Singapore,Singapura,2024,4,1.13,1.1449,26.163,16
+Singapore (2nd facility),Singapura,2024,4,1.14,1.1432,26.163,11
+"St. Ghislain, Belgium",Belgia,2024,4,1.07,1.0789,7.171,16
+"Storey County, Nevada",Amerika Serikat,2024,4,1.11,1.0888,1.289,9
+"The Dalles, Oregon",Amerika Serikat,2024,4,1.1,1.0774,3.095,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2024,4,1.06,1.0836,3.095,16
+"Berkeley County, South Carolina",Amerika Serikat,2025,1,1.07,1.0738,8.815,16
+"Bristow, Virginia",Amerika Serikat,2025,1,1.07,1.1053,0.985,0
+"Central Ohio (Columbus), Ohio",Amerika Serikat,2025,1,1.05,1.0924,-1.589,2
+"Central Ohio (Lancaster), Ohio",Amerika Serikat,2025,1,1.04,1.101,-0.68,2
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2025,1,1.05,1.0811,-1.464,12
+"Changhua County, Taiwan",Taiwan,2025,1,1.1,1.0818,14.907,16
+"Council Bluffs, Iowa",Amerika Serikat,2025,1,1.1,1.0689,-3.292,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2025,1,1.07,1.0758,-3.292,16
+"Douglas County, Georgia",Amerika Serikat,2025,1,1.08,1.0687,6.178,16
+"Dublin, Ireland",Irlandia,2025,1,1.08,1.0817,5.84,16
+"Eemshaven, Netherlands",Belanda,2025,1,1.07,1.0867,3.374,16
+"Fredericia, Denmark",Denmark,2025,1,1.07,1.0922,2.326,12
+"Hamina, Finland",Finlandia,2025,1,1.09,1.0863,-2.254,16
+"Henderson, Nevada",Amerika Serikat,2025,1,1.07,1.0953,2.912,13
+"Inzai, Japan",Jepang,2025,1,1.12,1.1014,2.981,1
+"Jackson County, Alabama",Amerika Serikat,2025,1,1.09,1.0686,4.011,16
+"Lenoir, North Carolina",Amerika Serikat,2025,1,1.08,1.0707,2.432,16
+"Loudoun County, Virginia",Amerika Serikat,2025,1,1.07,1.0768,0.271,16
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2025,1,1.07,1.0722,0.271,16
+"Mayes County, Oklahoma",Amerika Serikat,2025,1,1.09,1.0748,2.449,16
+"Midlothian, Texas",Amerika Serikat,2025,1,1.08,1.075,7.194,13
+"Montgomery County, Tennessee",Amerika Serikat,2025,1,1.08,1.0731,3.095,16
+"Omaha, Nebraska",Amerika Serikat,2025,1,1.06,1.0994,-3.918,0
+"Papillion, Nebraska",Amerika Serikat,2025,1,1.08,1.0824,-3.271,13
+"Quilicura, Chile",Chili,2025,1,1.09,1.1212,10.841,16
+Singapore,Singapura,2025,1,1.12,1.1343,25.532,16
+Singapore (2nd facility),Singapura,2025,1,1.14,1.1355,25.532,12
+"St. Ghislain, Belgium",Belgia,2025,1,1.07,1.0807,3.452,16
+"Storey County, Nevada",Amerika Serikat,2025,1,1.09,1.0896,-0.962,10
+"The Dalles, Oregon",Amerika Serikat,2025,1,1.1,1.0763,0.3,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2025,1,1.06,1.0832,0.3,16
+"Berkeley County, South Carolina",Amerika Serikat,2025,2,1.11,1.1162,21.584,16
+"Bristow, Virginia",Amerika Serikat,2025,2,1.08,1.1173,16.637,1
+"Central Ohio (Columbus), Ohio",Amerika Serikat,2025,2,1.05,1.1016,14.546,3
+"Central Ohio (Lancaster), Ohio",Amerika Serikat,2025,2,1.04,1.1071,15.173,3
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2025,2,1.07,1.0838,14.522,13
+"Changhua County, Taiwan",Taiwan,2025,2,1.14,1.12,23.024,16
+"Council Bluffs, Iowa",Amerika Serikat,2025,2,1.11,1.0826,14.187,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2025,2,1.08,1.0823,14.187,16
+"Douglas County, Georgia",Amerika Serikat,2025,2,1.1,1.0997,19.201,16
+"Dublin, Ireland",Irlandia,2025,2,1.08,1.0774,10.998,16
+"Eemshaven, Netherlands",Belanda,2025,2,1.07,1.0829,11.349,16
+"Fredericia, Denmark",Denmark,2025,2,1.06,1.0847,10.456,13
+"Hamina, Finland",Finlandia,2025,2,1.09,1.0774,7.493,16
+"Henderson, Nevada",Amerika Serikat,2025,2,1.09,1.1643,12.247,14
+"Inzai, Japan",Jepang,2025,2,1.14,1.1057,16.97,2
+"Jackson County, Alabama",Amerika Serikat,2025,2,1.11,1.0928,17.94,16
+"Lenoir, North Carolina",Amerika Serikat,2025,2,1.1,1.0862,16.828,16
+"Loudoun County, Virginia",Amerika Serikat,2025,2,1.08,1.0834,16.049,16
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2025,2,1.08,1.084,16.049,16
+"Mayes County, Oklahoma",Amerika Serikat,2025,2,1.16,1.0907,18.149,16
+"Midlothian, Texas",Amerika Serikat,2025,2,1.11,1.1124,20.937,14
+"Montgomery County, Tennessee",Amerika Serikat,2025,2,1.11,1.0913,18.157,16
+"Omaha, Nebraska",Amerika Serikat,2025,2,1.04,1.1049,13.655,1
+"Papillion, Nebraska",Amerika Serikat,2025,2,1.09,1.0936,14.045,14
+"Quilicura, Chile",Chili,2025,2,1.08,1.1088,4.837,16
+Singapore,Singapura,2025,2,1.13,1.1478,26.702,16
+Singapore (2nd facility),Singapura,2025,2,1.15,1.1389,26.702,13
+"St. Ghislain, Belgium",Belgia,2025,2,1.08,1.0782,12.323,16
+"Storey County, Nevada",Amerika Serikat,2025,2,1.16,1.0866,7.499,11
+"The Dalles, Oregon",Amerika Serikat,2025,2,1.1,1.0763,8.277,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2025,2,1.06,1.078,8.277,16
+"Berkeley County, South Carolina",Amerika Serikat,2025,3,1.12,1.1345,24.481,16
+"Bristow, Virginia",Amerika Serikat,2025,3,1.12,1.1407,20.545,2
+"Central Ohio (Columbus), Ohio",Amerika Serikat,2025,3,1.07,1.1204,18.991,4
+"Central Ohio (Lancaster), Ohio",Amerika Serikat,2025,3,1.04,1.1352,19.426,4
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2025,3,1.07,1.1093,18.894,14
+"Changhua County, Taiwan",Taiwan,2025,3,1.16,1.1339,25.616,16
+"Council Bluffs, Iowa",Amerika Serikat,2025,3,1.14,1.1053,20.526,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2025,3,1.1,1.1063,20.526,16
+"Douglas County, Georgia",Amerika Serikat,2025,3,1.12,1.1263,22.277,16
+"Dublin, Ireland",Irlandia,2025,3,1.08,1.0772,14.131,16
+"Eemshaven, Netherlands",Belanda,2025,3,1.08,1.0897,15.922,16
+"Fredericia, Denmark",Denmark,2025,3,1.06,1.0841,15.372,14
+"Hamina, Finland",Finlandia,2025,3,1.1,1.0815,15.553,16
+"Henderson, Nevada",Amerika Serikat,2025,3,1.12,1.2064,17.564,15
+"Inzai, Japan",Jepang,2025,3,1.14,1.153,25.323,3
+"Jackson County, Alabama",Amerika Serikat,2025,3,1.13,1.1174,21.264,16
+"Lenoir, North Carolina",Amerika Serikat,2025,3,1.12,1.1059,20.329,16
+"Loudoun County, Virginia",Amerika Serikat,2025,3,1.1,1.1072,20.031,16
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2025,3,1.1,1.104,20.031,16
+"Mayes County, Oklahoma",Amerika Serikat,2025,3,1.15,1.1204,22.703,16
+"Midlothian, Texas",Amerika Serikat,2025,3,1.13,1.1379,23.758,15
+"Montgomery County, Tennessee",Amerika Serikat,2025,3,1.1,1.1153,21.542,16
+"Omaha, Nebraska",Amerika Serikat,2025,3,1.04,1.1242,20.343,2
+"Papillion, Nebraska",Amerika Serikat,2025,3,1.11,1.1133,20.594,15
+"Quilicura, Chile",Chili,2025,3,1.08,1.1029,5.367,16
+Singapore,Singapura,2025,3,1.12,1.144,26.24,16
+Singapore (2nd facility),Singapura,2025,3,1.15,1.1363,26.24,14
+"St. Ghislain, Belgium",Belgia,2025,3,1.08,1.0851,15.259,16
+"Storey County, Nevada",Amerika Serikat,2025,3,1.22,1.0974,12.279,12
+"The Dalles, Oregon",Amerika Serikat,2025,3,1.11,1.0812,14.282,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2025,3,1.08,1.081,14.282,16
+"The Dalles, Oregon (3rd facility)",Amerika Serikat,2025,3,1.09,1.1075,14.282,0
+"Berkeley County, South Carolina",Amerika Serikat,2025,4,1.08,1.0772,12.485,16
+"Bristow, Virginia",Amerika Serikat,2025,4,1.07,1.0982,5.021,3
+"Central Ohio (Columbus), Ohio",Amerika Serikat,2025,4,1.05,1.0865,3.221,5
+"Central Ohio (Lancaster), Ohio",Amerika Serikat,2025,4,1.04,1.0946,3.946,5
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2025,4,1.06,1.0733,3.211,15
+"Changhua County, Taiwan",Taiwan,2025,4,1.12,1.1026,20.592,16
+"Council Bluffs, Iowa",Amerika Serikat,2025,4,1.09,1.0659,3.69,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2025,4,1.07,1.0697,3.69,16
+"Douglas County, Georgia",Amerika Serikat,2025,4,1.07,1.0768,9.154,16
+"Dublin, Ireland",Irlandia,2025,4,1.08,1.0799,8.611,16
+"Eemshaven, Netherlands",Belanda,2025,4,1.07,1.0811,7.675,16
+"Fredericia, Denmark",Denmark,2025,4,1.06,1.0812,6.573,15
+"Hamina, Finland",Finlandia,2025,4,1.09,1.0802,3.305,16
+"Henderson, Nevada",Amerika Serikat,2025,4,1.08,1.0973,8.041,16
+"Inzai, Japan",Jepang,2025,4,1.07,1.0896,9.698,4
+"Jackson County, Alabama",Amerika Serikat,2025,4,1.09,1.0734,7.847,16
+"Lenoir, North Carolina",Amerika Serikat,2025,4,1.08,1.0717,6.038,16
+"Loudoun County, Virginia",Amerika Serikat,2025,4,1.07,1.0735,4.371,16
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2025,4,1.07,1.0716,4.371,16
+"Mayes County, Oklahoma",Amerika Serikat,2025,4,1.09,1.0726,9.325,16
+"Midlothian, Texas",Amerika Serikat,2025,4,1.09,1.0823,12.561,16
+"Montgomery County, Tennessee",Amerika Serikat,2025,4,1.06,1.0734,7.665,16
+"Omaha, Nebraska",Amerika Serikat,2025,4,1.05,1.0868,3.217,3
+"Papillion, Nebraska",Amerika Serikat,2025,4,1.07,1.0743,3.759,16
+"Quilicura, Chile",Chili,2025,4,1.08,1.113,8.811,16
+Singapore,Singapura,2025,4,1.12,1.1419,26.0,16
+Singapore (2nd facility),Singapura,2025,4,1.14,1.1343,26.0,15
+"St. Ghislain, Belgium",Belgia,2025,4,1.07,1.08,7.259,16
+"Storey County, Nevada",Amerika Serikat,2025,4,1.11,1.0861,3.532,13
+"The Dalles, Oregon",Amerika Serikat,2025,4,1.1,1.0765,4.12,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2025,4,1.06,1.0815,4.12,16
+"The Dalles, Oregon (3rd facility)",Amerika Serikat,2025,4,1.07,1.1002,4.12,1
+"Berkeley County, South Carolina",Amerika Serikat,2026,1,1.08,1.0733,9.383,16
+"Bristow, Virginia",Amerika Serikat,2026,1,1.07,1.0947,1.196,4
+"Central Ohio (Columbus), Ohio",Amerika Serikat,2026,1,1.06,1.0782,-0.938,6
+"Central Ohio (Lancaster), Ohio",Amerika Serikat,2026,1,1.04,1.0908,-0.296,6
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2026,1,1.07,1.0645,-0.907,16
+"Changhua County, Taiwan",Taiwan,2026,1,1.11,1.0834,16.15,16
+"Council Bluffs, Iowa",Amerika Serikat,2026,1,1.1,1.0662,-1.083,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2026,1,1.07,1.0707,-1.083,16
+"Douglas County, Georgia",Amerika Serikat,2026,1,1.07,1.066,7.39,16
+"Dublin, Ireland",Irlandia,2026,1,1.08,1.0813,6.016,16
+"Eemshaven, Netherlands",Belanda,2026,1,1.07,1.0825,2.542,16
+"Fredericia, Denmark",Denmark,2026,1,1.06,1.081,0.639,16
+"Hamina, Finland",Finlandia,2026,1,1.1,1.0742,-7.509,16
+"Henderson, Nevada",Amerika Serikat,2026,1,1.08,1.0986,6.472,16
+"Inzai, Japan",Jepang,2026,1,1.08,1.095,3.441,5
+"Jackson County, Alabama",Amerika Serikat,2026,1,1.09,1.064,5.527,16
+"Lenoir, North Carolina",Amerika Serikat,2026,1,1.08,1.0637,3.386,16
+"Loudoun County, Virginia",Amerika Serikat,2026,1,1.07,1.0687,0.371,16
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2026,1,1.08,1.0656,0.371,16
+"Mayes County, Oklahoma",Amerika Serikat,2026,1,1.08,1.0682,5.096,16
+"Mesa, Arizona",Amerika Serikat,2026,1,1.22,1.1143,9.323,0
+"Midlothian, Texas",Amerika Serikat,2026,1,1.08,1.0712,9.47,16
+"Montgomery County, Tennessee",Amerika Serikat,2026,1,1.09,1.0643,4.237,16
+"Omaha, Nebraska",Amerika Serikat,2026,1,1.05,1.0912,-1.657,4
+"Papillion, Nebraska",Amerika Serikat,2026,1,1.07,1.0743,-0.994,16
+"Quilicura, Chile",Chili,2026,1,1.08,1.1132,11.142,16
+"Red Oak, Texas",Amerika Serikat,2026,1,1.1,1.0981,9.47,0
+Singapore,Singapura,2026,1,1.12,1.1305,25.123,16
+Singapore (2nd facility),Singapura,2026,1,1.14,1.1264,25.123,16
+"St. Ghislain, Belgium",Belgia,2026,1,1.07,1.0799,4.938,16
+"Storey County, Nevada",Amerika Serikat,2026,1,1.11,1.0776,1.794,14
+"The Dalles, Oregon",Amerika Serikat,2026,1,1.1,1.0761,1.307,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2026,1,1.06,1.0815,1.307,16
+"The Dalles, Oregon (3rd facility)",Amerika Serikat,2026,1,1.07,1.1009,1.307,2
+"Berkeley County, South Carolina",Amerika Serikat,2026,2,1.11,1.115,20.582,16
+"Bristow, Virginia",Amerika Serikat,2026,2,1.1,1.1147,15.676,5
+"Central Ohio (Columbus), Ohio",Amerika Serikat,2026,2,1.06,1.0925,14.59,7
+"Central Ohio (Lancaster), Ohio",Amerika Serikat,2026,2,1.04,1.1011,15.131,7
+"Central Ohio (New Albany), Ohio",Amerika Serikat,2026,2,1.08,1.0802,14.515,16
+"Changhua County, Taiwan",Taiwan,2026,2,1.13,1.1192,23.114,16
+"Council Bluffs, Iowa",Amerika Serikat,2026,2,1.12,1.0805,14.474,16
+"Council Bluffs, Iowa (2nd facility)",Amerika Serikat,2026,2,1.08,1.0795,14.474,16
+"Douglas County, Georgia",Amerika Serikat,2026,2,1.1,1.1004,18.273,16
+"Dublin, Ireland",Irlandia,2026,2,1.08,1.0764,10.776,16
+"Eemshaven, Netherlands",Belanda,2026,2,1.07,1.08,11.272,16
+"Fort Wayne, Indiana",Amerika Serikat,2026,2,1.05,1.103,13.911,0
+"Fredericia, Denmark",Denmark,2026,2,1.06,1.076,10.36,16
+"Hamina, Finland",Finlandia,2026,2,1.09,1.0714,8.458,16
+"Henderson, Nevada",Amerika Serikat,2026,2,1.1,1.1615,11.841,16
+"Inzai, Japan",Jepang,2026,2,1.11,1.1003,16.415,6
+"Jackson County, Alabama",Amerika Serikat,2026,2,1.12,1.0925,17.158,16
+"Lenoir, North Carolina",Amerika Serikat,2026,2,1.1,1.0867,15.883,16
+"Loudoun County, Virginia",Amerika Serikat,2026,2,1.09,1.0866,15.281,16
+"Loudoun County, Virginia (2nd facility)",Amerika Serikat,2026,2,1.09,1.0847,15.281,16
+"Mayes County, Oklahoma",Amerika Serikat,2026,2,1.11,1.0939,18.874,16
+"Mesa, Arizona",Amerika Serikat,2026,2,1.28,1.1316,13.888,1
+"Midlothian, Texas",Amerika Serikat,2026,2,1.12,1.1118,21.148,16
+"Montgomery County, Tennessee",Amerika Serikat,2026,2,1.12,1.0905,17.755,16
+"Omaha, Nebraska",Amerika Serikat,2026,2,1.06,1.0993,13.653,5
+"Papillion, Nebraska",Amerika Serikat,2026,2,1.09,1.0893,14.27,16
+"Quilicura, Chile",Chili,2026,2,1.07,1.1116,3.8,16
+"Red Oak, Texas",Amerika Serikat,2026,2,1.14,1.1352,21.148,1
+Singapore,Singapura,2026,2,1.13,1.1471,26.861,16
+Singapore (2nd facility),Singapura,2026,2,1.17,1.132,26.861,16
+"St. Ghislain, Belgium",Belgia,2026,2,1.08,1.0755,12.674,16
+"Storey County, Nevada",Amerika Serikat,2026,2,1.17,1.0803,7.725,15
+"The Dalles, Oregon",Amerika Serikat,2026,2,1.1,1.0739,8.435,16
+"The Dalles, Oregon (2nd facility)",Amerika Serikat,2026,2,1.07,1.0744,8.435,16
+"The Dalles, Oregon (3rd facility)",Amerika Serikat,2026,2,1.08,1.0964,8.435,3
