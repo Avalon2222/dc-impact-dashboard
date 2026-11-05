@@ -4,40 +4,57 @@ Panduan ini ditujukan untuk pembaca yang baru mengenal Python. Tujuannya bukan m
 tapi **paham kenapa kodenya begitu**. Baca pelan-pelan, buka file yang disebut, dan coba ubah
 sesuatu di tiap bagian. Jika ada yang rusak, `git checkout app.py` mengembalikannya. Rusak adalah bagian dari belajar.
 
-Estimasi waktu: 2–3 jam, dapat dibagi menjadi beberapa sesi.
+Estimasi waktu: Langkah 1–6 sekitar 2–3 jam (dasar), Langkah 7–10 sekitar 3–4 jam (database, pipeline, model, API). Dapat dibagi menjadi beberapa sesi.
 
 ---
 
-## Peta besar: 4 lapisan
+## Peta besar: 6 lapisan
 
 ```mermaid
 flowchart TB
-    subgraph DATA["1. DATA (file CSV)"]
+    subgraph DATA["1. DATA (file CSV + sumber luar)"]
         A[data_center_indonesia.csv<br/>27 baris, 1 baris = 1 fasilitas]
         B[parameter_asumsi.csv<br/>PUE, WUE, per kapita...]
+        H[PUE Google, listrik & air Meta,<br/>iklim NASA POWER]
     end
-    subgraph LOGIKA["2. LOGIKA (src/)"]
-        C[muat_data.py<br/>baca CSV → DataFrame]
+    subgraph PIPELINE["2. PIPELINE (scripts/)"]
+        P[pipeline.py<br/>unduh → validasi → latih model → bangun DB]
+        DB[(dc_impact.duckdb)]
+        M[models/*.joblib]
+    end
+    subgraph LOGIKA["3. LOGIKA (src/)"]
+        C[muat_data.py / db.py<br/>baca CSV & SQL]
         D[hitung.py<br/>rumus listrik, air, setara orang]
+        MD[model.py<br/>fitur & prediksi PUE/WUE]
     end
-    subgraph TAMPILAN["3. TAMPILAN (app.py)"]
-        E[Sidebar: filter & slider]
-        F[Tab: peta, grafik, tabel]
+    subgraph TAMPILAN["4. TAMPILAN (app.py)"]
+        E[Sidebar: filter, slider, toggle model]
+        F[Tab: peta, grafik, SQL Explorer, ML]
     end
-    subgraph TES["4. TES (tests/)"]
-        G[test_hitung.py<br/>cek rumus masih benar]
+    subgraph API["5. API (api/)"]
+        X[main.py<br/>FastAPI: /fasilitas /estimasi /prediksi /sql]
     end
-    A --> C --> D --> F
-    B --> C
+    subgraph TES["6. TES (tests/)"]
+        G[test_hitung, test_db, test_model,<br/>test_api, test_pipeline]
+    end
+    A --> P; B --> P; H --> P
+    P --> DB; P --> M
+    DB --> C --> D --> F
+    M --> MD --> F
     E --> D
+    DB --> X; M --> X; D --> X
     D -.diuji oleh.-> G
 ```
 
-**Kenapa dipisah 4 lapisan?** Supaya tiap bagian bisa diubah tanpa merusak yang lain:
+**Kenapa dipisah banyak lapisan?** Supaya tiap bagian bisa diubah tanpa merusak yang lain:
 
-- Ingin menambah data center? Cukup edit **CSV**, tanpa menyentuh kode.
-- Ingin mengganti rumus? Edit **hitung.py**, jalankan tes, selesai. Tampilan tidak berubah.
+- Ingin menambah data center? Cukup edit **CSV**, jalankan pipeline, tanpa menyentuh kode tampilan.
+- Ingin mengganti rumus? Edit **hitung.py**, jalankan tes, selesai. Dashboard *dan* API ikut berubah.
 - Ingin mengganti warna grafik? Cukup edit **app.py**.
+- Ingin bertanya hal baru ke data? Tulis **SQL** di tab SQL Explorer, tanpa mengubah kode apa pun.
+
+Langkah 1–6 membahas lapisan dasar (data, rumus, tes, Streamlit). Langkah 7–10 membahas lapisan
+yang ditambahkan belakangan: database, pipeline, model prediksi, dan API.
 
 Ini prinsip yang dipakai di hampir semua software: *separation of concerns*.
 
@@ -60,7 +77,7 @@ df[df["provinsi"] == "Kepulauan Riau"]   # filter: hanya Batam & Bintan
 ```
 
 **Konsep kunci — DataFrame** = tabel Excel versi Python. Baris = fasilitas, kolom = atribut.
-Tiga operasi yang dipakai di seluruh dashboard cuma ini:
+Tiga operasi yang dipakai di seluruh dashboard hanya ini:
 
 | Operasi | Kode | Analogi Excel |
 |---|---|---|
@@ -134,7 +151,7 @@ hitung.setara_penduduk_listrik(78.84, 1411) # ~55.875 orang
 
 Jalankan `python -m pytest tests/ -v`. Kamu akan lihat 9 baris `PASSED`.
 
-Tes itu cuma fungsi yang namanya diawali `test_` dan berisi `assert` (pernyataan "ini harus benar"):
+Tes itu hanya fungsi yang namanya diawali `test_` dan berisi `assert` (pernyataan "ini harus benar"):
 
 ```python
 def test_listrik_contoh_di_docstring():
@@ -170,7 +187,7 @@ sequenceDiagram
 Konsekuensinya:
 
 1. Tidak perlu kode "jika slider berubah, perbarui grafik". Cukup tulis alurnya sekali, urut dari atas.
-2. Baca CSV tiap rerun itu boros → dibungkus `@st.cache_data` supaya cuma dibaca sekali.
+2. Baca CSV tiap rerun itu boros → dibungkus `@st.cache_data` supaya hanya dibaca sekali.
 3. Variabel yang kamu ambil dari widget (`pue = st.slider(...)`) langsung berisi nilai terbaru.
 
 ### Anatomi app.py
@@ -226,6 +243,121 @@ pesan penting: sebagian besar kapasitas hyperscaler **tidak dipublikasikan**. It
 
 ---
 
+## Langkah 7 — Database: bertanya dengan SQL (DuckDB)
+
+Semua CSV dimasukkan ke satu file database `data/dc_impact.duckdb` oleh `scripts/bangun_db.py`.
+DuckDB adalah database analitik yang hidup dalam satu file, tanpa server, dan langsung bisa dipanggil dari Python:
+
+```python
+import duckdb
+kon = duckdb.connect("data/dc_impact.duckdb", read_only=True)
+kon.execute("SELECT provinsi, SUM(kapasitas_it_mw) AS mw FROM fasilitas GROUP BY provinsi ORDER BY mw DESC").df()
+```
+
+Bandingkan dengan versi pandas: `df.groupby("provinsi")["kapasitas_it_mw"].sum().sort_values(ascending=False)`.
+Keduanya benar. SQL unggul saat pertanyaan melibatkan **beberapa tabel** (`JOIN`) atau **perhitungan berjalan**
+(window function). Lihat folder `sql/`:
+
+| File | Konsep SQL yang dipakai |
+|---|---|
+| `01_kapasitas_per_provinsi.sql` | `GROUP BY`, `CASE WHEN` (pivot manual) |
+| `02_operator_terbesar.sql` | membaca `VIEW` (`v_estimasi`), `LIMIT` |
+| `03_pertumbuhan_kumulatif.sql` | CTE (`WITH`), window function `SUM() OVER (ORDER BY ...)` |
+| `04_pue_google_terbaru.sql` | `QUALIFY ROW_NUMBER() OVER (PARTITION BY ...)` |
+| `06_pue_vs_iklim.sql` | `JOIN` tiga tabel, persis data latih model |
+| `08_iklim_indonesia_vs_dunia.sql` | `UNION ALL`, subquery agregat |
+
+Dua hal yang layak ditiru dari `src/db.py`:
+
+1. **Hanya-baca.** `sql_aman()` menolak `INSERT/UPDATE/DROP` sebelum SQL dijalankan. Siapa pun yang membuka
+   SQL Explorer tidak bisa merusak data.
+2. **Jalan darurat.** Kalau file database tidak ada, `koneksi()` membangunnya di memori dari CSV. Aplikasi tidak
+   pernah mati hanya karena satu file hilang.
+
+VIEW `v_estimasi` menulis rumus `hitung.py` dalam SQL. `tests/test_db.py` memastikan hasil SQL dan Python sama
+persis. Itu cara murah menangkap kesalahan rumus di salah satu sisi.
+
+---
+
+## Langkah 8 — Pipeline: data yang memperbarui dirinya sendiri
+
+`scripts/pipeline.py` menjalankan lima langkah berurutan: unduh PUE Google → unduh iklim NASA POWER →
+validasi → latih model → bangun database. Tiap langkah adalah fungsi kecil, jadi bisa dijalankan sendiri:
+
+```bash
+python scripts/pipeline.py                      # semua
+python scripts/pipeline.py --tanpa-unduh        # tanpa internet
+python scripts/pipeline.py --langkah validasi db
+```
+
+Tiga kebiasaan penting yang ada di dalamnya:
+
+- **Validasi sebelum dipakai** (`langkah_validasi`): koordinat harus di Indonesia, PUE harus 1–2, tidak boleh ada
+  duplikat. Data buruk gagal di sini, bukan di grafik.
+- **Idempoten**: dijalankan dua kali memberi hasil yang sama. Itu syarat supaya bisa dijadwalkan.
+- **Jadwal**: `.github/workflows/perbarui-data.yml` menjalankannya tiap Senin dan membuat commit *hanya kalau*
+  ada CSV yang berubah. Buka tab **Actions** di GitHub untuk melihat riwayatnya.
+
+Parser HTML Google (`scripts/ambil_pue_google.py`) sengaja dites dengan potongan HTML kecil di
+`tests/test_pipeline.py`. Kalau Google mengubah halamannya, tes itulah yang pertama kali memberi tahu.
+
+---
+
+## Langkah 9 — Model prediksi: iklim → PUE (dan kenapa WUE gagal)
+
+Pertanyaannya: *kalau tahu iklim sebuah lokasi, bisakah kita menebak seberapa boros pendinginnya?*
+
+**Data latih (nyata, bukan sintetis):**
+
+- Google mempublikasikan PUE tiap kuartal untuk tiap kampusnya sejak 2016 → 868 baris dari 35 kampus.
+- Meta mempublikasikan listrik (MWh) dan air (megaliter) tahunan per situs 2020–2024 → 71 baris dari 16 situs.
+- Iklim tiap lokasi dari NASA POWER (suhu, kelembapan, bola basah, cooling degree days).
+
+**Cara evaluasi** (bagian yang paling sering dilewati orang):
+
+1. **Baseline** = tebak rata-rata. Model yang tidak mengalahkan baseline tidak berguna.
+2. **GroupKFold menurut kampus**: saat kampus X diuji, *semua* kuartal kampus X disembunyikan dari pelatihan.
+   Kalau tidak begitu, model hanya "menghafal" kampus, dan angkanya bohong untuk lokasi baru seperti Indonesia.
+3. **Uji waktu**: latih ≤ 2023, uji ≥ 2024.
+4. **Gerbang kelayakan**: model dipakai hanya kalau MAE ≤ 85% baseline **dan** R² ≥ 0,2.
+
+**Hasil** (`models/metrik.json`):
+
+| Target | Model terpilih | MAE CV | R² CV | Baseline MAE | Lolos gerbang? |
+|---|---|---|---|---|---|
+| PUE kuartalan (Google) | ridge | 0.0186 | 0.34 | 0.0259 | ya |
+| WUE tahunan (Meta) | baseline rata rata | 0.222 | -0.12 | 0.222 | tidak |
+
+Model PUE lolos: iklim panas-lembap memang menaikkan PUE, dan prediksi untuk Batam/Jakarta
+(≈ 1.13–1.14) cocok dengan kampus Google Singapura (1,12–1,15).
+Model WUE **tidak lolos**: situs Meta yang paling boros air (Clonee, Odense) justru di iklim sejuk. Artinya teknologi
+pendingin dan sumber air yang menentukan, bukan cuaca. Pipeline otomatis memilih baseline, dan dashboard mengatakannya
+terang-terangan. **Hasil negatif yang jujur lebih berharga daripada "prediksi" yang tidak lebih baik dari menebak.**
+
+Kodenya ada di `scripts/latih_model.py` (latih + evaluasi) dan `src/model.py` (fitur + prediksi, dipakai bersama
+oleh dashboard dan API). Model disimpan dengan `joblib`, prediksi *out-of-fold* disimpan ke
+`data/evaluasi_pue_oof.csv` supaya grafik "observasi vs prediksi" di dashboard jujur.
+
+---
+
+## Langkah 10 — API: pintu untuk program lain
+
+`api/main.py` membungkus `src/` dengan **FastAPI**. Jalankan `uvicorn api.main:app --reload`, buka
+`http://127.0.0.1:8000/docs`, dan kamu dapat dokumentasi interaktif yang dibuat otomatis dari *type hint*.
+
+```python
+@app.get("/estimasi")
+def estimasi(kapasitas_it_mw: float = Query(..., gt=0), pue: float = Query(1.5, ge=1)):
+    return {"listrik_gwh_tahun": hitung.listrik_tahunan_gwh(kapasitas_it_mw, 0.6, pue)}
+```
+
+Tiga hal yang terjadi di satu baris itu: validasi (`gt=0` → kirim -1, dapat error 422 yang jelas), dokumentasi,
+dan pemakaian ulang rumus yang sama dengan dashboard. `tests/test_api.py` memanggil endpoint lewat `TestClient`
+tanpa server, jadi tesnya cepat dan jalan di CI. `Dockerfile` di root membungkus API jadi image yang bisa dijalankan
+di mana saja: `docker build -t dc-impact-api . && docker run -p 8000:8000 dc-impact-api`.
+
+---
+
 ## Glosarium cepat
 
 | Istilah | Arti singkat |
@@ -240,12 +372,20 @@ pesan penting: sebagian besar kapasitas hyperscaler **tidak dipublikasikan**. It
 | DataFrame | Tabel di pandas |
 | Rerun | Streamlit menjalankan ulang seluruh skrip setiap interaksi |
 | Cache | Menyimpan hasil agar tidak dihitung ulang |
+| DuckDB | Database analitik dalam satu file, di-query dengan SQL |
+| Window function | Perhitungan SQL yang melihat baris lain (mis. total berjalan) tanpa `GROUP BY` |
+| Pipeline | Rangkaian langkah otomatis: unduh → validasi → latih → bangun DB |
+| MAE | Mean absolute error: rata-rata selisih absolut prediksi vs kenyataan |
+| R² | Seberapa banyak variasi yang dijelaskan model (1 sempurna, 0 = menebak rata-rata) |
+| Cross-validation | Mengukur model pada data yang tidak dipakai saat latih, bergantian |
+| Out-of-fold | Prediksi untuk baris yang sedang "disembunyikan" saat cross-validation |
+| Bola basah (wet-bulb) | Suhu terendah yang bisa dicapai dengan penguapan; penentu kerja pendingin evaporatif |
+| Endpoint | Satu alamat URL di API, mis. `/estimasi` |
 
 ---
 
 ## Setelah ini
 
-1. Kerjakan `docs/LATIHAN.md` (8 latihan, dari mudah sampai menengah).
-2. Push ke GitHub, pasang screenshot di README. Itu sudah portofolio.
-3. Project berikutnya dapat memakai `hitung.py` yang sama sebagai *backend API*.
-   Jadi apa yang dipelajari di sini akan langsung terpakai lagi.
+1. Kerjakan `docs/LATIHAN.md` (12 latihan, dari mudah sampai menengah; 9–12 untuk SQL, pipeline, model, API).
+2. Buka tab **Actions** di GitHub setelah hari Senin dan lihat apakah pipeline membuat commit baru.
+3. Coba ganti satu kandidat model di `scripts/latih_model.py` dan lihat apakah lolos gerbang kelayakan.

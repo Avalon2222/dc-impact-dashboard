@@ -1,0 +1,72 @@
+situs,negara,tahun,liter_per_kwh,wue_prediksi_oof,bola_basah_rata
+Altoona (IA),Amerika Serikat,2020,0.1541,0.3088,7.878
+Altoona (IA),Amerika Serikat,2021,0.1473,0.3088,8.519
+Altoona (IA),Amerika Serikat,2022,0.1907,0.3088,6.932
+Altoona (IA),Amerika Serikat,2023,0.1391,0.3088,8.497
+Altoona (IA),Amerika Serikat,2024,0.1526,0.3088,8.892
+Clonee (Ireland),Irlandia,2020,1.2628,0.2418,9.142
+Clonee (Ireland),Irlandia,2021,1.4622,0.2418,9.433
+Clonee (Ireland),Irlandia,2022,1.2554,0.2418,9.717
+Clonee (Ireland),Irlandia,2023,0.6909,0.2418,10.028
+Clonee (Ireland),Irlandia,2024,0.5302,0.2418,9.686
+DeKalb (IL),Amerika Serikat,2023,0.3958,0.2969,8.023
+DeKalb (IL),Amerika Serikat,2024,0.282,0.2969,8.537
+Eagle Mountain (UT),Amerika Serikat,2021,0.2522,0.306,4.798
+Eagle Mountain (UT),Amerika Serikat,2022,0.1766,0.306,4.209
+Eagle Mountain (UT),Amerika Serikat,2023,0.1104,0.306,4.559
+Eagle Mountain (UT),Amerika Serikat,2024,0.1192,0.306,5.16
+Forest City (NC),Amerika Serikat,2020,0.1143,0.3132,12.743
+Forest City (NC),Amerika Serikat,2021,0.1102,0.3132,12.26
+Forest City (NC),Amerika Serikat,2022,0.1278,0.3132,11.778
+Forest City (NC),Amerika Serikat,2023,0.1085,0.3132,12.446
+Forest City (NC),Amerika Serikat,2024,0.0299,0.3132,12.898
+Fort Worth (TX),Amerika Serikat,2020,0.3188,0.2964,15.597
+Fort Worth (TX),Amerika Serikat,2021,0.2504,0.2964,15.478
+Fort Worth (TX),Amerika Serikat,2022,0.3606,0.2964,14.716
+Fort Worth (TX),Amerika Serikat,2023,0.3924,0.2964,15.992
+Fort Worth (TX),Amerika Serikat,2024,0.2804,0.2964,16.509
+Gallatin (TN),Amerika Serikat,2023,0.0257,0.2981,12.755
+Gallatin (TN),Amerika Serikat,2024,0.5699,0.2981,13.094
+Henrico (VA),Amerika Serikat,2020,0.2059,0.3117,13.05
+Henrico (VA),Amerika Serikat,2021,0.1553,0.3117,12.529
+Henrico (VA),Amerika Serikat,2022,0.0785,0.3117,12.102
+Henrico (VA),Amerika Serikat,2023,0.0522,0.3117,12.847
+Henrico (VA),Amerika Serikat,2024,0.097,0.3117,13.207
+Huntsville (AL),Amerika Serikat,2021,0.4573,0.2975,14.007
+Huntsville (AL),Amerika Serikat,2022,0.282,0.2975,13.448
+Huntsville (AL),Amerika Serikat,2023,0.2475,0.2975,14.269
+Huntsville (AL),Amerika Serikat,2024,0.2414,0.2975,14.411
+Los Lunas (NM),Amerika Serikat,2020,0.2452,0.3039,6.407
+Los Lunas (NM),Amerika Serikat,2021,0.2131,0.3039,6.806
+Los Lunas (NM),Amerika Serikat,2022,0.1732,0.3039,6.442
+Los Lunas (NM),Amerika Serikat,2023,0.2549,0.3039,6.633
+Los Lunas (NM),Amerika Serikat,2024,0.2205,0.3039,7.15
+Luleå (Sweden),Swedia,2020,0.1328,0.3122,3.185
+Luleå (Sweden),Swedia,2021,0.1274,0.3122,1.364
+Luleå (Sweden),Swedia,2022,0.0935,0.3122,2.321
+Luleå (Sweden),Swedia,2023,0.1421,0.3122,1.582
+Luleå (Sweden),Swedia,2024,0.0619,0.3122,2.381
+New Albany (OH),Amerika Serikat,2020,0.1296,0.3093,9.452
+New Albany (OH),Amerika Serikat,2021,0.2366,0.3093,9.515
+New Albany (OH),Amerika Serikat,2022,0.1238,0.3093,8.62
+New Albany (OH),Amerika Serikat,2023,0.0908,0.3093,9.468
+New Albany (OH),Amerika Serikat,2024,0.165,0.3093,10.138
+Odense (Denmark),Denmark,2020,1.0496,0.2623,8.878
+Odense (Denmark),Denmark,2021,0.7447,0.2623,8.086
+Odense (Denmark),Denmark,2022,0.8267,0.2623,8.733
+Odense (Denmark),Denmark,2023,0.7162,0.2623,8.626
+Odense (Denmark),Denmark,2024,0.5128,0.2623,9.077
+Prineville (OR),Amerika Serikat,2020,0.6487,0.2963,4.623
+Prineville (OR),Amerika Serikat,2021,0.394,0.2963,4.886
+Prineville (OR),Amerika Serikat,2022,0.2444,0.2963,4.539
+Prineville (OR),Amerika Serikat,2023,0.1309,0.2963,4.922
+Prineville (OR),Amerika Serikat,2024,0.1898,0.2963,5.049
+Sarpy (NE),Amerika Serikat,2020,0.2081,0.3105,8.292
+Sarpy (NE),Amerika Serikat,2021,0.1439,0.3105,8.965
+Sarpy (NE),Amerika Serikat,2022,0.1002,0.3105,7.381
+Sarpy (NE),Amerika Serikat,2023,0.1071,0.3105,8.745
+Sarpy (NE),Amerika Serikat,2024,0.1129,0.3105,9.06
+Stanton Springs (GA),Amerika Serikat,2021,0.4877,0.304,14.747
+Stanton Springs (GA),Amerika Serikat,2022,0.121,0.304,14.269
+Stanton Springs (GA),Amerika Serikat,2023,0.063,0.304,14.965
+Stanton Springs (GA),Amerika Serikat,2024,0.1233,0.304,15.222

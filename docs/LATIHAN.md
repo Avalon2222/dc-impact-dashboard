@@ -169,7 +169,7 @@ fig_peta = px.scatter_map(df, lat="lat", lon="lon", size="kapasitas_it_mw", size
                           color=kolom_warna, color_discrete_map=peta_warna,
                           category_orders={kolom_warna: urutan}, hover_name="nama", ...)
 ```
-Pelajaran: Plotly cuma butuh *nama kolom*; ganti nama kolom = ganti pengelompokan.
+Pelajaran: Plotly hanya butuh *nama kolom*; ganti nama kolom = ganti pengelompokan.
 </details>
 
 ---
@@ -186,7 +186,88 @@ pemakaian air aktual satu fasilitas pun, itu sudah temuan.
 
 ---
 
+### Latihan 9 — Query SQL baru ⭐⭐
+
+Buat file `sql/09_pue_singapura_per_tahun.sql` yang menghitung rata-rata PUE kuartalan kampus Singapura
+per tahun. Baris komentar pertama jadi judul di tab SQL Explorer.
+
+<details><summary>Kunci jawaban</summary>
+
+```sql
+-- PUE rata-rata kampus Singapura per tahun
+SELECT tahun, ROUND(AVG(pue_kuartalan), 3) AS pue_rata, COUNT(*) AS kuartal
+FROM pue_google
+WHERE kampus LIKE 'Singapore%'
+GROUP BY tahun
+ORDER BY tahun;
+```
+
+Jalankan `python -m pytest tests/test_db.py -q`: tes `test_semua_query_tersimpan_jalan` otomatis memeriksa file barumu.
+</details>
+
+---
+
+### Latihan 10 — Validasi tambahan di pipeline ⭐⭐
+
+Tambahkan satu pemeriksaan di `langkah_validasi()` (`scripts/pipeline.py`): kolom `tahun` fasilitas harus
+antara 2000 dan 2035. Jalankan `python scripts/pipeline.py --langkah validasi`, lalu sengaja ubah satu
+tahun di CSV jadi 1900 dan pastikan pipeline berhenti dengan pesan yang jelas. Kembalikan CSV-nya.
+
+<details><summary>Kunci jawaban</summary>
+
+```python
+assert fasilitas["tahun"].dropna().between(2000, 2035).all(), "Tahun fasilitas di luar rentang wajar"
+```
+</details>
+
+---
+
+### Latihan 11 — Kandidat model baru ⭐⭐⭐
+
+Di `scripts/latih_model.py`, tambahkan `KNeighborsRegressor` (dari `sklearn.neighbors`) ke `kandidat()`.
+Jalankan `python scripts/latih_model.py`. Apakah ia lolos gerbang kelayakan? Apakah mengalahkan Ridge?
+Tulis jawabanmu di satu kalimat komentar di atas fungsi `kandidat()`.
+
+<details><summary>Petunjuk</summary>
+
+```python
+from sklearn.neighbors import KNeighborsRegressor
+"knn": make_pipeline(StandardScaler(), KNeighborsRegressor(n_neighbors=15)),
+```
+
+KNN sangat bergantung pada skala fitur, jadi `StandardScaler` wajib. Perhatikan juga kolom `mae_waktu`:
+model yang bagus di cross-validation tapi buruk di uji waktu biasanya "menghafal" tahun.
+</details>
+
+---
+
+### Latihan 12 — Endpoint baru di API ⭐⭐⭐
+
+Tambahkan `GET /operator` di `api/main.py` yang mengembalikan total MW dan jumlah fasilitas per operator,
+diurutkan dari yang terbesar. Tulis satu tes di `tests/test_api.py`.
+
+<details><summary>Kunci jawaban</summary>
+
+```python
+@app.get("/operator", tags=["data"])
+def per_operator():
+    df = db.jalankan(
+        "SELECT operator, COUNT(*) AS fasilitas, SUM(kapasitas_it_mw) AS kapasitas_it_mw "
+        "FROM fasilitas GROUP BY operator ORDER BY kapasitas_it_mw DESC"
+    )
+    return {"jumlah": len(df), "operator": _rapikan(df)}
+```
+
+```python
+def test_per_operator(klien):
+    r = klien.get("/operator").json()
+    assert r["jumlah"] > 5 and r["operator"][0]["kapasitas_it_mw"] >= r["operator"][1]["kapasitas_it_mw"]
+```
+</details>
+
+---
+
 ## Sudah selesai semua?
 
-Push ke GitHub, lalu lanjut ke project berikutnya (misalnya API dengan FastAPI + frontend).
-`src/hitung.py` yang sudah kamu kuasai akan jadi otak API-nya.
+Push ke GitHub. Kalau Latihan 9–12 beres, kamu sudah menyentuh empat hal yang biasanya ditanya saat wawancara
+data engineer: SQL, validasi data, evaluasi model, dan API.
