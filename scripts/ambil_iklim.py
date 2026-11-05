@@ -93,7 +93,8 @@ def rapikan_json(isi: dict) -> pd.DataFrame:
     harian.index.name = "time"
     harian = harian.reset_index()
     harian["time"] = pd.to_datetime(harian["time"], format="%Y%m%d")
-    return harian.replace(NILAI_KOSONG, pd.NA).astype({k: "float64" for k in VARIABEL.values()})
+    harian = harian.astype({k: "float64" for k in VARIABEL.values()})
+    return harian.replace(NILAI_KOSONG, float("nan"))
 
 
 def agregasi(harian: pd.DataFrame) -> pd.DataFrame:
