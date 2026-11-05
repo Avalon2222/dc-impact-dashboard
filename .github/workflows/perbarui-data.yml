@@ -1,0 +1,45 @@
+name: perbarui-data
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"   # tiap Senin 03:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/data_center_indonesia.csv"
+      - "data/parameter_asumsi.csv"
+      - "data/meta_listrik_air_tahunan.csv"
+      - "data/lokasi_kampus.csv"
+      - "scripts/**"
+
+permissions:
+  contents: write
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Jalankan pipeline (unduh, validasi, latih model, bangun DuckDB)
+        run: python scripts/pipeline.py
+      - name: Jalankan tes
+        run: python -m pytest tests/ -q
+      - name: Commit kalau data berubah
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # DuckDB, joblib, dan tanggal di metrik.json selalu berubah walau datanya sama; commit hanya kalau CSV berubah.
+          if git diff --quiet -- data/*.csv; then
+            echo "Tidak ada data baru."
+            git checkout -- .
+          else
+            git add data models
+            git commit -m "Perbarui data mingguan"
+            git push
+          fi
