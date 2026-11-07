@@ -73,6 +73,12 @@ def test_format_ringkas_semua_tingkat():
     assert hitung.format_ringkas(999) == "999"
 
 
+def test_format_ringkas_naik_satuan_setelah_dibulatkan():
+    assert hitung.format_ringkas(999_960) == "1,0 juta"          # bukan "1.000,0 ribu"
+    assert hitung.format_ringkas(999_999_999) == "1,0 miliar"    # bukan "1.000,0 juta"
+    assert hitung.format_ringkas(-2_500_000) == "-2,5 juta"
+
+
 def test_format_nan_jadi_strip():
     assert hitung.format_angka(float("nan")) == "-"
     assert hitung.format_ringkas(float("nan")) == "-"
