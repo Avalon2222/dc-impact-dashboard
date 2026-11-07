@@ -112,13 +112,13 @@ def format_angka(x: float, desimal: int = 0) -> str:
 
 
 def format_ringkas(x: float) -> str:
-    """Angka besar jadi ringkas: 1.500.000 -> '1,5 juta', 2.300 -> '2,3 ribu'."""
+    """Angka besar jadi ringkas: 1.500.000 -> '1,5 juta', 12.300 -> '12,3 ribu'.
+    Di bawah 10.000 ditulis utuh (2.300 tetap '2.300')."""
     if pd.isna(x):
         return "-"
-    if abs(x) >= 1_000_000_000:
-        return format_angka(x / 1_000_000_000, 1) + " miliar"
-    if abs(x) >= 1_000_000:
-        return format_angka(x / 1_000_000, 1) + " juta"
-    if abs(x) >= 10_000:
-        return format_angka(x / 1_000, 1) + " ribu"
+    # Cek dari satuan terbesar. Pakai nilai SETELAH dibulatkan, supaya
+    # 999.960 jadi "1,0 juta" dan bukan "1.000,0 ribu".
+    for batas, akhiran in ((1_000_000_000, " miliar"), (1_000_000, " juta"), (1_000, " ribu")):
+        if abs(round(x / batas, 1)) >= 1 and (batas > 1_000 or abs(round(x)) >= 10_000):
+            return format_angka(x / batas, 1) + akhiran
     return format_angka(x, 0)
