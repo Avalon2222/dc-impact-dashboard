@@ -96,3 +96,21 @@ def test_rumah_tangga_turunan_dari_orang():
     assert hasil["air_liter_hari"].iloc[0] == pytest.approx(hasil["air_m3_tahun"].iloc[0] * 1000 / 365)
     # Data center 5x lebih besar -> estimasi juga 5x (rumusnya linear)
     assert hasil["listrik_gwh_tahun"].iloc[1] == pytest.approx(5 * hasil["listrik_gwh_tahun"].iloc[0])
+
+
+def test_parameter_lengkap_sejalan_dengan_parameter():
+    from src.muat_data import muat_parameter_lengkap
+
+    lengkap = muat_parameter_lengkap()
+    assert not lengkap.isna().any().any()                      # NaN sudah diganti string kosong
+    assert set(lengkap["parameter"]) == set(muat_parameter())  # tabel tampilan = tabel hitung
+    assert (lengkap["satuan"] != "").all()
+    url = lengkap.loc[lengkap["url_sumber"] != "", "url_sumber"]
+    assert url.str.startswith("http").all()
+
+
+def test_status_dan_keyakinan_tidak_hilang_jadi_nan():
+    # Kolom kategori: nilai di luar daftar urutan diam-diam berubah jadi NaN, jadi dicek di sini.
+    df = muat_data_center()
+    assert df["status"].notna().all()
+    assert df["keyakinan"].notna().all()
