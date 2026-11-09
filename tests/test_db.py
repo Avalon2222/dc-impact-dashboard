@@ -68,3 +68,11 @@ def test_koneksi_darurat_tanpa_file(tmp_path):
     with db.koneksi(tmp_path / "tidak_ada.duckdb") as kon:
         n = kon.execute("SELECT COUNT(*) FROM fasilitas").fetchone()[0]
     assert n > 10
+
+
+def test_tanpa_komentar_buang_blok_dan_baris():
+    sql = "/* catatan\n panjang */ SELECT 1\n-- baris komentar\nFROM fasilitas"
+    assert db._tanpa_komentar(sql) == "SELECT 1\nFROM fasilitas"
+    assert db._tanpa_komentar("-- cuma komentar") == ""
+    # Kata berbahaya yang disembunyikan di dalam komentar tidak membuat SELECT biasa ditolak.
+    assert db.sql_aman("SELECT 1 /* DROP TABLE fasilitas */")
