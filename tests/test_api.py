@@ -70,3 +70,22 @@ def test_sql_tersimpan_dan_sql_bebas(klien):
 def test_sql_menolak_perubahan_data(klien):
     assert klien.post("/sql", json={"sql": "DROP TABLE fasilitas"}).status_code == 400
     assert klien.post("/sql", json={"sql": "SELECT * FROM tabel_tidak_ada"}).status_code == 400
+
+
+def test_metrik_model_ada_dan_503_kalau_belum_dilatih(klien, monkeypatch):
+    import api.main as api_main
+
+    r = klien.get("/model/metrik")
+    assert r.status_code == 200 and "model" in r.json()
+    monkeypatch.setattr(api_main, "muat_metrik", lambda: None)
+    assert klien.get("/model/metrik").status_code == 503
+
+
+def test_rapikan_nan_jadi_null():
+    import numpy as np
+    import pandas as pd
+
+    from api.main import _rapikan
+
+    df = pd.DataFrame({"nama": ["A", None], "mw": [1.5, np.nan]})
+    assert _rapikan(df) == [{"nama": "A", "mw": 1.5}, {"nama": None, "mw": None}]
