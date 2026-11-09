@@ -89,3 +89,26 @@ def test_akhir_kuartal_terakhir():
 
 def test_validasi_data_lolos():
     pipeline.langkah_validasi()
+
+
+def test_kunci_lokasi_sama_di_semua_skrip():
+    # Tiga skrip punya fungsi kunci_lokasi sendiri; kalau formatnya beda, JOIN iklim <-> fasilitas jadi kosong.
+    import bangun_db  # noqa: E402
+    import latih_model  # noqa: E402
+
+    for lat, lon in [(-6.2, 106.8166), (1.0449, 103.9999), (45.6, -122.0)]:
+        kunci = ambil_iklim.kunci_lokasi(lat, lon)
+        assert kunci == bangun_db.kunci_lokasi(lat, lon) == latih_model.kunci_lokasi(lat, lon)
+    assert ambil_iklim.kunci_lokasi(-6.2, 106.8166) == "-6.20,106.82"
+
+
+def test_daftar_lokasi_tanpa_duplikat():
+    lok = ambil_iklim.daftar_lokasi()
+    assert lok["lokasi_id"].is_unique
+    assert lok[["lat", "lon"]].notna().all().all()
+    assert len(lok) > 10
+
+
+def test_ke_angka_pue():
+    assert ambil_pue_google._ke_angka("1.09") == 1.09
+    assert ambil_pue_google._ke_angka("N/A") is None
