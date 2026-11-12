@@ -76,3 +76,9 @@ def test_tanpa_komentar_buang_blok_dan_baris():
     assert db._tanpa_komentar("-- cuma komentar") == ""
     # Kata berbahaya yang disembunyikan di dalam komentar tidak membuat SELECT biasa ditolak.
     assert db.sql_aman("SELECT 1 /* DROP TABLE fasilitas */")
+
+
+@pytest.mark.parametrize("nama", ["fasilitas; DROP TABLE fasilitas", "1tabel", "tabel-baru", ""])
+def test_skema_tolak_nama_tabel_aneh(nama):
+    with pytest.raises(ValueError, match="Nama tabel tidak valid"):
+        db.skema(nama)
