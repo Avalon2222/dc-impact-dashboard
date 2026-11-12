@@ -74,3 +74,33 @@ def test_evaluasi_oof_tersimpan():
     oof = pd.read_csv(model.ROOT / "data" / "evaluasi_pue_oof.csv")
     assert {"kampus", "pue_kuartalan", "pue_prediksi_oof"} <= set(oof.columns)
     assert oof["kampus"].nunique() >= 30
+
+
+class _ModelTiruan:
+    """Model buatan tanpa __len__: memastikan argumen model dipakai apa adanya."""
+
+    def __init__(self, nilai):
+        self.nilai = nilai
+
+    def __bool__(self):
+        raise AssertionError("model tidak boleh dicek dengan truthiness")
+
+    def predict(self, x):
+        return [self.nilai] * len(x)
+
+
+def test_prediksi_pakai_model_dari_argumen(iklim_tropis):
+    fitur_pue = model.siapkan_fitur_pue(iklim_tropis, umur_kuartal=8)
+    fitur_wue = model.siapkan_fitur_wue(iklim_tropis)
+    assert model.prediksi_pue(fitur_pue, _ModelTiruan(1.42)).iloc[0] == 1.42
+    assert model.prediksi_wue(fitur_wue, _ModelTiruan(-0.3)).iloc[0] == 0  # dipotong di 0
+
+
+def test_tanpa_artefak_model(tmp_path, monkeypatch, iklim_tropis):
+    monkeypatch.setattr(model, "DIR_MODEL", tmp_path)
+    assert model.muat_model("pue") is None
+    assert model.muat_metrik() is None
+    with pytest.raises(FileNotFoundError, match="Model PUE belum dilatih"):
+        model.prediksi_pue(model.siapkan_fitur_pue(iklim_tropis, umur_kuartal=8))
+    with pytest.raises(FileNotFoundError, match="Model WUE belum dilatih"):
+        model.prediksi_wue(model.siapkan_fitur_wue(iklim_tropis))
