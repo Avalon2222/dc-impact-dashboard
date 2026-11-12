@@ -66,14 +66,16 @@ def muat_metrik() -> dict | None:
 
 
 def prediksi_pue(fitur: pd.DataFrame, model=None) -> pd.Series:
-    model = model or muat_model("pue")
+    if model is None:
+        model = muat_model("pue")
     if model is None:
         raise FileNotFoundError("Model PUE belum dilatih; jalankan python scripts/latih_model.py")
     return pd.Series(model.predict(fitur[FITUR_PUE]), index=fitur.index, name="pue_prediksi")
 
 
 def prediksi_wue(fitur: pd.DataFrame, model=None) -> pd.Series:
-    model = model or muat_model("wue")
+    if model is None:
+        model = muat_model("wue")
     if model is None:
         raise FileNotFoundError("Model WUE belum dilatih; jalankan python scripts/latih_model.py")
     return pd.Series(model.predict(fitur[FITUR_WUE]), index=fitur.index, name="wue_prediksi").clip(lower=0)
