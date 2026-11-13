@@ -137,3 +137,20 @@ def test_validasi_tolak_pue_duplikat(data_salinan):
     pd.concat([pue, pue.head(1)]).to_csv(data_salinan / "pue_google_kuartalan.csv", index=False)
     with pytest.raises(pipeline.DataTidakValid, match="Duplikat PUE"):
         pipeline.langkah_validasi()
+
+
+def test_main_lewati_langkah_internet_dan_ikuti_urutan(monkeypatch):
+    dipanggil = []
+    palsu = {
+        "unduh_pue": (lambda: dipanggil.append("unduh_pue"), True),
+        "validasi": (lambda: dipanggil.append("validasi"), False),
+        "db": (lambda: dipanggil.append("db"), False),
+    }
+    monkeypatch.setattr(pipeline, "LANGKAH", palsu)
+    assert pipeline.main(["--langkah", "db", "unduh_pue", "validasi", "--tanpa-unduh"]) == 0
+    assert dipanggil == ["db", "validasi"]
+
+
+def test_main_langkah_tak_dikenal_ditolak():
+    with pytest.raises(SystemExit):
+        pipeline.main(["--langkah", "deploy"])
