@@ -154,3 +154,18 @@ def test_main_lewati_langkah_internet_dan_ikuti_urutan(monkeypatch):
 def test_main_langkah_tak_dikenal_ditolak():
     with pytest.raises(SystemExit):
         pipeline.main(["--langkah", "deploy"])
+
+
+def test_jalankan_skrip_dari_akar_repo(monkeypatch):
+    panggilan = {}
+
+    def run_palsu(perintah, check, cwd):
+        panggilan.update(perintah=perintah, check=check, cwd=cwd)
+
+    monkeypatch.setattr(pipeline.subprocess, "run", run_palsu)
+    pipeline.langkah_model()
+    assert panggilan["perintah"] == [pipeline.PYTHON, str(ROOT / "scripts" / "latih_model.py")]
+    # check=True supaya pipeline berhenti kalau skrip anak gagal.
+    assert panggilan["check"] is True and panggilan["cwd"] == ROOT
+    pipeline.langkah_db()
+    assert panggilan["perintah"][-1].endswith("bangun_db.py")
