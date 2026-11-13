@@ -114,3 +114,9 @@ def test_status_dan_keyakinan_tidak_hilang_jadi_nan():
     df = muat_data_center()
     assert df["status"].notna().all()
     assert df["keyakinan"].notna().all()
+
+
+def test_contoh_di_docstring_tetap_benar():
+    # Angka contoh di docstring dipakai di dokumentasi BELAJAR.md, jadi harus sesuai rumus.
+    assert hitung.listrik_tahunan_gwh(10, 0.6, 1.5) == pytest.approx(78.84)
+    assert hitung.air_tahunan_m3(10, 0.6, 1.8) == pytest.approx(94_608)
