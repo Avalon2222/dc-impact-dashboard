@@ -38,6 +38,16 @@ def jalankan_skrip(nama: str) -> None:
     subprocess.run([PYTHON, str(ROOT / "scripts" / nama)], check=True, cwd=ROOT)
 
 
+class DataTidakValid(ValueError):
+    """Data gagal validasi. Pipeline berhenti supaya data rusak tidak ikut dipakai model dan dashboard."""
+
+
+def _pastikan(kondisi, pesan: str) -> None:
+    # Bukan `assert`: assert hilang kalau Python dijalankan dengan -O, padahal validasi ini wajib.
+    if not kondisi:
+        raise DataTidakValid(pesan)
+
+
 def langkah_unduh_pue() -> None:
     jalankan_skrip("ambil_pue_google.py")
 
@@ -50,24 +60,24 @@ def langkah_validasi() -> None:
     """Periksa kualitas data sebelum dipakai: kolom wajib ada, nilai masuk akal, tidak ada duplikat."""
     fasilitas = pd.read_csv(DATA / "data_center_indonesia.csv")
     hilang = [k for k in KOLOM_WAJIB_FASILITAS if k not in fasilitas.columns]
-    assert not hilang, f"Kolom wajib hilang di data_center_indonesia.csv: {hilang}"
-    assert fasilitas["lat"].between(-11, 6).all() and fasilitas["lon"].between(95, 141).all(), "Koordinat di luar Indonesia"
-    assert (fasilitas["kapasitas_it_mw"] > 0).all(), "Kapasitas harus > 0"
-    assert fasilitas["status"].isin(["beroperasi", "dibangun", "rencana"]).all(), "Status tidak dikenal"
-    assert not fasilitas["nama"].duplicated().any(), "Nama fasilitas duplikat"
+    _pastikan(not hilang, f"Kolom wajib hilang di data_center_indonesia.csv: {hilang}")
+    _pastikan(fasilitas["lat"].between(-11, 6).all() and fasilitas["lon"].between(95, 141).all(), "Koordinat di luar Indonesia")
+    _pastikan((fasilitas["kapasitas_it_mw"] > 0).all(), "Kapasitas harus > 0")
+    _pastikan(fasilitas["status"].isin(["beroperasi", "dibangun", "rencana"]).all(), "Status tidak dikenal")
+    _pastikan(not fasilitas["nama"].duplicated().any(), "Nama fasilitas duplikat")
 
     pue = pd.read_csv(DATA / "pue_google_kuartalan.csv")
-    assert len(pue) >= 500, "Data PUE Google terlalu sedikit"
-    assert pue["pue_kuartalan"].dropna().between(1.0, 2.0).all(), "PUE di luar rentang wajar"
-    assert not pue.duplicated(["kampus", "tahun", "kuartal"]).any(), "Duplikat PUE kampus/tahun/kuartal"
+    _pastikan(len(pue) >= 500, "Data PUE Google terlalu sedikit")
+    _pastikan(pue["pue_kuartalan"].dropna().between(1.0, 2.0).all(), "PUE di luar rentang wajar")
+    _pastikan(not pue.duplicated(["kampus", "tahun", "kuartal"]).any(), "Duplikat PUE kampus/tahun/kuartal")
 
     lokasi = pd.read_csv(DATA / "lokasi_kampus.csv")
     tanpa_lokasi = set(pue["kampus"]) - set(lokasi["kampus"]) - {"Fleet"}
-    assert not tanpa_lokasi, f"Kampus Google tanpa koordinat di lokasi_kampus.csv: {sorted(tanpa_lokasi)}"
+    _pastikan(not tanpa_lokasi, f"Kampus Google tanpa koordinat di lokasi_kampus.csv: {sorted(tanpa_lokasi)}")
 
     iklim = pd.read_csv(DATA / "iklim_kuartalan.csv")
-    assert iklim["bola_basah_rata"].between(-40, 35).all(), "Suhu bola basah di luar rentang wajar"
-    assert (iklim["jumlah_hari"] >= 85).all(), "Ada kuartal/tahun yang tidak lengkap"
+    _pastikan(iklim["bola_basah_rata"].between(-40, 35).all(), "Suhu bola basah di luar rentang wajar")
+    _pastikan((iklim["jumlah_hari"] >= 85).all(), "Ada kuartal/tahun yang tidak lengkap")
     print(f"  validasi OK: {len(fasilitas)} fasilitas, {len(pue)} baris PUE, {len(iklim)} baris iklim")
 
 

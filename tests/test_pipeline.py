@@ -112,3 +112,28 @@ def test_daftar_lokasi_tanpa_duplikat():
 def test_ke_angka_pue():
     assert ambil_pue_google._ke_angka("1.09") == 1.09
     assert ambil_pue_google._ke_angka("N/A") is None
+
+
+@pytest.fixture
+def data_salinan(tmp_path, monkeypatch):
+    import shutil
+
+    for nama in ["data_center_indonesia.csv", "pue_google_kuartalan.csv", "lokasi_kampus.csv", "iklim_kuartalan.csv"]:
+        shutil.copy(ROOT / "data" / nama, tmp_path / nama)
+    monkeypatch.setattr(pipeline, "DATA", tmp_path)
+    return tmp_path
+
+
+def test_validasi_tolak_koordinat_di_luar_indonesia(data_salinan):
+    f = pd.read_csv(data_salinan / "data_center_indonesia.csv")
+    f.loc[0, "lat"] = 35.0
+    f.to_csv(data_salinan / "data_center_indonesia.csv", index=False)
+    with pytest.raises(pipeline.DataTidakValid, match="Koordinat"):
+        pipeline.langkah_validasi()
+
+
+def test_validasi_tolak_pue_duplikat(data_salinan):
+    pue = pd.read_csv(data_salinan / "pue_google_kuartalan.csv")
+    pd.concat([pue, pue.head(1)]).to_csv(data_salinan / "pue_google_kuartalan.csv", index=False)
+    with pytest.raises(pipeline.DataTidakValid, match="Duplikat PUE"):
+        pipeline.langkah_validasi()
