@@ -49,7 +49,7 @@ def air_tahunan_m3(kapasitas_it_mw: float, utilisasi: float, wue_liter_per_kwh: 
         / 1000                    -> m3  (1 m3 = 1000 liter)
 
     Contoh: 10 MW, utilisasi 0.6, WUE 1.8
-        10 x 0.6 x 8760 x 1000 x 1.8 / 1000 = 94.608 m3/tahun
+        10 x 0.6 x 8760 x 1000 x 1.8 / 1000 = 94608 m3/tahun (sekitar 94,6 ribu m3)
     """
     kwh_server = kapasitas_it_mw * utilisasi * JAM_PER_TAHUN * 1000
     return kwh_server * wue_liter_per_kwh / 1000
