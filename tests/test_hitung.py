@@ -120,3 +120,18 @@ def test_contoh_di_docstring_tetap_benar():
     # Angka contoh di docstring dipakai di dokumentasi BELAJAR.md, jadi harus sesuai rumus.
     assert hitung.listrik_tahunan_gwh(10, 0.6, 1.5) == pytest.approx(78.84)
     assert hitung.air_tahunan_m3(10, 0.6, 1.8) == pytest.approx(94_608)
+
+
+@pytest.mark.parametrize("x, teks", [
+    (999_960, "1,0 juta"),          # dibulatkan dulu, bukan "1.000,0 ribu"
+    (-1_500_000, "-1,5 juta"),
+    (9_999, "9.999"),               # di bawah 10 ribu ditulis utuh
+    (float("nan"), "-"),
+])
+def test_format_ringkas_kasus_tepi(x, teks):
+    assert hitung.format_ringkas(x) == teks
+
+
+def test_format_angka_negatif_dan_nan():
+    assert hitung.format_angka(-1234.5, 1) == "-1.234,5"
+    assert hitung.format_angka(float("nan")) == "-"
