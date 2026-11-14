@@ -173,3 +173,11 @@ def test_kolom_teks_kosong_tetap_string(tmp_path):
     df = muat_data_center(_csv_data_center(tmp_path, "rencana"))
     assert df.loc[0, "catatan"] == ""
     assert df.loc[0, "url_sumber"] == ""
+
+
+@pytest.mark.parametrize("utilisasi", [-0.1, 60, 1.01])
+def test_utilisasi_di_luar_0_sampai_1_ditolak(utilisasi):
+    with pytest.raises(ValueError, match="utilisasi"):
+        hitung.listrik_tahunan_gwh(10, utilisasi, 1.5)
+    with pytest.raises(ValueError, match="utilisasi"):
+        hitung.air_tahunan_m3(10, utilisasi, 1.8)
