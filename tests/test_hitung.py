@@ -181,3 +181,10 @@ def test_utilisasi_di_luar_0_sampai_1_ditolak(utilisasi):
         hitung.listrik_tahunan_gwh(10, utilisasi, 1.5)
     with pytest.raises(ValueError, match="utilisasi"):
         hitung.air_tahunan_m3(10, utilisasi, 1.8)
+
+
+def test_setara_penduduk_pembagi_nol_ditolak():
+    with pytest.raises(ValueError, match="kwh_per_kapita_tahun"):
+        hitung.setara_penduduk_listrik(10, 0)
+    with pytest.raises(ValueError, match="liter_per_orang_hari"):
+        hitung.setara_penduduk_air(1000, -5)
