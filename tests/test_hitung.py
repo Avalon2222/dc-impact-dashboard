@@ -167,3 +167,9 @@ def test_parameter_dobel_ditolak(tmp_path):
     csv.write_text("parameter,nilai\npue,1.5\nwue,1.8\npue,1.3\n")
     with pytest.raises(ValueError, match="pue"):
         muat_parameter(csv)
+
+
+def test_kolom_teks_kosong_tetap_string(tmp_path):
+    df = muat_data_center(_csv_data_center(tmp_path, "rencana"))
+    assert df.loc[0, "catatan"] == ""
+    assert df.loc[0, "url_sumber"] == ""
