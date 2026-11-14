@@ -135,3 +135,8 @@ def test_format_ringkas_kasus_tepi(x, teks):
 def test_format_angka_negatif_dan_nan():
     assert hitung.format_angka(-1234.5, 1) == "-1.234,5"
     assert hitung.format_angka(float("nan")) == "-"
+
+
+@pytest.mark.parametrize("x, desimal", [(-0.4, 0), (-0.04, 1), (-0.0, 2)])
+def test_format_angka_tidak_menampilkan_nol_negatif(x, desimal):
+    assert not hitung.format_angka(x, desimal).startswith("-")
