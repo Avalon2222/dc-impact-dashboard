@@ -57,6 +57,10 @@ def muat_parameter(path: Path | None = None) -> dict:
     """
     path = path or DATA_DIR / "parameter_asumsi.csv"
     df = pd.read_csv(path)
+    dobel = sorted(df.loc[df["parameter"].duplicated(), "parameter"].unique())
+    if dobel:
+        # dict() diam-diam memakai baris terakhir, jadi parameter dobel lebih baik ditolak.
+        raise ValueError(f"Parameter dobel di {Path(path).name}: {dobel}")
     return dict(zip(df["parameter"], df["nilai"]))
 
 

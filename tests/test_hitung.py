@@ -160,3 +160,10 @@ def test_status_dirapikan_dari_huruf_besar_dan_spasi(tmp_path):
 def test_status_asing_langsung_error(tmp_path):
     with pytest.raises(ValueError, match="operasional"):
         muat_data_center(_csv_data_center(tmp_path, "operasional"))
+
+
+def test_parameter_dobel_ditolak(tmp_path):
+    csv = tmp_path / "param.csv"
+    csv.write_text("parameter,nilai\npue,1.5\nwue,1.8\npue,1.3\n")
+    with pytest.raises(ValueError, match="pue"):
+        muat_parameter(csv)
