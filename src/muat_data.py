@@ -31,6 +31,14 @@ def muat_data_center(path: Path | None = None) -> pd.DataFrame:
     for kolom in ["lat", "lon", "kapasitas_it_mw", "tahun"]:
         df[kolom] = pd.to_numeric(df[kolom], errors="coerce")
 
+    # Rapikan huruf besar dan spasi dulu ("Beroperasi " -> "beroperasi"), lalu tolak nilai asing.
+    # Tanpa ini, nilai di luar daftar urutan diam-diam berubah jadi NaN di Categorical.
+    for kolom, pilihan in (("status", URUTAN_STATUS), ("keyakinan", URUTAN_KEYAKINAN)):
+        df[kolom] = df[kolom].astype("string").str.strip().str.lower()
+        asing = sorted(set(df[kolom].dropna()) - set(pilihan))
+        if asing:
+            raise ValueError(f"Nilai '{kolom}' tidak dikenal di {Path(path).name}: {asing}. Pilihan: {pilihan}")
+
     # Kolom kategori diberi urutan supaya legenda grafik konsisten.
     df["status"] = pd.Categorical(df["status"], categories=URUTAN_STATUS, ordered=True)
     df["keyakinan"] = pd.Categorical(df["keyakinan"], categories=URUTAN_KEYAKINAN, ordered=True)

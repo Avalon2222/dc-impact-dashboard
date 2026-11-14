@@ -140,3 +140,23 @@ def test_format_angka_negatif_dan_nan():
 @pytest.mark.parametrize("x, desimal", [(-0.4, 0), (-0.04, 1), (-0.0, 2)])
 def test_format_angka_tidak_menampilkan_nol_negatif(x, desimal):
     assert not hitung.format_angka(x, desimal).startswith("-")
+
+
+def _csv_data_center(tmp_path, status, keyakinan="tinggi"):
+    csv = tmp_path / "dc.csv"
+    csv.write_text(
+        "nama,lat,lon,kapasitas_it_mw,tahun,status,keyakinan,catatan,url_sumber,sumber\n"
+        f"DC Uji,-6.2,106.8,10,2024,{status},{keyakinan},,,\n"
+    )
+    return csv
+
+
+def test_status_dirapikan_dari_huruf_besar_dan_spasi(tmp_path):
+    df = muat_data_center(_csv_data_center(tmp_path, " Beroperasi ", "Sedang"))
+    assert df["status"].tolist() == ["beroperasi"]
+    assert df["keyakinan"].tolist() == ["sedang"]
+
+
+def test_status_asing_langsung_error(tmp_path):
+    with pytest.raises(ValueError, match="operasional"):
+        muat_data_center(_csv_data_center(tmp_path, "operasional"))
