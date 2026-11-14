@@ -25,7 +25,9 @@ def muat_data_center(path: Path | None = None) -> pd.DataFrame:
     Mengembalikan DataFrame dengan satu baris = satu fasilitas data center.
     """
     path = path or DATA_DIR / "data_center_indonesia.csv"
-    df = pd.read_csv(path)
+    # Kolom teks dibaca sebagai string. Kalau satu kolom kosong semua, pandas menebaknya float
+    # dan fillna("") di bawah jadi bercampur tipe.
+    df = pd.read_csv(path, dtype={"catatan": str, "url_sumber": str, "sumber": str})
 
     # Pastikan kolom angka memang bertipe angka (kalau ada yang kosong jadi NaN).
     for kolom in ["lat", "lon", "kapasitas_it_mw", "tahun"]:
