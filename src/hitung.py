@@ -97,6 +97,8 @@ def tambah_kolom_estimasi(
       setara_orang_listrik, setara_orang_air,
       setara_rumah_tangga_listrik, setara_rumah_tangga_air
     """
+    if orang_per_rumah_tangga <= 0:
+        raise ValueError("orang_per_rumah_tangga harus lebih dari 0")
     hasil = df.copy()
     mw = hasil["kapasitas_it_mw"]
 

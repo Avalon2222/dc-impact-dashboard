@@ -188,3 +188,9 @@ def test_setara_penduduk_pembagi_nol_ditolak():
         hitung.setara_penduduk_listrik(10, 0)
     with pytest.raises(ValueError, match="liter_per_orang_hari"):
         hitung.setara_penduduk_air(1000, -5)
+
+
+def test_tambah_kolom_estimasi_tolak_rumah_tangga_nol():
+    df = pd.DataFrame({"kapasitas_it_mw": [10.0]})
+    with pytest.raises(ValueError, match="orang_per_rumah_tangga"):
+        hitung.tambah_kolom_estimasi(df, 0.6, 1.5, 1.8, 1200, 150, orang_per_rumah_tangga=0)
