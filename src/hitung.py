@@ -21,6 +21,12 @@ JAM_PER_TAHUN = 8760  # 365 hari x 24 jam
 HARI_PER_TAHUN = 365
 
 
+def _cek_utilisasi(utilisasi: float) -> None:
+    """Utilisasi adalah porsi kapasitas yang terpakai, jadi harus di antara 0 dan 1 (bukan persen)."""
+    if not 0 <= utilisasi <= 1:
+        raise ValueError(f"utilisasi harus 0-1 (misalnya 0.6, bukan 60), dapat {utilisasi}")
+
+
 def listrik_tahunan_gwh(kapasitas_it_mw: float, utilisasi: float, pue: float) -> float:
     """Estimasi konsumsi listrik total fasilitas per tahun, dalam GWh.
 
@@ -33,6 +39,7 @@ def listrik_tahunan_gwh(kapasitas_it_mw: float, utilisasi: float, pue: float) ->
     Contoh: 10 MW, utilisasi 0.6, PUE 1.5
         10 x 0.6 x 1.5 x 8760 / 1000 = 78.84 GWh/tahun
     """
+    _cek_utilisasi(utilisasi)
     return kapasitas_it_mw * utilisasi * pue * JAM_PER_TAHUN / 1000
 
 
@@ -51,6 +58,7 @@ def air_tahunan_m3(kapasitas_it_mw: float, utilisasi: float, wue_liter_per_kwh: 
     Contoh: 10 MW, utilisasi 0.6, WUE 1.8
         10 x 0.6 x 8760 x 1000 x 1.8 / 1000 = 94608 m3/tahun (sekitar 94,6 ribu m3)
     """
+    _cek_utilisasi(utilisasi)
     kwh_server = kapasitas_it_mw * utilisasi * JAM_PER_TAHUN * 1000
     return kwh_server * wue_liter_per_kwh / 1000
 
