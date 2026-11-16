@@ -70,7 +70,8 @@ def prediksi_pue(fitur: pd.DataFrame, model=None) -> pd.Series:
         model = muat_model("pue")
     if model is None:
         raise FileNotFoundError("Model PUE belum dilatih; jalankan python scripts/latih_model.py")
-    return pd.Series(model.predict(fitur[FITUR_PUE]), index=fitur.index, name="pue_prediksi")
+    # PUE = listrik total / listrik IT, jadi secara fisik tidak mungkin di bawah 1.
+    return pd.Series(model.predict(fitur[FITUR_PUE]), index=fitur.index, name="pue_prediksi").clip(lower=1.0)
 
 
 def prediksi_wue(fitur: pd.DataFrame, model=None) -> pd.Series:
