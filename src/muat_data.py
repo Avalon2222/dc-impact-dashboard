@@ -59,6 +59,8 @@ def muat_parameter(path: Path | None = None) -> dict:
     """
     path = path or DATA_DIR / "parameter_asumsi.csv"
     df = pd.read_csv(path)
+    # Spasi sisa edit manual ("pue ") membuat PARAM["pue"] KeyError dan lolos dari cek dobel.
+    df["parameter"] = df["parameter"].astype(str).str.strip()
     dobel = sorted(df.loc[df["parameter"].duplicated(), "parameter"].unique())
     if dobel:
         # dict() diam-diam memakai baris terakhir, jadi parameter dobel lebih baik ditolak.
