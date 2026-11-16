@@ -15,6 +15,7 @@ Istilah penting:
 
 from __future__ import annotations
 
+import numpy as np
 import pandas as pd
 
 JAM_PER_TAHUN = 8760  # 365 hari x 24 jam
@@ -25,6 +26,12 @@ def _cek_utilisasi(utilisasi: float) -> None:
     """Utilisasi adalah porsi kapasitas yang terpakai, jadi harus di antara 0 dan 1 (bukan persen)."""
     if not 0 <= utilisasi <= 1:
         raise ValueError(f"utilisasi harus 0-1 (misalnya 0.6, bukan 60), dapat {utilisasi}")
+
+
+def _cek_pue(pue) -> None:
+    """PUE = listrik total / listrik server, jadi tidak mungkin di bawah 1. Bisa skalar atau Series per baris."""
+    if np.any(np.asarray(pue, dtype=float) < 1):
+        raise ValueError(f"PUE tidak boleh di bawah 1 (listrik total selalu >= listrik server), dapat {pue}")
 
 
 def listrik_tahunan_gwh(kapasitas_it_mw: float, utilisasi: float, pue: float) -> float:
@@ -40,6 +47,7 @@ def listrik_tahunan_gwh(kapasitas_it_mw: float, utilisasi: float, pue: float) ->
         10 x 0.6 x 1.5 x 8760 / 1000 = 78.84 GWh/tahun
     """
     _cek_utilisasi(utilisasi)
+    _cek_pue(pue)
     return kapasitas_it_mw * utilisasi * pue * JAM_PER_TAHUN / 1000
 
 
