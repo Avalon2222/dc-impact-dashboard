@@ -67,6 +67,8 @@ def air_tahunan_m3(kapasitas_it_mw: float, utilisasi: float, wue_liter_per_kwh: 
         10 x 0.6 x 8760 x 1000 x 1.8 / 1000 = 94608 m3/tahun (sekitar 94,6 ribu m3)
     """
     _cek_utilisasi(utilisasi)
+    if np.any(np.asarray(wue_liter_per_kwh, dtype=float) < 0):
+        raise ValueError(f"WUE tidak boleh negatif (0 = tanpa air), dapat {wue_liter_per_kwh}")
     kwh_server = kapasitas_it_mw * utilisasi * JAM_PER_TAHUN * 1000
     return kwh_server * wue_liter_per_kwh / 1000
 
