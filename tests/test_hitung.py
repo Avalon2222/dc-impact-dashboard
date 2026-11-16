@@ -210,3 +210,9 @@ def test_air_tolak_wue_negatif():
     with pytest.raises(ValueError, match="WUE"):
         hitung.air_tahunan_m3(10, 0.6, -0.5)
     assert hitung.air_tahunan_m3(10, 0.6, 0.0) == 0
+
+
+def test_format_angka_tak_hingga_jadi_strip():
+    assert hitung.format_angka(float("inf")) == "-"
+    assert hitung.format_angka(float("-inf"), 1) == "-"
+    assert hitung.format_ringkas(float("inf")) == "-"
