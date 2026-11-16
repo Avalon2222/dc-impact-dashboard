@@ -216,3 +216,12 @@ def test_format_angka_tak_hingga_jadi_strip():
     assert hitung.format_angka(float("inf")) == "-"
     assert hitung.format_angka(float("-inf"), 1) == "-"
     assert hitung.format_ringkas(float("inf")) == "-"
+
+
+def test_muat_parameter_rapikan_spasi_nama(tmp_path):
+    csv = tmp_path / "param.csv"
+    csv.write_text("parameter,nilai\npue ,1.5\n wue,1.8\n")
+    assert muat_parameter(csv) == {"pue": 1.5, "wue": 1.8}
+    csv.write_text("parameter,nilai\npue,1.5\npue ,1.6\n")
+    with pytest.raises(ValueError, match="dobel"):
+        muat_parameter(csv)
