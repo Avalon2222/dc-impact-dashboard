@@ -204,3 +204,9 @@ def test_listrik_tolak_pue_di_bawah_satu():
     # PUE per baris dari model (bisa NaN untuk lokasi tanpa iklim) tetap diterima.
     hasil = hitung.listrik_tahunan_gwh(pd.Series([10.0, 5.0]), 0.6, pd.Series([1.0, float("nan")]))
     assert hasil.iloc[0] == pytest.approx(52.56)
+
+
+def test_air_tolak_wue_negatif():
+    with pytest.raises(ValueError, match="WUE"):
+        hitung.air_tahunan_m3(10, 0.6, -0.5)
+    assert hitung.air_tahunan_m3(10, 0.6, 0.0) == 0
