@@ -82,3 +82,11 @@ def test_tanpa_komentar_buang_blok_dan_baris():
 def test_skema_tolak_nama_tabel_aneh(nama):
     with pytest.raises(ValueError, match="Nama tabel tidak valid"):
         db.skema(nama)
+
+
+def test_query_tersimpan_judul_tahan_bom(tmp_path, monkeypatch):
+    (tmp_path / "01_contoh.sql").write_text("﻿-- Judul Contoh\n--\n  -- Penjelasan singkat\nSELECT 1", encoding="utf-8")
+    monkeypatch.setattr(db, "DIR_SQL", tmp_path)
+    q = db.query_tersimpan()[0]
+    assert q["judul"] == "Judul Contoh"
+    assert q["deskripsi"] == "Penjelasan singkat"

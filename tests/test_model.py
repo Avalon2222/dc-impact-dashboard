@@ -104,3 +104,11 @@ def test_tanpa_artefak_model(tmp_path, monkeypatch, iklim_tropis):
         model.prediksi_pue(model.siapkan_fitur_pue(iklim_tropis, umur_kuartal=8))
     with pytest.raises(FileNotFoundError, match="Model WUE belum dilatih"):
         model.prediksi_wue(model.siapkan_fitur_wue(iklim_tropis))
+
+
+
+def test_prediksi_pue_dipotong_di_satu(iklim_tropis):
+    fitur = model.siapkan_fitur_pue(iklim_tropis)
+    hasil = model.prediksi_pue(fitur, _ModelTiruan(0.93))
+    assert (hasil == 1.0).all()
+    assert (model.prediksi_wue(model.siapkan_fitur_wue(iklim_tropis), _ModelTiruan(-0.2)) == 0.0).all()
