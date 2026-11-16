@@ -94,8 +94,9 @@ def query_tersimpan() -> list[dict]:
     """Baca sql/*.sql. Baris komentar pertama (-- Judul) jadi judul, sisanya jadi deskripsi."""
     hasil = []
     for path in sorted(DIR_SQL.glob("*.sql")):
-        teks = path.read_text(encoding="utf-8")
-        komentar = [b[2:].strip() for b in teks.splitlines() if b.startswith("--")]
+        teks = path.read_text(encoding="utf-8-sig")   # -sig: BOM dari editor Windows tidak ikut terbaca
+        komentar = [b.strip()[2:].strip() for b in teks.splitlines() if b.strip().startswith("--")]
+        komentar = [k for k in komentar if k]
         hasil.append({
             "file": path.name,
             "judul": komentar[0] if komentar else path.stem,
