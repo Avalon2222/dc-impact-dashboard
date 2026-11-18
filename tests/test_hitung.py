@@ -255,3 +255,10 @@ def test_pembagi_nan_ditolak():
     df = pd.DataFrame({"kapasitas_it_mw": [10.0]})
     with pytest.raises(ValueError, match="orang_per_rumah_tangga"):
         hitung.tambah_kolom_estimasi(df, 0.6, 1.5, 1.8, 1200, 150, orang_per_rumah_tangga=nan)
+
+
+def test_format_ringkas_sampai_triliun():
+    # Liter air per tahun skenario besar bisa tembus triliun; jangan tampil "2.500,0 miliar".
+    assert hitung.format_ringkas(2_500_000_000_000) == "2,5 triliun"
+    assert hitung.format_ringkas(999_960_000_000) == "1,0 triliun"
+    assert hitung.format_ringkas(-3_000_000_000_000) == "-3,0 triliun"
