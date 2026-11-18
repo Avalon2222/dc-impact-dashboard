@@ -32,6 +32,11 @@ def muat_data_center(path: Path | None = None) -> pd.DataFrame:
     # Pastikan kolom angka memang bertipe angka (kalau ada yang kosong jadi NaN).
     for kolom in ["lat", "lon", "kapasitas_it_mw", "tahun"]:
         df[kolom] = pd.to_numeric(df[kolom], errors="coerce")
+    # Kapasitas negatif (salah ketik tanda minus) akan menghasilkan listrik dan air negatif
+    # yang diam-diam mengurangi total nasional.
+    negatif = df.loc[df["kapasitas_it_mw"] < 0, "nama"].tolist()
+    if negatif:
+        raise ValueError(f"kapasitas_it_mw negatif di {Path(path).name}: {negatif}")
 
     # Rapikan huruf besar dan spasi dulu ("Beroperasi " -> "beroperasi"), lalu tolak nilai asing.
     # Tanpa ini, nilai di luar daftar urutan diam-diam berubah jadi NaN di Categorical.
