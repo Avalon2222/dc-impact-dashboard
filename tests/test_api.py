@@ -89,3 +89,14 @@ def test_rapikan_nan_jadi_null():
 
     df = pd.DataFrame({"nama": ["A", None], "mw": [1.5, np.nan]})
     assert _rapikan(df) == [{"nama": "A", "mw": 1.5}, {"nama": None, "mw": None}]
+
+
+@pytest.mark.parametrize("url, params", [
+    ("/ringkasan", {"pue": "inf"}),
+    ("/ringkasan", {"wue": "inf"}),
+    ("/estimasi", {"kapasitas_it_mw": "inf"}),
+    ("/estimasi", {"kapasitas_it_mw": 10, "wue": "inf"}),
+])
+def test_angka_tak_hingga_ditolak_422(klien, url, params):
+    # Sebelumnya /ringkasan?pue=inf gagal 500 dan /estimasi diam-diam menjawab null.
+    assert klien.get(url, params=params).status_code == 422
