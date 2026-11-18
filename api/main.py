@@ -106,7 +106,7 @@ def daftar_fasilitas(
     status: Status | None = None,
     provinsi: str | None = None,
     keyakinan: Literal["tinggi", "sedang", "rendah"] | None = None,
-    min_mw: float = Query(0, ge=0),
+    min_mw: float = Query(0, ge=0, allow_inf_nan=False),
 ):
     """Daftar data center Indonesia, bisa difilter. Data dari tabel `fasilitas` di DuckDB."""
     syarat, params = ["kapasitas_it_mw >= ?"], [min_mw]
@@ -130,9 +130,9 @@ def satu_fasilitas(id: int):
 
 @app.get("/ringkasan", tags=["estimasi"])
 def ringkasan(
-    utilisasi: float = Query(PARAM["utilisasi"], ge=0, le=1),
-    pue: float = Query(PARAM["pue"], ge=1),
-    wue: float = Query(PARAM["wue"], ge=0),
+    utilisasi: float = Query(PARAM["utilisasi"], ge=0, le=1, allow_inf_nan=False),
+    pue: float = Query(PARAM["pue"], ge=1, allow_inf_nan=False),
+    wue: float = Query(PARAM["wue"], ge=0, allow_inf_nan=False),
     status: Status | None = None,
 ):
     """Total kapasitas, listrik, dan air per provinsi dengan asumsi yang bisa diubah lewat query string."""
@@ -158,10 +158,10 @@ def ringkasan(
 
 @app.get("/estimasi", response_model=Estimasi, tags=["estimasi"])
 def estimasi(
-    kapasitas_it_mw: float = Query(..., gt=0, examples=[10]),
-    utilisasi: float = Query(PARAM["utilisasi"], ge=0, le=1),
-    pue: float = Query(PARAM["pue"], ge=1),
-    wue: float = Query(PARAM["wue"], ge=0),
+    kapasitas_it_mw: float = Query(..., gt=0, allow_inf_nan=False, examples=[10]),
+    utilisasi: float = Query(PARAM["utilisasi"], ge=0, le=1, allow_inf_nan=False),
+    pue: float = Query(PARAM["pue"], ge=1, allow_inf_nan=False),
+    wue: float = Query(PARAM["wue"], ge=0, allow_inf_nan=False),
 ):
     """Hitung listrik & air satu fasilitas hipotetis. Rumus persis sama dengan dashboard (src/hitung.py)."""
     gwh = hitung.listrik_tahunan_gwh(kapasitas_it_mw, utilisasi, pue)
