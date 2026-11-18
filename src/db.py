@@ -23,6 +23,8 @@ DIR_SQL = ROOT / "sql"
 
 # Hanya pernyataan pembacaan yang boleh dijalankan dari SQL Explorer / API.
 _POLA_AMAN = re.compile(r"^\s*(WITH|SELECT|DESCRIBE|SHOW|EXPLAIN|PRAGMA\s+table_info|SUMMARIZE)\b", re.IGNORECASE)
+# Grup 1 = string berkutip (dipertahankan); sisanya komentar blok atau komentar baris.
+_POLA_KOMENTAR = re.compile(r"('(?:[^']|'')*'|\"(?:[^\"]|\"\")*\")|/\*.*?\*/|--[^\n]*", re.DOTALL)
 _KATA_TERLARANG = re.compile(
     r"\b(INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|ATTACH|COPY|EXPORT|IMPORT|INSTALL|LOAD|CALL|SET|RESET|TRUNCATE|VACUUM)\b",
     re.IGNORECASE,
@@ -47,9 +49,13 @@ def koneksi(path: Path | None = None) -> duckdb.DuckDBPyConnection:
 
 
 def _tanpa_komentar(sql: str) -> str:
-    """Buang komentar -- ... dan /* ... */ supaya pemeriksaan keamanan melihat SQL aslinya."""
-    sql = re.sub(r"/\*.*?\*/", " ", sql, flags=re.DOTALL)
-    return "\n".join(b for b in sql.splitlines() if not b.strip().startswith("--")).strip()
+    """Buang komentar -- ... dan /* ... */ supaya pemeriksaan keamanan melihat SQL aslinya.
+
+    Komentar di akhir baris ("SELECT 1; -- selesai") ikut dibuang. Teks di dalam tanda kutip
+    dibiarkan, jadi '--' atau ';' di dalam string tetap terlihat oleh pemeriksaan.
+    """
+    sql = _POLA_KOMENTAR.sub(lambda m: m.group(1) or " ", sql)
+    return "\n".join(b for b in sql.splitlines() if b.strip()).strip()
 
 
 def sql_aman(sql: str) -> bool:

@@ -90,3 +90,13 @@ def test_query_tersimpan_judul_tahan_bom(tmp_path, monkeypatch):
     q = db.query_tersimpan()[0]
     assert q["judul"] == "Judul Contoh"
     assert q["deskripsi"] == "Penjelasan singkat"
+
+
+@pytest.mark.parametrize("sql, aman", [
+    ("SELECT 1; -- selesai", True),
+    ("SELECT nama FROM fasilitas -- urut nanti\nORDER BY nama;", True),
+    ("SELECT '--' AS garis; DROP TABLE fasilitas", False),
+    ("SELECT 'a;b' AS teks", False),   # titik koma di string tetap ditolak, lebih aman
+])
+def test_sql_aman_komentar_di_akhir_baris(sql, aman):
+    assert db.sql_aman(sql) is aman
