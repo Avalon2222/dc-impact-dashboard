@@ -78,14 +78,14 @@ def setara_penduduk_listrik(listrik_gwh: float, kwh_per_kapita_tahun: float) -> 
 
     1 GWh = 1.000.000 kWh.
     """
-    if kwh_per_kapita_tahun <= 0:
+    if not kwh_per_kapita_tahun > 0:   # "not >" juga menolak NaN
         raise ValueError("kwh_per_kapita_tahun harus lebih dari 0")
     return listrik_gwh * 1_000_000 / kwh_per_kapita_tahun
 
 
 def setara_penduduk_air(air_m3_tahun: float, liter_per_orang_hari: float) -> float:
     """Berapa orang yang kebutuhan air setahunnya setara angka ini?"""
-    if liter_per_orang_hari <= 0:
+    if not liter_per_orang_hari > 0:
         raise ValueError("liter_per_orang_hari harus lebih dari 0")
     liter_per_orang_tahun = liter_per_orang_hari * HARI_PER_TAHUN
     return air_m3_tahun * 1000 / liter_per_orang_tahun
@@ -107,7 +107,7 @@ def tambah_kolom_estimasi(
       setara_orang_listrik, setara_orang_air,
       setara_rumah_tangga_listrik, setara_rumah_tangga_air
     """
-    if orang_per_rumah_tangga <= 0:
+    if not orang_per_rumah_tangga > 0:
         raise ValueError("orang_per_rumah_tangga harus lebih dari 0")
     hasil = df.copy()
     mw = hasil["kapasitas_it_mw"]

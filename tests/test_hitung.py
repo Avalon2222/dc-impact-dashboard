@@ -244,3 +244,14 @@ def test_parameter_lengkap_rapikan_nama_seperti_muat_parameter(tmp_path):
     lengkap = muat_parameter_lengkap(csv)
     assert lengkap["parameter"].tolist() == ["pue", "wue"]
     assert set(lengkap["parameter"]) == set(muat_parameter(csv))
+
+
+def test_pembagi_nan_ditolak():
+    nan = float("nan")
+    with pytest.raises(ValueError, match="kwh_per_kapita_tahun"):
+        hitung.setara_penduduk_listrik(10, nan)
+    with pytest.raises(ValueError, match="liter_per_orang_hari"):
+        hitung.setara_penduduk_air(1000, nan)
+    df = pd.DataFrame({"kapasitas_it_mw": [10.0]})
+    with pytest.raises(ValueError, match="orang_per_rumah_tangga"):
+        hitung.tambah_kolom_estimasi(df, 0.6, 1.5, 1.8, 1200, 150, orang_per_rumah_tangga=nan)
