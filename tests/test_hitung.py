@@ -225,3 +225,12 @@ def test_muat_parameter_rapikan_spasi_nama(tmp_path):
     csv.write_text("parameter,nilai\npue,1.5\npue ,1.6\n")
     with pytest.raises(ValueError, match="dobel"):
         muat_parameter(csv)
+
+
+def test_muat_parameter_nilai_harus_angka(tmp_path):
+    csv = tmp_path / "param.csv"
+    csv.write_text('parameter,nilai\npue,"1,5"\nwue,1.8\n,\n')
+    assert muat_parameter(csv) == {"pue": 1.5, "wue": 1.8}
+    csv.write_text("parameter,nilai\npue,\nwue,banyak\n")
+    with pytest.raises(ValueError, match=r"pue.*wue"):
+        muat_parameter(csv)

@@ -60,7 +60,14 @@ def muat_parameter(path: Path | None = None) -> dict:
     path = path or DATA_DIR / "parameter_asumsi.csv"
     df = pd.read_csv(path)
     # Spasi sisa edit manual ("pue ") membuat PARAM["pue"] KeyError dan lolos dari cek dobel.
-    df["parameter"] = df["parameter"].astype(str).str.strip()
+    df["parameter"] = df["parameter"].fillna("").astype(str).str.strip()
+    df = df[df["parameter"] != ""]   # baris kosong di akhir CSV bukan parameter "nan"
+    # Nilai harus angka; "1,5" (koma desimal) diterima, sel kosong atau teks ditolak dengan nama parameternya.
+    nilai = pd.to_numeric(df["nilai"].astype(str).str.strip().str.replace(",", ".", regex=False), errors="coerce")
+    rusak = df.loc[nilai.isna(), "parameter"].tolist()
+    if rusak:
+        raise ValueError(f"Nilai parameter kosong atau bukan angka di {Path(path).name}: {rusak}")
+    df = df.assign(nilai=nilai)
     dobel = sorted(df.loc[df["parameter"].duplicated(), "parameter"].unique())
     if dobel:
         # dict() diam-diam memakai baris terakhir, jadi parameter dobel lebih baik ditolak.
