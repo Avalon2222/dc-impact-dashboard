@@ -262,3 +262,14 @@ def test_format_ringkas_sampai_triliun():
     assert hitung.format_ringkas(2_500_000_000_000) == "2,5 triliun"
     assert hitung.format_ringkas(999_960_000_000) == "1,0 triliun"
     assert hitung.format_ringkas(-3_000_000_000_000) == "-3,0 triliun"
+
+
+def test_kapasitas_negatif_ditolak_dengan_nama(tmp_path):
+    csv = tmp_path / "dc.csv"
+    csv.write_text(
+        "nama,lat,lon,kapasitas_it_mw,tahun,status,keyakinan,catatan,url_sumber,sumber\n"
+        "DC Benar,-6.2,106.8,10,2024,beroperasi,tinggi,,,\n"
+        "DC Minus,-6.3,106.9,-5,2025,dibangun,sedang,,,\n"
+    )
+    with pytest.raises(ValueError, match="DC Minus"):
+        muat_data_center(csv)
