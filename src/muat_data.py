@@ -78,4 +78,9 @@ def muat_parameter(path: Path | None = None) -> dict:
 def muat_parameter_lengkap(path: Path | None = None) -> pd.DataFrame:
     """Versi lengkap tabel parameter (dengan sumber dan catatan) untuk ditampilkan."""
     path = path or DATA_DIR / "parameter_asumsi.csv"
-    return pd.read_csv(path).fillna("")
+    df = pd.read_csv(path)
+    # Nama dirapikan dan baris kosong dibuang dengan aturan yang sama seperti muat_parameter,
+    # supaya tabel yang ditampilkan selalu sama dengan tabel yang dipakai menghitung.
+    df["parameter"] = df["parameter"].fillna("").astype(str).str.strip()
+    df = df[df["parameter"] != ""].reset_index(drop=True)
+    return df.fillna("")

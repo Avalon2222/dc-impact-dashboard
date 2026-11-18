@@ -234,3 +234,13 @@ def test_muat_parameter_nilai_harus_angka(tmp_path):
     csv.write_text("parameter,nilai\npue,\nwue,banyak\n")
     with pytest.raises(ValueError, match=r"pue.*wue"):
         muat_parameter(csv)
+
+
+def test_parameter_lengkap_rapikan_nama_seperti_muat_parameter(tmp_path):
+    from src.muat_data import muat_parameter_lengkap
+
+    csv = tmp_path / "param.csv"
+    csv.write_text("parameter,nilai,sumber\npue ,1.5,Uptime\n wue,1.8,\n,,\n")
+    lengkap = muat_parameter_lengkap(csv)
+    assert lengkap["parameter"].tolist() == ["pue", "wue"]
+    assert set(lengkap["parameter"]) == set(muat_parameter(csv))
