@@ -273,3 +273,8 @@ def test_kapasitas_negatif_ditolak_dengan_nama(tmp_path):
     )
     with pytest.raises(ValueError, match="DC Minus"):
         muat_data_center(csv)
+
+
+def test_status_spasi_saja_dianggap_kosong(tmp_path):
+    df = muat_data_center(_csv_data_center(tmp_path, "   ", "  "))
+    assert df["status"].isna().all() and df["keyakinan"].isna().all()
