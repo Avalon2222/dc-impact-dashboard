@@ -106,3 +106,16 @@ def test_sql_hasil_tak_hingga_jadi_null(klien):
     r = klien.post("/sql", json={"sql": "SELECT 'inf'::DOUBLE AS a, '-inf'::DOUBLE AS b, 1.5 AS c"})
     assert r.status_code == 200
     assert r.json()["baris"] == [{"a": None, "b": None, "c": 1.5}]
+
+
+def test_fasilitas_tanpa_kapasitas_tetap_terdaftar(klien, monkeypatch):
+    import duckdb
+
+    from src import db
+
+    kon = duckdb.connect(":memory:")
+    kon.execute("CREATE TABLE fasilitas AS SELECT * FROM (VALUES (1, 'A', 10.0), (2, 'B', NULL)) t(id, nama, kapasitas_it_mw)")
+    asli = db.jalankan
+    monkeypatch.setattr(db, "jalankan", lambda sql, params=None, kon_=None: asli(sql, params, kon=kon))
+    assert klien.get("/fasilitas").json()["jumlah"] == 2
+    assert klien.get("/fasilitas", params={"min_mw": 5}).json()["jumlah"] == 1
