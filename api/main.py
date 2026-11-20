@@ -21,6 +21,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Literal
 
+import numpy as np
 import pandas as pd
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel, Field
@@ -45,7 +46,9 @@ Status = Literal["beroperasi", "dibangun", "rencana"]
 
 
 def _rapikan(df: pd.DataFrame) -> list[dict]:
-    """DataFrame -> list of dict yang aman di-JSON-kan (NaN jadi null)."""
+    """DataFrame -> list of dict yang aman di-JSON-kan (NaN dan tak hingga jadi null)."""
+    # inf bukan angka JSON yang sah; tanpa ini SELECT 'inf'::DOUBLE di /sql berakhir error 500.
+    df = df.replace([np.inf, -np.inf], np.nan)
     return df.astype(object).where(df.notna(), None).to_dict(orient="records")
 
 
