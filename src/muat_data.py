@@ -42,6 +42,8 @@ def muat_data_center(path: Path | None = None) -> pd.DataFrame:
     # Tanpa ini, nilai di luar daftar urutan diam-diam berubah jadi NaN di Categorical.
     for kolom, pilihan in (("status", URUTAN_STATUS), ("keyakinan", URUTAN_KEYAKINAN)):
         df[kolom] = df[kolom].astype("string").str.strip().str.lower()
+        # Sel berisi spasi saja sama dengan sel kosong, bukan nilai asing bernama ''.
+        df[kolom] = df[kolom].mask(df[kolom] == "")
         asing = sorted(set(df[kolom].dropna()) - set(pilihan))
         if asing:
             raise ValueError(f"Nilai '{kolom}' tidak dikenal di {Path(path).name}: {asing}. Pilihan: {pilihan}")
