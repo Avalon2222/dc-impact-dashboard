@@ -112,7 +112,8 @@ def daftar_fasilitas(
     min_mw: float = Query(0, ge=0, allow_inf_nan=False),
 ):
     """Daftar data center Indonesia, bisa difilter. Data dari tabel `fasilitas` di DuckDB."""
-    syarat, params = ["kapasitas_it_mw >= ?"], [min_mw]
+    # Tanpa min_mw, fasilitas yang kapasitasnya belum diketahui (NULL) tetap ikut; NULL >= 0 bernilai NULL.
+    syarat, params = (["kapasitas_it_mw >= ?"], [min_mw]) if min_mw > 0 else (["TRUE"], [])
     if status:
         syarat.append("status = ?"); params.append(status)
     if provinsi:
