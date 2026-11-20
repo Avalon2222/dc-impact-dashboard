@@ -100,3 +100,9 @@ def test_rapikan_nan_jadi_null():
 def test_angka_tak_hingga_ditolak_422(klien, url, params):
     # Sebelumnya /ringkasan?pue=inf gagal 500 dan /estimasi diam-diam menjawab null.
     assert klien.get(url, params=params).status_code == 422
+
+
+def test_sql_hasil_tak_hingga_jadi_null(klien):
+    r = klien.post("/sql", json={"sql": "SELECT 'inf'::DOUBLE AS a, '-inf'::DOUBLE AS b, 1.5 AS c"})
+    assert r.status_code == 200
+    assert r.json()["baris"] == [{"a": None, "b": None, "c": 1.5}]
