@@ -119,3 +119,9 @@ def test_fasilitas_tanpa_kapasitas_tetap_terdaftar(klien, monkeypatch):
     monkeypatch.setattr(db, "jalankan", lambda sql, params=None, kon_=None: asli(sql, params, kon=kon))
     assert klien.get("/fasilitas").json()["jumlah"] == 2
     assert klien.get("/fasilitas", params={"min_mw": 5}).json()["jumlah"] == 1
+
+
+def test_filter_provinsi_tidak_peka_huruf_dan_spasi(klien):
+    persis = klien.get("/fasilitas", params={"provinsi": "DKI Jakarta"}).json()["jumlah"]
+    assert persis > 0
+    assert klien.get("/fasilitas", params={"provinsi": " dki jakarta "}).json()["jumlah"] == persis

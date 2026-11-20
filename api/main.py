@@ -116,8 +116,9 @@ def daftar_fasilitas(
     syarat, params = (["kapasitas_it_mw >= ?"], [min_mw]) if min_mw > 0 else (["TRUE"], [])
     if status:
         syarat.append("status = ?"); params.append(status)
-    if provinsi:
-        syarat.append("provinsi = ?"); params.append(provinsi)
+    if provinsi and provinsi.strip():
+        # "dki jakarta" atau " Jawa Barat" dari query string tetap cocok dengan nama di data.
+        syarat.append("lower(trim(provinsi)) = lower(trim(?))"); params.append(provinsi)
     if keyakinan:
         syarat.append("keyakinan = ?"); params.append(keyakinan)
     df = db.jalankan(f"SELECT * FROM fasilitas WHERE {' AND '.join(syarat)} ORDER BY kapasitas_it_mw DESC", params)
