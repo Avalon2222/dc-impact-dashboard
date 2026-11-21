@@ -98,4 +98,8 @@ def muat_parameter_lengkap(path: Path | None = None) -> pd.DataFrame:
     # supaya tabel yang ditampilkan selalu sama dengan tabel yang dipakai menghitung.
     df["parameter"] = df["parameter"].fillna("").astype(str).str.strip()
     df = df[df["parameter"] != ""].reset_index(drop=True)
-    return df.fillna("")
+    # Nilai "1,5" dipakai sebagai 1.5 oleh muat_parameter, jadi tabel tampilan memakai angka yang sama.
+    df["nilai"] = _nilai_angka(df["nilai"])
+    teks = [k for k in df.columns if k != "nilai"]
+    df[teks] = df[teks].fillna("")
+    return df

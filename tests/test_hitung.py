@@ -9,7 +9,7 @@ import pandas as pd
 import pytest
 
 from src import hitung
-from src.muat_data import muat_data_center, muat_parameter
+from src.muat_data import muat_data_center, muat_parameter, muat_parameter_lengkap
 
 
 def test_listrik_contoh_di_docstring():
@@ -285,3 +285,12 @@ def test_muat_parameter_tolak_tak_hingga(tmp_path):
     csv.write_text("parameter,nilai\npue,inf\nwue,1.8\nutilisasi,-Infinity\n")
     with pytest.raises(ValueError, match=r"pue.*utilisasi"):
         muat_parameter(csv)
+
+
+def test_muat_parameter_lengkap_nilai_sama_dengan_yang_dipakai(tmp_path):
+    csv = tmp_path / "param.csv"
+    csv.write_text('parameter,nilai,satuan\npue,"1,5",rasio\nwue,1.8,\n')
+    tabel = muat_parameter_lengkap(csv)
+    assert tabel["nilai"].tolist() == [1.5, 1.8]
+    assert dict(zip(tabel["parameter"], tabel["nilai"])) == muat_parameter(csv)
+    assert tabel["satuan"].tolist() == ["rasio", ""]
