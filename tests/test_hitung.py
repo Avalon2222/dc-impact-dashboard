@@ -294,3 +294,15 @@ def test_muat_parameter_lengkap_nilai_sama_dengan_yang_dipakai(tmp_path):
     assert tabel["nilai"].tolist() == [1.5, 1.8]
     assert dict(zip(tabel["parameter"], tabel["nilai"])) == muat_parameter(csv)
     assert tabel["satuan"].tolist() == ["rasio", ""]
+
+
+def test_muat_data_center_tolak_koordinat_di_luar_rentang(tmp_path):
+    csv = tmp_path / "dc.csv"
+    csv.write_text(
+        "nama,lat,lon,kapasitas_it_mw,tahun,status,keyakinan,catatan,url_sumber,sumber\n"
+        "DC Benar,-6.2,106.8,10,2024,beroperasi,tinggi,,,\n"
+        "DC Tertukar,106.8,-6.2,10,2024,beroperasi,tinggi,,,\n"
+        "DC Tanpa Titik,,,5,2024,rencana,rendah,,,\n"
+    )
+    with pytest.raises(ValueError, match="DC Tertukar"):
+        muat_data_center(csv)
