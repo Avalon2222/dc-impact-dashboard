@@ -8,6 +8,7 @@ Kenapa dipisah dari app.py?
 
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 # Path(__file__) = lokasi file ini. .parent.parent = naik dua folder = root proyek.
@@ -59,6 +60,12 @@ def muat_data_center(path: Path | None = None) -> pd.DataFrame:
     return df
 
 
+def _nilai_angka(kolom: pd.Series) -> pd.Series:
+    """Kolom nilai parameter -> float. "1,5" (koma desimal) diterima, teks lain jadi NaN."""
+    teks = kolom.astype(str).str.strip().str.replace(",", ".", regex=False)
+    return pd.to_numeric(teks, errors="coerce").astype(float)
+
+
 def muat_parameter(path: Path | None = None) -> dict:
     """Baca parameter asumsi (PUE, WUE, dll) menjadi dict {nama: nilai}.
 
@@ -70,8 +77,9 @@ def muat_parameter(path: Path | None = None) -> dict:
     df["parameter"] = df["parameter"].fillna("").astype(str).str.strip()
     df = df[df["parameter"] != ""]   # baris kosong di akhir CSV bukan parameter "nan"
     # Nilai harus angka; "1,5" (koma desimal) diterima, sel kosong atau teks ditolak dengan nama parameternya.
-    nilai = pd.to_numeric(df["nilai"].astype(str).str.strip().str.replace(",", ".", regex=False), errors="coerce")
-    rusak = df.loc[nilai.isna(), "parameter"].tolist()
+    nilai = _nilai_angka(df["nilai"])
+    # "inf" lolos to_numeric, padahal asumsi tak hingga membuat semua estimasi ikut tak hingga.
+    rusak = df.loc[~np.isfinite(nilai), "parameter"].tolist()
     if rusak:
         raise ValueError(f"Nilai parameter kosong atau bukan angka di {Path(path).name}: {rusak}")
     df = df.assign(nilai=nilai)

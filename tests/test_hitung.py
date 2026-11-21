@@ -278,3 +278,10 @@ def test_kapasitas_negatif_ditolak_dengan_nama(tmp_path):
 def test_status_spasi_saja_dianggap_kosong(tmp_path):
     df = muat_data_center(_csv_data_center(tmp_path, "   ", "  "))
     assert df["status"].isna().all() and df["keyakinan"].isna().all()
+
+
+def test_muat_parameter_tolak_tak_hingga(tmp_path):
+    csv = tmp_path / "param.csv"
+    csv.write_text("parameter,nilai\npue,inf\nwue,1.8\nutilisasi,-Infinity\n")
+    with pytest.raises(ValueError, match=r"pue.*utilisasi"):
+        muat_parameter(csv)
