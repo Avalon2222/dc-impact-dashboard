@@ -39,6 +39,11 @@ def muat_data_center(path: Path | None = None) -> pd.DataFrame:
     if negatif:
         raise ValueError(f"kapasitas_it_mw negatif di {Path(path).name}: {negatif}")
 
+    # Lat/lon tertukar (106, -6) atau salah ketik membuat titik muncul di luar bumi atau di Antartika.
+    di_luar = df.loc[(df["lat"].abs() > 90) | (df["lon"].abs() > 180), "nama"].tolist()
+    if di_luar:
+        raise ValueError(f"Koordinat di luar rentang (lat ±90, lon ±180) di {Path(path).name}: {di_luar}")
+
     # Rapikan huruf besar dan spasi dulu ("Beroperasi " -> "beroperasi"), lalu tolak nilai asing.
     # Tanpa ini, nilai di luar daftar urutan diam-diam berubah jadi NaN di Categorical.
     for kolom, pilihan in (("status", URUTAN_STATUS), ("keyakinan", URUTAN_KEYAKINAN)):
