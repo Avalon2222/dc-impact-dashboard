@@ -125,3 +125,19 @@ def test_filter_provinsi_tidak_peka_huruf_dan_spasi(klien):
     persis = klien.get("/fasilitas", params={"provinsi": "DKI Jakarta"}).json()["jumlah"]
     assert persis > 0
     assert klien.get("/fasilitas", params={"provinsi": " dki jakarta "}).json()["jumlah"] == persis
+
+
+def test_fasilitas_kapasitas_sama_urut_id(klien, monkeypatch):
+    import duckdb
+
+    from src import db
+
+    kon = duckdb.connect(":memory:")
+    kon.execute(
+        "CREATE TABLE fasilitas AS SELECT * FROM (VALUES (5, 'E', 10.0), (3, 'C', NULL), (2, 'B', 10.0), "
+        "(4, 'D', 20.0), (1, 'A', 10.0)) t(id, nama, kapasitas_it_mw)"
+    )
+    asli = db.jalankan
+    monkeypatch.setattr(db, "jalankan", lambda sql, params=None, kon_=None: asli(sql, params, kon=kon))
+    ids = [f["id"] for f in klien.get("/fasilitas").json()["fasilitas"]]
+    assert ids == [4, 1, 2, 5, 3]

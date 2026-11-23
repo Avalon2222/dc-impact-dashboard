@@ -121,7 +121,7 @@ def daftar_fasilitas(
         syarat.append("lower(trim(provinsi)) = lower(trim(?))"); params.append(provinsi)
     if keyakinan:
         syarat.append("keyakinan = ?"); params.append(keyakinan)
-    df = db.jalankan(f"SELECT * FROM fasilitas WHERE {' AND '.join(syarat)} ORDER BY kapasitas_it_mw DESC", params)
+    df = db.jalankan(f"SELECT * FROM fasilitas WHERE {' AND '.join(syarat)} ORDER BY kapasitas_it_mw DESC NULLS LAST, id", params)
     return {"jumlah": len(df), "fasilitas": _rapikan(df)}
 
 
