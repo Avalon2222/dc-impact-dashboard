@@ -131,6 +131,7 @@ def format_angka(x: float, desimal: int = 0) -> str:
     """Format angka gaya Indonesia: titik ribuan, koma desimal. 1234567.8 -> '1.234.568'."""
     if pd.isna(x) or np.isinf(x):
         return "-"   # inf (mis. hasil bagi nol) jangan tampil sebagai "inf" di kartu metrik
+    desimal = max(int(desimal), 0)   # presisi negatif membuat f-string ValueError
     if round(x, desimal) == 0:
         x = 0.0  # supaya -0.4 tidak tampil sebagai "-0"
     teks = f"{x:,.{desimal}f}"  # gaya Inggris: 1,234,567.8
