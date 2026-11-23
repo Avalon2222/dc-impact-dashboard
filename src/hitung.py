@@ -30,8 +30,13 @@ def _cek_utilisasi(utilisasi: float) -> None:
 
 def _cek_pue(pue) -> None:
     """PUE = listrik total / listrik server, jadi tidak mungkin di bawah 1. Bisa skalar atau Series per baris."""
-    if np.any(np.asarray(pue, dtype=float) < 1):
+    nilai = np.asarray(pue, dtype=float)
+    if np.any(nilai < 1):
         raise ValueError(f"PUE tidak boleh di bawah 1 (listrik total selalu >= listrik server), dapat {pue}")
+    # Asumsi tunggal NaN/inf lolos dari "< 1" lalu membuat semua estimasi ikut kosong/tak hingga.
+    # Untuk Series per baris, NaN tetap boleh (fasilitas yang PUE-nya belum diketahui).
+    if nilai.ndim == 0 and not np.isfinite(nilai):
+        raise ValueError(f"PUE harus angka terhingga, dapat {pue}")
 
 
 def listrik_tahunan_gwh(kapasitas_it_mw: float, utilisasi: float, pue: float) -> float:
@@ -67,8 +72,11 @@ def air_tahunan_m3(kapasitas_it_mw: float, utilisasi: float, wue_liter_per_kwh: 
         10 x 0.6 x 8760 x 1000 x 1.8 / 1000 = 94608 m3/tahun (sekitar 94,6 ribu m3)
     """
     _cek_utilisasi(utilisasi)
-    if np.any(np.asarray(wue_liter_per_kwh, dtype=float) < 0):
+    wue = np.asarray(wue_liter_per_kwh, dtype=float)
+    if np.any(wue < 0):
         raise ValueError(f"WUE tidak boleh negatif (0 = tanpa air), dapat {wue_liter_per_kwh}")
+    if wue.ndim == 0 and not np.isfinite(wue):
+        raise ValueError(f"WUE harus angka terhingga, dapat {wue_liter_per_kwh}")
     kwh_server = kapasitas_it_mw * utilisasi * JAM_PER_TAHUN * 1000
     return kwh_server * wue_liter_per_kwh / 1000
 

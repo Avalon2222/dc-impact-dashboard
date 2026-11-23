@@ -310,3 +310,14 @@ def test_muat_data_center_tolak_koordinat_di_luar_rentang(tmp_path):
 
 def test_format_angka_desimal_negatif_dianggap_nol():
     assert hitung.format_angka(1234.56, desimal=-2) == "1.235"
+
+
+@pytest.mark.parametrize("nilai", [float("nan"), float("inf")])
+def test_pue_dan_wue_tunggal_harus_terhingga(nilai):
+    with pytest.raises(ValueError):
+        hitung.listrik_tahunan_gwh(10, 0.6, nilai)
+    with pytest.raises(ValueError):
+        hitung.air_tahunan_m3(10, 0.6, nilai)
+    # Per baris, PUE yang belum diketahui tetap boleh kosong.
+    hasil = hitung.listrik_tahunan_gwh(10, 0.6, pd.Series([1.5, float("nan")]))
+    assert hasil.isna().tolist() == [False, True]
