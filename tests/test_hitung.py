@@ -306,3 +306,7 @@ def test_muat_data_center_tolak_koordinat_di_luar_rentang(tmp_path):
     )
     with pytest.raises(ValueError, match="DC Tertukar"):
         muat_data_center(csv)
+
+
+def test_format_angka_desimal_negatif_dianggap_nol():
+    assert hitung.format_angka(1234.56, desimal=-2) == "1.235"
