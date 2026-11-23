@@ -27,7 +27,7 @@ from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel, Field
 
 from src import db, hitung
-from src.model import FITUR_IKLIM, muat_metrik, muat_model, prediksi_pue, prediksi_wue, siapkan_fitur_pue, siapkan_fitur_wue
+from src.model import muat_metrik, muat_model, prediksi_pue, prediksi_wue, siapkan_fitur_pue, siapkan_fitur_wue
 from src.muat_data import muat_parameter
 
 ROOT = Path(__file__).resolve().parent.parent
