@@ -23,8 +23,11 @@ from typing import Literal
 
 import numpy as np
 import pandas as pd
-from fastapi import FastAPI, HTTPException, Query
-from pydantic import BaseModel, Field
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.encoders import jsonable_encoder
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel, ConfigDict, Field
 
 from src import db, hitung
 from src.model import muat_metrik, muat_model, prediksi_pue, prediksi_wue, siapkan_fitur_pue, siapkan_fitur_wue
@@ -42,6 +45,23 @@ app = FastAPI(
 )
 
 PARAM = muat_parameter()
+
+
+def _tanpa_tak_hingga(nilai):
+    """Ganti float NaN/inf (yang bukan JSON sah) dengan None, rekursif di dalam list/dict."""
+    if isinstance(nilai, float) and not np.isfinite(nilai):
+        return None
+    if isinstance(nilai, dict):
+        return {k: _tanpa_tak_hingga(v) for k, v in nilai.items()}
+    if isinstance(nilai, (list, tuple)):
+        return [_tanpa_tak_hingga(v) for v in nilai]
+    return nilai
+
+
+@app.exception_handler(RequestValidationError)
+async def _validasi_gagal(request: Request, exc: RequestValidationError) -> JSONResponse:
+    """Pesan 422 bawaan memuat nilai masukan; NaN/Infinity di sana membuat jawabannya sendiri gagal (500)."""
+    return JSONResponse(status_code=422, content={"detail": _tanpa_tak_hingga(jsonable_encoder(exc.errors()))})
 Status = Literal["beroperasi", "dibangun", "rencana"]
 
 
@@ -68,6 +88,11 @@ class Estimasi(BaseModel):
 
 class FiturIklim(BaseModel):
     """Ringkasan iklim satu periode. Satuan: °C, %, hari, derajat-hari (dasar 18 °C)."""
+
+    # json.loads Python menerima Infinity/NaN; cdd18 tanpa batas atas akan lolos lalu scikit-learn
+    # melempar ValueError (500). Tolak di validasi saja.
+    model_config = ConfigDict(allow_inf_nan=False)
+
     suhu_rata: float = Field(..., ge=-40, le=45, examples=[27.6])
     suhu_maks_rata: float = Field(..., ge=-40, le=55, examples=[32.0])
     rh_rata: float = Field(..., ge=0, le=100, examples=[83.0])
