@@ -332,3 +332,13 @@ def test_pembagi_setara_tak_hingga_ditolak():
     df = pd.DataFrame({"kapasitas_it_mw": [10.0]})
     with pytest.raises(ValueError):
         hitung.tambah_kolom_estimasi(df, 0.6, 1.5, 1.8, 1000, 150, orang_per_rumah_tangga=inf)
+
+
+def test_kapasitas_tak_hingga_ditolak(tmp_path):
+    csv = tmp_path / "dc.csv"
+    csv.write_text(
+        "nama,lat,lon,kapasitas_it_mw,tahun,status,keyakinan,catatan,url_sumber,sumber\n"
+        "DC Uji,-6.2,106.8,inf,2024,beroperasi,tinggi,,,\n"
+    )
+    with pytest.raises(ValueError, match="tak hingga"):
+        muat_data_center(csv)
