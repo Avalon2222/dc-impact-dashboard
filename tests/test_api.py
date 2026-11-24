@@ -141,3 +141,12 @@ def test_fasilitas_kapasitas_sama_urut_id(klien, monkeypatch):
     monkeypatch.setattr(db, "jalankan", lambda sql, params=None, kon_=None: asli(sql, params, kon=kon))
     ids = [f["id"] for f in klien.get("/fasilitas").json()["fasilitas"]]
     assert ids == [4, 1, 2, 5, 3]
+
+
+@pytest.mark.parametrize("nilai", ["Infinity", "NaN"])
+def test_prediksi_iklim_tak_hingga_ditolak_422(klien, nilai):
+    iklim = ('{"suhu_rata": 27.6, "suhu_maks_rata": 32, "rh_rata": 83, "titik_embun_rata": 24, '
+             '"bola_basah_rata": 26, "bola_basah_p90": 27, "hari_panas_lembap": 92, "cdd18": %s}' % nilai)
+    for url in ("/prediksi/pue", "/prediksi/wue"):
+        r = klien.post(url, content='{"iklim": %s}' % iklim, headers={"content-type": "application/json"})
+        assert r.status_code == 422
