@@ -38,6 +38,10 @@ def muat_data_center(path: Path | None = None) -> pd.DataFrame:
     negatif = df.loc[df["kapasitas_it_mw"] < 0, "nama"].tolist()
     if negatif:
         raise ValueError(f"kapasitas_it_mw negatif di {Path(path).name}: {negatif}")
+    # "inf" lolos to_numeric dan membuat total listrik/air nasional ikut tak hingga.
+    tak_hingga = df.loc[np.isinf(df["kapasitas_it_mw"]), "nama"].tolist()
+    if tak_hingga:
+        raise ValueError(f"kapasitas_it_mw tak hingga di {Path(path).name}: {tak_hingga}")
 
     # Lat/lon tertukar (106, -6) atau salah ketik membuat titik muncul di luar bumi atau di Antartika.
     di_luar = df.loc[(df["lat"].abs() > 90) | (df["lon"].abs() > 180), "nama"].tolist()
