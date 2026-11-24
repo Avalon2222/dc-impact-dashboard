@@ -321,3 +321,14 @@ def test_pue_dan_wue_tunggal_harus_terhingga(nilai):
     # Per baris, PUE yang belum diketahui tetap boleh kosong.
     hasil = hitung.listrik_tahunan_gwh(10, 0.6, pd.Series([1.5, float("nan")]))
     assert hasil.isna().tolist() == [False, True]
+
+
+def test_pembagi_setara_tak_hingga_ditolak():
+    inf = float("inf")
+    with pytest.raises(ValueError):
+        hitung.setara_penduduk_listrik(10, inf)
+    with pytest.raises(ValueError):
+        hitung.setara_penduduk_air(1000, inf)
+    df = pd.DataFrame({"kapasitas_it_mw": [10.0]})
+    with pytest.raises(ValueError):
+        hitung.tambah_kolom_estimasi(df, 0.6, 1.5, 1.8, 1000, 150, orang_per_rumah_tangga=inf)
