@@ -187,3 +187,11 @@ def test_parser_pue_kuartalan_kosong_tidak_menggeser_ttm():
 def test_ke_angka_pue_bukan_angka_terhingga():
     for teks in ("nan", "inf", "-Infinity", None):
         assert ambil_pue_google._ke_angka(teks) is None
+
+
+def test_validasi_tolak_id_fasilitas_duplikat(data_salinan):
+    f = pd.read_csv(data_salinan / "data_center_indonesia.csv")
+    f.loc[1, "id"] = f.loc[0, "id"]
+    f.to_csv(data_salinan / "data_center_indonesia.csv", index=False)
+    with pytest.raises(pipeline.DataTidakValid, match="id fasilitas"):
+        pipeline.langkah_validasi()
