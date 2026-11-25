@@ -65,6 +65,8 @@ def langkah_validasi() -> None:
     _pastikan((fasilitas["kapasitas_it_mw"] > 0).all(), "Kapasitas harus > 0")
     _pastikan(fasilitas["status"].isin(["beroperasi", "dibangun", "rencana"]).all(), "Status tidak dikenal")
     _pastikan(not fasilitas["nama"].duplicated().any(), "Nama fasilitas duplikat")
+    # id dipakai API (/fasilitas/{id}); id ganda membuat salah satu fasilitas tidak bisa diambil.
+    _pastikan(fasilitas["id"].notna().all() and not fasilitas["id"].duplicated().any(), "id fasilitas kosong atau duplikat")
 
     pue = pd.read_csv(DATA / "pue_google_kuartalan.csv")
     _pastikan(len(pue) >= 500, "Data PUE Google terlalu sedikit")
