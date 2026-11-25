@@ -17,6 +17,7 @@ Jalankan:  python scripts/ambil_pue_google.py
 
 from __future__ import annotations
 
+import math
 import re
 import sys
 from html.parser import HTMLParser
@@ -94,9 +95,11 @@ FLEET_TTM = "Fleet-wide trailing twelve-month (TTM) PUE:"
 
 def _ke_angka(teks: str) -> float | None:
     try:
-        return float(teks)
-    except ValueError:
+        nilai = float(teks)
+    except (TypeError, ValueError):
         return None
+    # float("nan") dan float("inf") berhasil, padahal bukan angka PUE; anggap kosong.
+    return nilai if math.isfinite(nilai) else None
 
 
 def parse_html(html: str) -> pd.DataFrame:

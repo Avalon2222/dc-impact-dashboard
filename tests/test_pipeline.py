@@ -182,3 +182,8 @@ def test_parser_pue_kuartalan_kosong_tidak_menggeser_ttm():
     assert "Hamina, Finland" not in set(df.kampus)
     mesa = df[df.kampus == "Mesa, Arizona"].iloc[0]
     assert mesa["pue_kuartalan"] == 1.22 and pd.isna(mesa["pue_ttm"])
+
+
+def test_ke_angka_pue_bukan_angka_terhingga():
+    for teks in ("nan", "inf", "-Infinity", None):
+        assert ambil_pue_google._ke_angka(teks) is None
