@@ -105,16 +105,17 @@ def parse_html(html: str) -> pd.DataFrame:
     p.feed(html)
     rekaman = []
     for tahun, kuartal, nama, angka in p.baris:
-        nilai = [_ke_angka(x) for x in angka]
-        nilai = [v for v in nilai if v is not None]
-        if not nilai or not nama:
+        # Posisi kolom dipertahankan: kalau PUE kuartalan "N/A", angka TTM tidak boleh bergeser
+        # dan terbaca sebagai PUE kuartalan.
+        kuartalan = _ke_angka(angka[0]) if angka else None
+        if kuartalan is None or not nama:
             continue
         rekaman.append({
             "kampus": nama,
             "tahun": tahun,
             "kuartal": kuartal,
-            "pue_kuartalan": nilai[0],
-            "pue_ttm": nilai[1] if len(nilai) > 1 else None,
+            "pue_kuartalan": kuartalan,
+            "pue_ttm": _ke_angka(angka[1]) if len(angka) > 1 else None,
         })
     df = pd.DataFrame(rekaman)
     if df.empty:

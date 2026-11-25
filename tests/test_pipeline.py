@@ -169,3 +169,16 @@ def test_jalankan_skrip_dari_akar_repo(monkeypatch):
     assert panggilan["check"] is True and panggilan["cwd"] == ROOT
     pipeline.langkah_db()
     assert panggilan["perintah"][-1].endswith("bangun_db.py")
+
+
+def test_parser_pue_kuartalan_kosong_tidak_menggeser_ttm():
+    html = """
+    <h2>2025 PUE Yearly Report</h2>
+    <div data-cy="tabItem"><span>Quarter 01</span>
+    <table><tr role="row"><td>Hamina, Finland</td><td>N/A</td><td>1.12</td></tr>
+    <tr role="row"><td>Mesa, Arizona</td><td>1.22</td><td>N/A</td></tr></table></div>
+    """
+    df = ambil_pue_google.parse_html(html)
+    assert "Hamina, Finland" not in set(df.kampus)
+    mesa = df[df.kampus == "Mesa, Arizona"].iloc[0]
+    assert mesa["pue_kuartalan"] == 1.22 and pd.isna(mesa["pue_ttm"])
