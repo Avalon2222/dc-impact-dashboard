@@ -39,7 +39,8 @@ PATH_DB = DATA / "dc_impact.duckdb"
 
 
 def kunci_lokasi(lat: float, lon: float) -> str:
-    return f"{lat:.2f},{lon:.2f}"
+    # + 0.0 mengubah -0.0 jadi 0.0: tanpa itu -0.001 jadi "-0.00" sedangkan 0.001 jadi "0.00".
+    return f"{round(lat, 2) + 0.0:.2f},{round(lon, 2) + 0.0:.2f}"
 
 
 def muat_tabel() -> dict[str, pd.DataFrame]:

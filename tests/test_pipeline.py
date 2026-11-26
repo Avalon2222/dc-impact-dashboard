@@ -102,6 +102,15 @@ def test_kunci_lokasi_sama_di_semua_skrip():
     assert ambil_iklim.kunci_lokasi(-6.2, 106.8166) == "-6.20,106.82"
 
 
+def test_kunci_lokasi_dekat_khatulistiwa_tanpa_minus_nol():
+    # -0.001 dan 0.001 sama-sama dibulatkan ke 0.00; kuncinya harus sama supaya JOIN iklim tidak putus.
+    import bangun_db  # noqa: E402
+    import latih_model  # noqa: E402
+
+    for modul in (ambil_iklim, bangun_db, latih_model):
+        assert modul.kunci_lokasi(-0.001, -0.004) == modul.kunci_lokasi(0.001, 0.0) == "0.00,0.00"
+
+
 def test_daftar_lokasi_tanpa_duplikat():
     lok = ambil_iklim.daftar_lokasi()
     assert lok["lokasi_id"].is_unique
