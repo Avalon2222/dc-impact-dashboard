@@ -82,8 +82,9 @@ def muat_parameter(path: Path | None = None) -> dict:
     """
     path = path or DATA_DIR / "parameter_asumsi.csv"
     df = pd.read_csv(path)
-    # Spasi sisa edit manual ("pue ") membuat PARAM["pue"] KeyError dan lolos dari cek dobel.
-    df["parameter"] = df["parameter"].fillna("").astype(str).str.strip()
+    # Spasi sisa edit manual ("pue ") atau huruf besar ("PUE") membuat PARAM["pue"] KeyError
+    # dan lolos dari cek dobel.
+    df["parameter"] = df["parameter"].fillna("").astype(str).str.strip().str.lower()
     df = df[df["parameter"] != ""]   # baris kosong di akhir CSV bukan parameter "nan"
     # Nilai harus angka; "1,5" (koma desimal) diterima, sel kosong atau teks ditolak dengan nama parameternya.
     nilai = _nilai_angka(df["nilai"])
@@ -105,7 +106,7 @@ def muat_parameter_lengkap(path: Path | None = None) -> pd.DataFrame:
     df = pd.read_csv(path)
     # Nama dirapikan dan baris kosong dibuang dengan aturan yang sama seperti muat_parameter,
     # supaya tabel yang ditampilkan selalu sama dengan tabel yang dipakai menghitung.
-    df["parameter"] = df["parameter"].fillna("").astype(str).str.strip()
+    df["parameter"] = df["parameter"].fillna("").astype(str).str.strip().str.lower()
     df = df[df["parameter"] != ""].reset_index(drop=True)
     # Nilai "1,5" dipakai sebagai 1.5 oleh muat_parameter, jadi tabel tampilan memakai angka yang sama.
     df["nilai"] = _nilai_angka(df["nilai"])
