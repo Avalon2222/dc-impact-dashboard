@@ -42,6 +42,10 @@ def muat_data_center(path: Path | None = None) -> pd.DataFrame:
     tak_hingga = df.loc[np.isinf(df["kapasitas_it_mw"]), "nama"].tolist()
     if tak_hingga:
         raise ValueError(f"kapasitas_it_mw tak hingga di {Path(path).name}: {tak_hingga}")
+    # Tahun "inf" juga lolos to_numeric dan membuat grafik pertumbuhan kapasitas punya titik di tak hingga.
+    tahun_rusak = df.loc[np.isinf(df["tahun"]), "nama"].tolist()
+    if tahun_rusak:
+        raise ValueError(f"tahun tak hingga di {Path(path).name}: {tahun_rusak}")
 
     # Lat/lon tertukar (106, -6) atau salah ketik membuat titik muncul di luar bumi atau di Antartika.
     di_luar = df.loc[(df["lat"].abs() > 90) | (df["lon"].abs() > 180), "nama"].tolist()

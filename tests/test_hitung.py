@@ -352,3 +352,13 @@ def test_muat_parameter_nama_huruf_besar_dirapikan(tmp_path):
     csv.write_text("parameter,nilai\npue,1.5\nPUE,1.6\n")
     with pytest.raises(ValueError, match="dobel"):
         muat_parameter(csv)
+
+
+def test_muat_data_center_tahun_tak_hingga_ditolak(tmp_path):
+    csv = tmp_path / "dc.csv"
+    csv.write_text(
+        "nama,lat,lon,kapasitas_it_mw,tahun,status,keyakinan,catatan,url_sumber,sumber\n"
+        "DC Uji,-6.2,106.8,10,inf,beroperasi,tinggi,,,\n"
+    )
+    with pytest.raises(ValueError, match="DC Uji"):
+        muat_data_center(csv)
