@@ -342,3 +342,13 @@ def test_kapasitas_tak_hingga_ditolak(tmp_path):
     )
     with pytest.raises(ValueError, match="tak hingga"):
         muat_data_center(csv)
+
+
+def test_muat_parameter_nama_huruf_besar_dirapikan(tmp_path):
+    csv = tmp_path / "param.csv"
+    csv.write_text("parameter,nilai\nPUE,1.5\nWue ,1.8\n")
+    assert muat_parameter(csv) == {"pue": 1.5, "wue": 1.8}
+    assert muat_parameter_lengkap(csv)["parameter"].tolist() == ["pue", "wue"]
+    csv.write_text("parameter,nilai\npue,1.5\nPUE,1.6\n")
+    with pytest.raises(ValueError, match="dobel"):
+        muat_parameter(csv)
