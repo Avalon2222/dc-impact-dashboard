@@ -100,3 +100,13 @@ def test_query_tersimpan_judul_tahan_bom(tmp_path, monkeypatch):
 ])
 def test_sql_aman_komentar_di_akhir_baris(sql, aman):
     assert db.sql_aman(sql) is aman
+
+
+def test_query_tersimpan_komentar_di_tengah_query_bukan_deskripsi(tmp_path, monkeypatch):
+    (tmp_path / "01_contoh.sql").write_text(
+        "-- Judul Contoh\n-- Penjelasan singkat\nSELECT 1 AS a\n-- filter nanti\nWHERE TRUE", encoding="utf-8"
+    )
+    monkeypatch.setattr(db, "DIR_SQL", tmp_path)
+    q = db.query_tersimpan()[0]
+    assert q["judul"] == "Judul Contoh"
+    assert q["deskripsi"] == "Penjelasan singkat"
