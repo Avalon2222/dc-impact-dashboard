@@ -37,6 +37,9 @@ def _cek_pue(pue) -> None:
     # Untuk Series per baris, NaN tetap boleh (fasilitas yang PUE-nya belum diketahui).
     if nilai.ndim == 0 and not np.isfinite(nilai):
         raise ValueError(f"PUE harus angka terhingga, dapat {pue}")
+    # inf di Series per baris juga ditolak: satu fasilitas inf membuat total nasional ikut tak hingga.
+    if np.any(np.isinf(nilai)):
+        raise ValueError(f"PUE tidak boleh tak hingga, dapat {pue}")
 
 
 def listrik_tahunan_gwh(kapasitas_it_mw: float, utilisasi: float, pue: float) -> float:
@@ -77,6 +80,8 @@ def air_tahunan_m3(kapasitas_it_mw: float, utilisasi: float, wue_liter_per_kwh: 
         raise ValueError(f"WUE tidak boleh negatif (0 = tanpa air), dapat {wue_liter_per_kwh}")
     if wue.ndim == 0 and not np.isfinite(wue):
         raise ValueError(f"WUE harus angka terhingga, dapat {wue_liter_per_kwh}")
+    if np.any(np.isinf(wue)):
+        raise ValueError(f"WUE tidak boleh tak hingga, dapat {wue_liter_per_kwh}")
     kwh_server = kapasitas_it_mw * utilisasi * JAM_PER_TAHUN * 1000
     return kwh_server * wue_liter_per_kwh / 1000
 
