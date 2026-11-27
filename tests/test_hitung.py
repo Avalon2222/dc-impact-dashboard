@@ -362,3 +362,15 @@ def test_muat_data_center_tahun_tak_hingga_ditolak(tmp_path):
     )
     with pytest.raises(ValueError, match="DC Uji"):
         muat_data_center(csv)
+
+
+def test_muat_data_center_tahun_pecahan_ditolak(tmp_path):
+    csv = tmp_path / "dc.csv"
+    csv.write_text(
+        "nama,lat,lon,kapasitas_it_mw,tahun,status,keyakinan,catatan,url_sumber,sumber\n"
+        "DC Utuh,-6.2,106.8,10,2024,beroperasi,tinggi,,,\n"
+        "DC Pecahan,-6.2,106.8,10,2024.5,beroperasi,tinggi,,,\n"
+        "DC Tanpa Tahun,-6.2,106.8,10,,rencana,rendah,,,\n"
+    )
+    with pytest.raises(ValueError, match="DC Pecahan"):
+        muat_data_center(csv)
