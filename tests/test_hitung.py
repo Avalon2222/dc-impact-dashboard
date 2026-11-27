@@ -374,3 +374,13 @@ def test_muat_data_center_tahun_pecahan_ditolak(tmp_path):
     )
     with pytest.raises(ValueError, match="DC Pecahan"):
         muat_data_center(csv)
+
+
+def test_pue_wue_per_baris_tak_hingga_ditolak():
+    mw = pd.Series([10.0, 20.0])
+    with pytest.raises(ValueError, match="PUE"):
+        hitung.listrik_tahunan_gwh(mw, 0.6, pd.Series([1.4, float("inf")]))
+    with pytest.raises(ValueError, match="WUE"):
+        hitung.air_tahunan_m3(mw, 0.6, pd.Series([1.8, float("inf")]))
+    # NaN per baris tetap boleh (PUE fasilitas belum diketahui).
+    assert hitung.listrik_tahunan_gwh(mw, 0.6, pd.Series([1.4, float("nan")])).isna().tolist() == [False, True]
