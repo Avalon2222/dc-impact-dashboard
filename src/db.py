@@ -101,7 +101,16 @@ def query_tersimpan() -> list[dict]:
     hasil = []
     for path in sorted(DIR_SQL.glob("*.sql")):
         teks = path.read_text(encoding="utf-8-sig")   # -sig: BOM dari editor Windows tidak ikut terbaca
-        komentar = [b.strip()[2:].strip() for b in teks.splitlines() if b.strip().startswith("--")]
+        # Hanya blok komentar di kepala file yang jadi judul/deskripsi; komentar di tengah query
+        # ("-- filter tahun") adalah catatan kode, bukan bagian penjelasan.
+        komentar = []
+        for b in teks.splitlines():
+            b = b.strip()
+            if not b:
+                continue
+            if not b.startswith("--"):
+                break
+            komentar.append(b[2:].strip())
         komentar = [k for k in komentar if k]
         hasil.append({
             "file": path.name,
