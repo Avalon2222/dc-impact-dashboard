@@ -407,3 +407,15 @@ def test_muat_data_center_tahun_mustahil_ditolak(tmp_path):
     )
     with pytest.raises(ValueError, match="DC Salah Ketik"):
         muat_data_center(csv)
+
+
+def test_muat_data_center_id_ganda_ditolak(tmp_path):
+    csv = tmp_path / "dc.csv"
+    csv.write_text(
+        "id,nama,lat,lon,kapasitas_it_mw,tahun,status,keyakinan,catatan,url_sumber,sumber\n"
+        "1,DC Satu,-6.2,106.8,10,2024,beroperasi,tinggi,,,\n"
+        "1,DC Kembar,-6.3,106.9,5,2025,dibangun,sedang,,,\n"
+        "2,DC Dua,-6.4,107.0,5,2025,dibangun,sedang,,,\n"
+    )
+    with pytest.raises(ValueError, match="DC Kembar"):
+        muat_data_center(csv)

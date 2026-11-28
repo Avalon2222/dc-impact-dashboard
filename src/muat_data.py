@@ -58,6 +58,12 @@ def muat_data_center(path: Path | None = None) -> pd.DataFrame:
     if tahun_mustahil:
         raise ValueError(f"tahun di luar rentang 1990-2100 di {Path(path).name}: {tahun_mustahil}")
 
+    # id ganda membuat halaman detail dan API /fasilitas/{id} mengembalikan fasilitas yang salah.
+    if "id" in df:
+        ganda = df.loc[df["id"].duplicated(keep=False) & df["id"].notna(), "nama"].tolist()
+        if ganda:
+            raise ValueError(f"id fasilitas ganda di {Path(path).name}: {ganda}")
+
     # Lat/lon tertukar (106, -6) atau salah ketik membuat titik muncul di luar bumi atau di Antartika.
     di_luar = df.loc[(df["lat"].abs() > 90) | (df["lon"].abs() > 180), "nama"].tolist()
     if di_luar:
