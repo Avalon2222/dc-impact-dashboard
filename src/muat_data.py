@@ -52,6 +52,11 @@ def muat_data_center(path: Path | None = None) -> pd.DataFrame:
     tahun_rusak = df.loc[np.isinf(df["tahun"]) | (df["tahun"] % 1 != 0) & df["tahun"].notna(), "nama"].tolist()
     if tahun_rusak:
         raise ValueError(f"tahun tak hingga atau pecahan di {Path(path).name}: {tahun_rusak}")
+    # Tahun 20245 atau 224 (salah ketik) lolos sebagai angka, lalu grafik pertumbuhan kapasitas
+    # merentang ribuan tahun; data center pertama di Indonesia pun baru ada setelah 1990.
+    tahun_mustahil = df.loc[df["tahun"].notna() & ~df["tahun"].between(1990, 2100), "nama"].tolist()
+    if tahun_mustahil:
+        raise ValueError(f"tahun di luar rentang 1990-2100 di {Path(path).name}: {tahun_mustahil}")
 
     # Lat/lon tertukar (106, -6) atau salah ketik membuat titik muncul di luar bumi atau di Antartika.
     di_luar = df.loc[(df["lat"].abs() > 90) | (df["lon"].abs() > 180), "nama"].tolist()
