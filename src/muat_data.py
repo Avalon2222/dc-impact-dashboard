@@ -33,6 +33,11 @@ def muat_data_center(path: Path | None = None) -> pd.DataFrame:
     # Pastikan kolom angka memang bertipe angka (kalau ada yang kosong jadi NaN).
     for kolom in ["lat", "lon", "kapasitas_it_mw", "tahun"]:
         df[kolom] = pd.to_numeric(df[kolom], errors="coerce")
+    # Spasi sisa edit manual ("Jawa Barat ") membuat filter provinsi punya dua pilihan untuk satu provinsi
+    # dan nama fasilitas tidak cocok saat dicari.
+    for kolom in ["nama", "operator", "lokasi", "kabupaten_kota", "provinsi", "tipe"]:
+        if kolom in df:
+            df[kolom] = df[kolom].map(lambda v: v.strip() if isinstance(v, str) else v)
     # Kapasitas negatif (salah ketik tanda minus) akan menghasilkan listrik dan air negatif
     # yang diam-diam mengurangi total nasional.
     negatif = df.loc[df["kapasitas_it_mw"] < 0, "nama"].tolist()

@@ -384,3 +384,15 @@ def test_pue_wue_per_baris_tak_hingga_ditolak():
         hitung.air_tahunan_m3(mw, 0.6, pd.Series([1.8, float("inf")]))
     # NaN per baris tetap boleh (PUE fasilitas belum diketahui).
     assert hitung.listrik_tahunan_gwh(mw, 0.6, pd.Series([1.4, float("nan")])).isna().tolist() == [False, True]
+
+
+def test_kolom_teks_berspasi_dirapikan(tmp_path):
+    csv = tmp_path / "dc.csv"
+    csv.write_text(
+        "nama,provinsi,lat,lon,kapasitas_it_mw,tahun,status,keyakinan,catatan,url_sumber,sumber\n"
+        " DC Satu ,Jawa Barat ,-6.2,106.8,10,2024,beroperasi,tinggi,,,\n"
+        "DC Dua, Jawa Barat,-6.3,106.9,5,2025,dibangun,sedang,,,\n"
+    )
+    df = muat_data_center(csv)
+    assert df["nama"].tolist() == ["DC Satu", "DC Dua"]
+    assert df["provinsi"].unique().tolist() == ["Jawa Barat"]
