@@ -396,3 +396,14 @@ def test_kolom_teks_berspasi_dirapikan(tmp_path):
     df = muat_data_center(csv)
     assert df["nama"].tolist() == ["DC Satu", "DC Dua"]
     assert df["provinsi"].unique().tolist() == ["Jawa Barat"]
+
+
+def test_muat_data_center_tahun_mustahil_ditolak(tmp_path):
+    csv = tmp_path / "dc.csv"
+    csv.write_text(
+        "nama,lat,lon,kapasitas_it_mw,tahun,status,keyakinan,catatan,url_sumber,sumber\n"
+        "DC Benar,-6.2,106.8,10,2024,beroperasi,tinggi,,,\n"
+        "DC Salah Ketik,-6.3,106.9,5,20245,dibangun,sedang,,,\n"
+    )
+    with pytest.raises(ValueError, match="DC Salah Ketik"):
+        muat_data_center(csv)
